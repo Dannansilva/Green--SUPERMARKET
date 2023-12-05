@@ -1,7 +1,8 @@
 import React from "react";
-import logo from "../../public/Logo.png";
+import logo from "../public/Logo.png";
 import { FaSearch } from "react-icons/fa";
 import { SlHandbag } from "react-icons/sl";
+import Image from "next/image";
 
 const Navbar = () => {
   return (
@@ -11,7 +12,7 @@ const Navbar = () => {
         <a href="/">
           {" "}
           
-          {/* <img src={logo} alt="" />{" "} */}
+          <Image src={logo} alt="logo"/>
         </a>
         {/* search bar */}
         <div className="flex items-center gap-2 border-2 p-1 rounded">
