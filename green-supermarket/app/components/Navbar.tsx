@@ -10,7 +10,7 @@ const Navbar = () => {
         {/* image */}
         <a href="/">
           {" "}
-          {/* need to put images */}
+          
           {/* <img src={logo} alt="" />{" "} */}
         </a>
         {/* search bar */}
