@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../public/Logo.png";
+import logo from "../../../public/Logo.png";
 import { FaSearch } from "react-icons/fa";
 import { SlHandbag } from "react-icons/sl";
 import Image from "next/image";
