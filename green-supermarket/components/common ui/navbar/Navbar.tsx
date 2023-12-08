@@ -41,14 +41,13 @@ const Navbar = () => {
           </div>
           {/*  search button */}
           <button
-          type="submit"
-          className=" bg-green-500 text-white px-4 py-1 rounded"
-        >
-          Search
-        </button>
+            type="submit"
+            className=" bg-green-500 text-white px-4 py-1 rounded"
+          >
+            Search
+          </button>
         </div>
 
-       
         {/* Shoping cart */}
         <div className=" mt-2">
           <a href="/" className=" flex items-center gap-2">
