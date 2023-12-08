@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../../public/Logo.png";
 import { CiSearch } from "react-icons/ci";
 import { SlHandbag } from "react-icons/sl";
@@ -13,6 +13,7 @@ const Navbar = () => {
     { title: "About Us", path: "/" },
     { title: "Contact Us", path: "/" },
   ];
+
   return (
     <header>
       <nav className=" flex justify-between mt-3">
@@ -22,22 +23,32 @@ const Navbar = () => {
           <Image src={logo} alt="logo" />
         </a>
         {/* search bar */}
-        <div className="flex items-center gap-2 border-2 p-1 rounded">
-          <form action="">
-            <div className=" flex items-center gap-3 ">
-              <div className=" text-2xl">
-                <CiSearch />
+        <div className=" inline-flex">
+          <div className="flex items-center gap-2 border-2 p-1 rounded">
+            <form action="">
+              <div className=" flex items-center gap-3 ">
+                <div className=" text-2xl">
+                  <CiSearch />
+                </div>
+                <input
+                  type="text"
+                  name="search"
+                  id="srch"
+                  placeholder="Search"
+                />
               </div>
-              <input type="text" name="search" id="srch" placeholder="Search" />
-              <button
-                type="submit"
-                className=" bg-green-500 text-white px-4 py-1 rounded"
-              >
-                Search
-              </button>
-            </div>
-          </form>
+            </form>
+          </div>
+          {/*  search button */}
+          <button
+          type="submit"
+          className=" bg-green-500 text-white px-4 py-1 rounded"
+        >
+          Search
+        </button>
         </div>
+
+       
         {/* Shoping cart */}
         <div className=" mt-2">
           <a href="/" className=" flex items-center gap-2">
@@ -47,7 +58,7 @@ const Navbar = () => {
       </nav>
       <hr className=" my-2" />
       {/* category */}
-      <div className=" py-4 bg-green-900 justify-between items-center inline-flex w-full">
+      <div className=" py-4 bg-green-900 justify-between items-center inline-flex w-full lg:flex">
         <div className="justify-start items-center gap-8 flex">
           <ul className=" justify-start items-center gap-5 flex  text-neutral-400">
             {navItems.map(({ title, path }) => (
