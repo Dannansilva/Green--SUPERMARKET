@@ -16,7 +16,19 @@ const Navbar = () => {
 
   return (
     <header>
-      <nav className=" flex justify-between mt-3">
+      <div className=" flex gap-1 justify-end items-center mt-1">
+        <div className="text-stone-500  text-sm font-normal font-['Poppins'] leading-none">
+          Sign In
+        </div>
+        <div className="text-stone-500 text-sm font-normal font-['Poppins'] leading-none">
+          /
+        </div>
+        <div className="text-stone-500 text-sm font-normal font-['Poppins'] leading-none">
+          Sign Up
+        </div>
+      </div>
+      <hr className=" my-2 " />
+      <nav className=" flex justify-between mt-2">
         {/* image */}
         <a href="/">
           {" "}
@@ -55,7 +67,7 @@ const Navbar = () => {
           </a>
         </div>
       </nav>
-      <hr className=" my-2" />
+      <hr className=" my-2 " />
       {/* category */}
       <div className=" py-4 bg-green-900 justify-between items-center inline-flex w-full lg:flex">
         <div className="justify-start items-center gap-8 flex">
