@@ -1,9 +1,16 @@
-import React from 'react'
+import React from 'react';
+import FirstPart from "../../../components/about us/firstpart";
+import Secondpart from '@/components/about us/secondpart';
+import ThirdPart from '@/components/about us/thirdpart';
 
-const aboutus = () => {
+const Page = () => {
   return (
-    <div>aboutus</div>
-  )
+    <div>
+      <FirstPart />
+      <Secondpart />
+      <ThirdPart/> 
+    </div>
+  );
 }
 
-export default aboutus
+export default Page;
