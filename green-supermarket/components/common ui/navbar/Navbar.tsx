@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../../public/Logo.png";
+import logo from "../../../public/assets/Logo.png";
 import { CiSearch } from "react-icons/ci";
 import { SlHandbag } from "react-icons/sl";
 import Image from "next/image";
