@@ -31,11 +31,7 @@ const Banner = () => {
         </div>
         {/* button */}
         <div
-          className="px-10 py-4 bg-white rounded-[53px] justify-center items-center gap-4 inline-flex hover:bg-green-600 text-green-600 hover:text-white text-base
-font-semibold
-font-['Poppins']
-leading-tight"
-        >
+          className="px-10 py-4 bg-white rounded-[53px] justify-center items-center gap-4 inline-flex hover:bg-green-600 text-green-600 hover:text-white text-lg font-semibold font-['Poppins'] leading-tight">
           <button>Shop now</button>
           <FaArrowRight />
         </div>
