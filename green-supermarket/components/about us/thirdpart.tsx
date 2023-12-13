@@ -9,11 +9,11 @@ const ThirdPart = () => {
     <div className="lg:flex lg:justify-between">
       {/* Left side - Text */}
       <div className="lg:w-1/2">
-        <div className="text-zinc-900 text-2xl md:text-5xl font-semibold font-['Poppins'] leading-[32px] md:leading-[57.60px] ">
+        <div className="text-zinc-900 text-2xl md:text-5xl font-semibold  leading-[32px] md:leading-[57.60px] ">
           We deliver right to your doorstep!
         </div>
 
-        <p className="w-full md:w-[536px] text-stone-500 text-base font-normal font-['Poppins'] leading-normal">
+        <p className="w-full md:w-[536px] text-stone-500 text-base font-normal  leading-normal">
           Your satisfaction is our priority, and we're here to make every
           mealtime a delightful experience. Shop with us today and discover the
           joy of effortless, doorstep delivery! <br />
