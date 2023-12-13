@@ -10,25 +10,25 @@ import Image from "next/image";
 const SecondPart = () => {
   return (
     <div className="mt-20 my-10 flex items-center">
-      <div className="w-[712px] h-[618px] mr-4">
+      <div className="w-[712px] h-[618px] mr-3">
         <Image src={abtimages2} alt="lady human farmer" />
       </div>
-      <div className="flex-1 pl-5">
+      <div className="flex-1 pl-3">
         <div className="text-green-950 text-[56px] font-semibold font-['Poppins'] leading-[67.20px]">
           A safe and trusted <br /> online shopping <br /> experience
         </div>
         <div className=" mt-2">
           
           {/* Reasons to shop */}
-          <div className="grid grid-flow-col grid-cols-2 grid-rows-3 gap-2">
+          <div className="grid grid-flow-col grid-cols-2 grid-rows-3 gap-1">
             {/* 1 Reason */}
-            <div className=" justify-start items-center gap-2 inline-flex  mt-5">
+            <div className=" justify-start items-center gap-1 inline-flex  mt-5 ">
               <Image src={icon1} alt="icon 1" />
 
               <div className="w-56 text-zinc-900 text-lg font-semibold font-['Poppins'] leading-[27px]">
                 100% organic food
                 <p className="w-56 text-zinc-500 text-sm font-normal font-['Poppins'] leading-[21px]">
-                  100% healthy & fresh food, straight from our farmers.
+                  100% healthy & fresh food, <br />straight from our farmers.
                 </p>
               </div>
             </div>
@@ -55,8 +55,8 @@ const SecondPart = () => {
               </div>
             </div>
             {/* 4 Reason */}
-            <div className=" justify-start items-center gap-2 inline-flex  ">
-              <Image src={icon4} alt="icon 4" />
+            <div className=" justify-start items-center gap-1 inline-flex  pl-5 ">
+              <Image src={icon4} alt="icon 4" className=" gap-4" />
 
               <div className="w-56 text-zinc-900 text-lg font-semibold font-['Poppins'] leading-[27px]">
               100% Secure Payment

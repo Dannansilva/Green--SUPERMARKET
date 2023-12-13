@@ -5,6 +5,7 @@ import { SlHandbag } from "react-icons/sl";
 import Image from "next/image";
 import Link from "next/link";
 import { FiPhoneCall } from "react-icons/fi";
+import Container from "@/components/container/container";
 const Navbar = () => {
   const navItems = [
     { title: "Home", path: "/" },
@@ -16,6 +17,7 @@ const Navbar = () => {
 
   return (
     <header>
+      
       <div className=" flex gap-1 justify-end items-center mt-1">
         <div className="text-stone-500  text-sm font-normal font-['Poppins'] leading-none">
           Sign In
@@ -28,6 +30,7 @@ const Navbar = () => {
         </div>
       </div>
       <hr className=" my-2 " />
+      
       <nav className=" flex justify-between mt-2">
         {/* image */}
         <a href="/">
@@ -67,10 +70,13 @@ const Navbar = () => {
           </a>
         </div>
       </nav>
+      
       <hr className=" my-2 " />
       {/* category */}
+     
       <div className=" py-4 bg-green-900 justify-between items-center inline-flex w-full lg:flex">
-        <div className="justify-start items-center gap-8 flex">
+      {/* padding */}
+        <div className="justify-start items-center gap-8 flex mx-5">
           <ul className=" justify-start items-center gap-5 flex  text-neutral-400">
             {navItems.map(({ title, path }) => (
               <li key={title} className=" hover:text-white">
@@ -80,13 +86,15 @@ const Navbar = () => {
           </ul>
         </div>
         {/* phone icon and number */}
-        <div className=" justify-between items-center gap-2 inline-flex">
-          <div className=" relative text-white justify-between">
+        <div className=" justify-between items-center gap-2 inline-flex me-5">
+          <div className=" relative text-white justify-between ">
             <FiPhoneCall />
           </div>
-          <div className=" text-white justify-start"> (94) 76 889 654</div>
+          <div className=" text-white justify-start "> (94) 76 889 654</div>
         </div>
+        
       </div>
+      
     </header>
   );
 };
