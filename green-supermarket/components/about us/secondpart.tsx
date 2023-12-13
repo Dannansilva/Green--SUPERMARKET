@@ -10,11 +10,11 @@ import Image from "next/image";
 const SecondPart = () => {
   return (
     <div className="mt-20 my-10 flex items-center">
-      <div className="w-[712px] h-[618px] mr-3">
-        <Image src={abtimages2} alt="lady human farmer" />
+      <div className="w-[712px] h-[618px] mr-3 md:w-max ">
+        <Image src={abtimages2} alt="lady human farmer " />
       </div>
       <div className="flex-1 pl-3">
-        <div className="text-green-950 text-[56px] font-semibold font-['Poppins'] leading-[67.20px]">
+        <div className="text-green-950 text-[56px] font-semibold font-['Poppins'] leading-[67.20px] ">
           A safe and trusted <br /> online shopping <br /> experience
         </div>
         <div className=" mt-2">

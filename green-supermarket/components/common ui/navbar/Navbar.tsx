@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <header>
       
-      <div className=" flex gap-1 justify-end items-center mt-1">
+      <div className=" flex gap-1 justify-end items-center mt-1 ">
         <div className="text-stone-500  text-sm font-normal font-['Poppins'] leading-none">
           Sign In
         </div>
@@ -74,7 +74,7 @@ const Navbar = () => {
       <hr className=" my-2 " />
       {/* category */}
      
-      <div className=" py-4 bg-green-900 justify-between items-center inline-flex w-full lg:flex">
+      <div className=" py-4 bg-green-900 justify-between items-center inline-flex w-full lg:flex sm:w-full">
       {/* padding */}
         <div className="justify-start items-center gap-8 flex mx-5">
           <ul className=" justify-start items-center gap-5 flex  text-neutral-400">
