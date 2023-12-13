@@ -64,17 +64,17 @@ const Navbar = () => {
             <hr className=" hidden md:block lg:block xl:block" />
 
             {/* navbar second row */}
-            <div className="h-[93px] flex flex-row items-center w-full justify-between md:justify-between lg:justify-between xl:justify-between sm:-mt-6 sm:ml-2">
+            <div className="h-[110px] flex flex-row items-center w-full justify-between md:justify-between lg:justify-between xl:justify-between  sm:-mt-6 sm:ml-2 pt-4 py-0">
               {/* logo */}
 
-              <div className="flex items-center md:h-6">
+              <div className="flex items-center md:h-6 lg:h-full xl:h-full">
                 <Link href="/">
                   <Image
                     src={logo}
                     alt="Logo"
                     height={38}
                     width={137}
-                    className="img-fluid md:h-full sm:w-24"
+                    className="img-fluid md:h-full "
                   />
                 </Link>
               </div>
@@ -173,7 +173,7 @@ const Navbar = () => {
             </div>
 
             {/* md, lg ,xl menu */}
-            <div className="bg-DarkGreen h-[60px] hidden  md:flex lg:flex xl:flex lg:flex-row xl:flex-row justify-between items-center md:h-12 lg:h-[60px] xl:h-[60px] md:-mt-2 ">
+            <div className="bg-DarkGreen h-[60px] hidden  md:flex lg:flex xl:flex lg:flex-row xl:flex-row justify-between items-center md:h-12 lg:h-[55px] xl:h-[55px] md:-mt-2 ">
               <div className="h-full flex flex-row  px-5 md:text-sm lg:text-sm xl:text-md">
                 <ul className="flex items-center md:gap-[40px] lg:gap-[60px] xl:gap-[60px] text-Lightgray2 ">
                   {navItems.map(({ title, path }) => (
