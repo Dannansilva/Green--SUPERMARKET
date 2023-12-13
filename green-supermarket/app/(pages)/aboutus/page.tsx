@@ -9,7 +9,7 @@ const Page = () => {
     <div>
       <Container>
       <FirstPart />
-      {/* <Secondpart /> */}
+      <Secondpart />
       <ThirdPart/> 
       </Container>
     </div>

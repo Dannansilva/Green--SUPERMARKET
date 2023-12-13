@@ -9,61 +9,70 @@ import Image from "next/image";
 
 const SecondPart = () => {
   return (
-    <div className="mt-20 my-10 flex items-center">
-      <div className="w-[712px] h-[618px] mr-3 md:w-max ">
-        <Image src={abtimages2} alt="lady human farmer " />
+    <div className="lg:flex">
+      {/* Image on the left for large screens */}
+      <div className="lg:w-1/2">
+        <Image src={abtimages2} alt="farmer hooman" className="w-full h-full" />
       </div>
-      <div className="flex-1 pl-3">
-        <div className="text-green-950 text-[56px] font-semibold font-['Poppins'] leading-[67.20px] ">
-          A safe and trusted <br /> online shopping <br /> experience
+
+      {/* Content on the right for large screens */}
+      <div className="lg:w-1/2 p-4">
+        {/* heading */}
+        <div className="text-green-950 text-[36px] font-semibold font-['Poppins'] leading-[47.20px]">
+          A safe and trusted online shopping experience
         </div>
-        <div className=" mt-2">
-          
-          {/* Reasons to shop */}
-          <div className="grid grid-flow-col grid-cols-2 grid-rows-3 gap-1">
-            {/* 1 Reason */}
-            <div className=" justify-start items-center gap-1 inline-flex  mt-5 ">
-              <Image src={icon1} alt="icon 1" />
 
-              <div className="w-56 text-zinc-900 text-lg font-semibold font-['Poppins'] leading-[27px]">
+        {/* Reasons to shop */}
+        <div className="grid grid-cols-1 lg:grid-cols-2  lg:grid-rows-3   gap-4 mt-4 justify-center">
+          {/* first reason */}
+          <div className="inline-flex">
+            <Image src={icon1} alt="icon1" className="w-9 h-9" />
+            <div className="flex-col justify-center items-start gap-2">
+              <p className="text-zinc-900 text-lg font-medium font-['Poppins'] leading-[27px]">
                 100% organic food
-                <p className="w-56 text-zinc-500 text-sm font-normal font-['Poppins'] leading-[21px]">
-                  100% healthy & fresh food, <br />straight from our farmers.
-                </p>
-              </div>
+              </p>
+              <p className="text-zinc-500 text-sm font-normal font-['Poppins'] leading-[21px]">
+                100% healthy & fresh food, straight from our farmers.
+              </p>
             </div>
-            {/* 2 Reason */}
-            <div className=" justify-start items-center gap-2 inline-flex  mt-5">
-              <Image src={icon2} alt="icon 2" />
+          </div>
 
-              <div className="w-56 text-zinc-900 text-lg font-semibold font-['Poppins'] leading-[27px]">
-              Customer Feedback
-                <p className="w-56 text-zinc-500 text-sm font-normal font-['Poppins'] leading-[21px]">
+          {/* second reason */}
+          <div className="inline-flex">
+            <Image src={icon2} alt="icon1" className="w-9 h-9" />
+            <div className="flex-col justify-center items-start gap-2">
+              <p className="text-zinc-900 text-lg font-medium font-['Poppins'] leading-[27px]">
+                Customer Feedback
+              </p>
+              <p className="text-zinc-500 text-sm font-normal font-['Poppins'] leading-[21px]">
                 Our happy customer
-                </p>
-              </div>
+              </p>
             </div>
-            {/* 3 Reason */}
-            <div className=" justify-start items-center gap-2 inline-flex mt-5 ">
-              <Image src={icon3} alt="icon 3" />
+          </div>
 
-              <div className="w-56 text-zinc-900 text-lg font-semibold font-['Poppins'] leading-[27px]">
-              Great Support 24/7
-                <p className="w-56 text-zinc-500 text-sm font-normal font-['Poppins'] leading-[21px]">
+          {/* third reason */}
+          <div className="inline-flex">
+            <Image src={icon3} alt="icon1" className="w-9 h-9" />
+            <div className="flex-col justify-center items-start gap-2">
+              <p className="text-zinc-900 text-lg font-medium font-['Poppins'] leading-[27px]">
+                Great Support 24/7
+              </p>
+              <p className="text-zinc-500 text-sm font-normal font-['Poppins'] leading-[21px]">
                 Instant help and support
-                </p>
-              </div>
+              </p>
             </div>
-            {/* 4 Reason */}
-            <div className=" justify-start items-center gap-1 inline-flex  pl-5 ">
-              <Image src={icon4} alt="icon 4" className=" gap-4" />
+          </div>
 
-              <div className="w-56 text-zinc-900 text-lg font-semibold font-['Poppins'] leading-[27px]">
-              100% Secure Payment
-                <p className="w-56 text-zinc-500 text-sm font-normal font-['Poppins'] leading-[21px]">
-                  Safe payment procedures
-                </p>
-              </div>
+          {/* fourth reason */}
+          <div className="inline-flex">
+            <Image src={icon4} alt="icon1" className="w-9 h-9" />
+            <div className="flex-col justify-center items-start gap-2">
+              <p className="text-zinc-900 text-lg font-medium font-['Poppins'] leading-[27px]">
+                100% Secure Payment
+              </p>
+              <p className="text-zinc-500 text-sm font-normal font-['Poppins'] leading-[21px]">
+                Safe payment procedures
+              </p>
             </div>
           </div>
         </div>

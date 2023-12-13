@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const FirstPart = () => {
   return (
-    <div className="mt-5 my-20 flex flex-col md:flex-row items-center">
+    <div className="mt-8 my-5 flex flex-col md:flex-row items-center">
       <div className="md:flex-1 md:pl-2">
         <div className="text-green-950 text-[36px] md:text-[48px] lg:text-[56px] font-semibold font-['Poppins'] leading-[43.20px] md:leading-[54px] lg:leading-[67.20px]">
           100% organic <br /> produce
