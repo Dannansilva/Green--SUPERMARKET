@@ -11,7 +11,10 @@ import { IoSearch } from "react-icons/io5";
 import { PiHandbagFill } from "react-icons/pi";
 import { FaUser } from "react-icons/fa6";
 import { RiMenu3Fill } from "react-icons/ri";
+<<<<<<< HEAD
 import { GrLocation } from "react-icons/gr";
+=======
+>>>>>>> 90214695750fa513e4777a99845c5529d161b6ec
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,10 +48,17 @@ const Navbar = () => {
               {/* location */}
               <div className="hidden sm:hidden items-center md:flex lg:flex xl:flex md:flex-row lg:flex-row xl:flex-row">
                 <Image
+<<<<<<< HEAD
                   src={location}
                   alt="reach us"
                   height={18}
                   width={15}
+=======
+                  src="/assets/mappin.png"
+                  width={15}
+                  height={18}
+                  alt="Picture of the author"
+>>>>>>> 90214695750fa513e4777a99845c5529d161b6ec
                   className=" mr-1"
                 />
                 <p className=" sm:text-xs">
@@ -104,7 +114,11 @@ const Navbar = () => {
                 {/* md search bar */}
                 <div className="  flex-row hidden sm:hidden lg:flex xl:flex md:flex ">
                   <form
+<<<<<<< HEAD
                     action="input"
+=======
+                    action="submit"
+>>>>>>> 90214695750fa513e4777a99845c5529d161b6ec
                     className={`  first-letter:relative mx-auto w-max items-center  ${
                       isClicked ? "centered" : ""
                     }`}
@@ -116,7 +130,11 @@ const Navbar = () => {
                         onClick={handleClick}
                       />
                       <div className="absolute inset-y-0 left-0 flex items-center pl-3">
+<<<<<<< HEAD
                         <IoSearch size={20} className="w-full ml-0.5 mt-0.5" />
+=======
+                        <IoSearch size={20} className="w-full ml-1" />
+>>>>>>> 90214695750fa513e4777a99845c5529d161b6ec
                       </div>
                     </div>
                   </form>
@@ -176,8 +194,13 @@ const Navbar = () => {
 
             {/* md, lg ,xl menu */}
             <div className="bg-DarkGreen h-[60px] hidden  md:flex lg:flex xl:flex lg:flex-row xl:flex-row justify-between items-center md:h-12 lg:h-[55px] xl:h-[55px] md:-mt-2 ">
+<<<<<<< HEAD
               <div className="h-full flex flex-row  px-5 md:text-xs lg:text-sm xl:text-md">
                 <ul className="flex items-center md:gap-[20px] lg:gap-[60px] xl:gap-[60px] text-Lightgray2 ">
+=======
+              <div className="h-full flex flex-row  px-5 md:text-sm lg:text-sm xl:text-md">
+                <ul className="flex items-center md:gap-[40px] lg:gap-[60px] xl:gap-[60px] text-Lightgray2 ">
+>>>>>>> 90214695750fa513e4777a99845c5529d161b6ec
                   {navItems.map(({ title, path }) => (
                     <li
                       key={title}
@@ -204,16 +227,29 @@ const Navbar = () => {
                   {navItems.map(({ title, path }) => (
                     <li
                       key={title}
+<<<<<<< HEAD
                       className="hover:text-white duration-300 ease-in-out transform cursor-pointer hover:text-lg hover:scale-105"
+=======
+                      className="hover:text-white duration-500 ease-in-out transform cursor-pointer hover:scale-105 hover:font-semibold hover:text-lg"
+>>>>>>> 90214695750fa513e4777a99845c5529d161b6ec
                     >
                       <Link href={path}>{title}</Link>
                     </li>
                   ))}
                 </ul>
               </div>
+<<<<<<< HEAD
               <div className="flex felx-row justify-between items-center px-2 text-white font-light text-xs md:text-sm lg:text-md xl:text-sm ">
                 <FiPhoneCall size={16} className="text-white mr-2" />
                 <p>+94 762630010</p>
+=======
+
+              <div className="">
+                <div className=" flex felx-row justify-between items-center px-2 text-white font-light md:text-xs">
+                  <FiPhoneCall size={14} className="text-white mr-2" />
+                  <p>+94 762630010</p>
+                </div>
+>>>>>>> 90214695750fa513e4777a99845c5529d161b6ec
               </div>
             </div>
 
