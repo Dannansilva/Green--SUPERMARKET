@@ -179,7 +179,7 @@ const Navbar = () => {
           </div>
           <div className="bg-DarkGreen h-[60px] hidden  md:flex lg:flex xl:flex lg:flex-row xl:flex-row justify-between items-center md:h-12 lg:h-[55px] xl:h-[55px] md:-mt-2  ">
               <div className="h-full flex flex-row  px-5 md:text-xs lg:text-sm xl:text-md">
-                <ul className="flex items-center md:gap-[30px] lg:gap-[60px] xl:gap-[60px] text-Lightgray2 md:mx-16 lg:mx-24 xl:mx-36">
+                <ul className="flex items-center md:gap-[30px] lg:gap-[40px] xl:gap-[50px] text-Lightgray2 md:mx-16 lg:mx-24 xl:mx-36">
                   {navItems.map(({ title, path }) => (
                     <li
                       key={title}
