@@ -15,10 +15,12 @@ const Container: React.FC<ContainerProps> = ({
             relative
             max-w-[1400px]
             mx-auto
-            xl:px-18
-            md:px-8
+            xl:mx-20
+            md:mx-16
             sm:px-2
             px-5
+            lg:mx-24
+            sm:mx-2
         ">
             {children}
         </div>
