@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const SecondPart = () => {
   return (
-    <div className="lg:flex">
+    <div className="  lg:flex ">
       {/* Image on the left for large screens */}
       <div className="lg:w-1/2">
         <Image src={abtimages2} alt="farmer hooman" className="w-full h-full" />

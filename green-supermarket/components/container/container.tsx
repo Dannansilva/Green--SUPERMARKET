@@ -11,7 +11,7 @@ const Container: React.FC<ContainerProps> = ({ children }) => {
     <div
       className="
             relative
-            max-w-[1400px]
+            
             mx-auto
             xl:mr-36
             xl:ml-36
