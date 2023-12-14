@@ -6,7 +6,7 @@ const FirstPart = () => {
   return (
     <div className="mt-8 my-1 flex flex-col md:flex-row items-center">
       <div className="md:flex-1 md:pl-2">
-        <div className="text-green-950 text-[36px] md:text-[48px] lg:text-[56px] font-semibold  leading-[43.20px] md:leading-[54px] lg:leading-[67.20px]">
+        <div className="text-green-950 text-[36px] md:text-[35px] lg:text-[56px] font-semibold  leading-[43.20px] md:leading-[54px] lg:leading-[67.20px]">
           100% organic <br /> produce
         </div>
         <div className="w-full md:w-[75%] lg:w-[590px] text-stone-500 text-base md:text-lg font-normal leading-[24px] md:leading-[27px] mt-4">
