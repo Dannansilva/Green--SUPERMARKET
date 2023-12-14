@@ -13,8 +13,8 @@ const Container: React.FC<ContainerProps> = ({ children }) => {
             relative
             max-w-[1400px]
             mx-auto
-            xl:px-20
-           
+            xl:mr-36
+            xl:ml-36
             sm:mx-2
             px-5
             md:mx-16
