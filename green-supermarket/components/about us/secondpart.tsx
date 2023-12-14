@@ -23,7 +23,7 @@ const SecondPart = () => {
         </div>
 
         {/* Reasons to shop */}
-        <div className="grid grid-cols-1 lg:grid-cols-2  lg:grid-rows-3   gap-4 mt-4 justify-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2  lg:grid-rows-3  mt-8 gap-4 lg:mt-28 justify-center">
           {/* first reason */}
           <div className="inline-flex">
             <Image src={icon1} alt="icon1" className="w-9 h-9" />
