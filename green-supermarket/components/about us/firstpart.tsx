@@ -18,7 +18,7 @@ const FirstPart = () => {
           </p>
         </div>
       </div>
-      <div className="w-full md:w-[50%] h-[300px] md:h-[450px] lg:h-[618px] ml-4 mt-4 md:mt-0">
+      <div className="w-full md:w-[50%] h-[300px] md:h-[450px] lg:h-[618px] ml-1 mt-4 md:mt-0">
         <Image src={abtimages} alt="farmer hooman" layout="responsive" width={712} height={618} />
       </div>
     </div>
