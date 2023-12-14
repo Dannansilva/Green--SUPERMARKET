@@ -173,7 +173,11 @@ const Navbar = () => {
             </div>
 
             {/* md, lg ,xl menu */}
-            <div className="bg-DarkGreen h-[60px] hidden  md:flex lg:flex xl:flex lg:flex-row xl:flex-row justify-between items-center md:h-12 lg:h-[55px] xl:h-[55px] md:-mt-2 ">
+            
+
+            {/* search bar for sm */}
+          </div>
+          <div className="bg-DarkGreen h-[60px] hidden  md:flex lg:flex xl:flex lg:flex-row xl:flex-row justify-between items-center md:h-12 lg:h-[55px] xl:h-[55px] md:-mt-2 mx-0 ">
               <div className="h-full flex flex-row  px-5 md:text-xs lg:text-sm xl:text-md">
                 <ul className="flex items-center md:gap-[20px] lg:gap-[60px] xl:gap-[60px] text-Lightgray2 ">
                   {navItems.map(({ title, path }) => (
@@ -215,8 +219,6 @@ const Navbar = () => {
               </div>
             </div>
 
-            {/* search bar for sm */}
-          </div>
         </nav>
       </>
     </header>
