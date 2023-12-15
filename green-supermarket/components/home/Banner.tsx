@@ -36,18 +36,18 @@ const Banner = () => {
   return (
     <>
 
-      <div className="mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36 mb-10 mt-10 ">
+      <div className="mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36 py-2 md:mt-10 sm:mt-6 -mt-4    ">
 
         {/* Banner 1st part */}
         <div
-          className="bg-center bg-no-repeat bg-cover max-h-[600px] rounded-lg sm:-mt-10 md:-mt-0 sm:max-h-[400px] md:max-h-[600px]"
+          className="bg-center bg-no-repeat bg-cover max-h-[400px] rounded-lg  sm:-mt-10 md:-mt-0 sm:max-h-[400px] md:max-h-[600px] inset-0   "
           style={{
             backgroundImage:
               "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0)), url('/assets/HomePage/banner/Banner.jpg')",
             height: "600px",
           }}
         >
-          <div className="flex flex-col pt-[155px] md:pt-[155px] pl-[10px] md:pl-[50px] lg:pl-[105px] justify-between sm:pt-[80px] ">
+          <div className="flex flex-col pt-[80px] md:pt-[155px] pl-[10px] md:pl-[50px] lg:pl-[105px] justify-between sm:pt-[80px] ">
             <div className="pb-[28px] ">
               <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-semibold">
                 Fresh & Healthy
@@ -87,8 +87,8 @@ const Banner = () => {
 
         {/* banner 2nd part */}
 
-        <div className="flex flex-col md:shadow-lg md:rounded-lg md:mt-4 sm:pt-1">
-          <div className="flex flex-row md:flex-row md:justify-between md:mx-[14px]">
+        <div className=" flex flex-col md:shadow-lg md:rounded-lg md:mt-4 sm:pt-1">
+          <div className="flex flex-row md:flex-row md:justify-between md:mx-[14px] ">
             {services.map(({ id, image, Service, Sinfo }) => (
               <div
                 key={id}
@@ -100,12 +100,12 @@ const Banner = () => {
                     alt={""}
                     width={40}
                     height={27.27}
-                    className=" max-w-full sm:hidden md:block "
+                    className=" max-w-full hidden sm:hidden md:block "
                   />
 
 
                   {/* sm banner2 */}
-                  <div className=" items-center justify-center md:hidden ">
+                  <div className=" items-center justify-center md:block lg:hidden ">
                   <div className=" md:hidden image-container sm:flex sm:flex-row  items-center sm:justify-center">
                     <Image
                       src={image}
@@ -116,8 +116,8 @@ const Banner = () => {
                     />
                   </div>
 
-                  <div className=" sm:flex md:hidden sm:justify-normal sm:items-center pt-1 pl-2">
-                    <p className="text-xs  font-semibold text-black text-center">
+                  <div className=" sm:flex md:hidden sm:justify-normal sm:items-center pt-1 pl-">
+                    <p className="text-xs  font-semibold text-Gray text-center">
                       {Service}
                     </p>
                   </div>
@@ -131,7 +131,7 @@ const Banner = () => {
                     </p>
                   </div>
                   <div className="">
-                    <p className="text-xs md:text-xs font-normal text-black lg:text-md">
+                    <p className="text-xs md:text-xs font-normal text-Lightgray lg:text-md">
                       {Sinfo}
                     </p>
                   </div>
