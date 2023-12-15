@@ -10,6 +10,12 @@ const Container: React.FC<ContainerProps> = ({ children }) => {
   return (
     <div
       className="
+
+            relative
+            max-w-[1440px]
+            mx-auto
+            xl:mr-36
+            xl:ml-36
             sm:mx-2
             md:mx-16
             lg:mx-24

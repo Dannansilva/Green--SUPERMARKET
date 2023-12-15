@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const ThirdPart = () => {
   return (
-    <div className="lg:flex lg:justify-between">
+    <div className="lg:flex lg:justify-between lg:mb-7">
       {/* Left side - Text */}
       <div className="lg:w-1/2">
         <div className="text-zinc-900 text-2xl md:text-5xl font-semibold  leading-[32px] md:leading-[57.60px] ">
