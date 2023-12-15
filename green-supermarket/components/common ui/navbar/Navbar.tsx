@@ -27,10 +27,10 @@ const Navbar = () => {
 
   const navItems = [
     { title: "Home", path: "/" },
-    { title: "Shop", path: "/" },
+    { title: "Shop", path: "/shop" },
     { title: "Account", path: "/" },
-    { title: "About Us", path: "/" },
-    { title: "Contact Us", path: "/" },
+    { title: "About Us", path: "/aboutus" },
+    { title: "Contact Us", path: "/contact" },
   ];
 
   return (
