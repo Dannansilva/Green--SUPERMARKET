@@ -14,7 +14,7 @@ const ThirdPart = () => {
         </div>
 
         <p className="w-full md:w-[536px] text-stone-500 text-base font-normal  leading-normal">
-          Your satisfaction is our priority, and we're here to make every
+          Your satisfaction is our priority, and we are here to make every
           mealtime a delightful experience. Shop with us today and discover the
           joy of effortless, doorstep delivery! <br />
 
