@@ -4,8 +4,36 @@ import Image from "next/image";
 import Container from "../container/container";
 import Bannar from "../../public/assets/Bannar.png";
 // import HomeButton from "../Button/HomeButton";
+import { CiDeliveryTruck } from "react-icons/ci";
 
 const services = [
+  {
+    id: 1,
+    image: "/assets/HomePage/banner/delivery-truck 1.png",
+    Service: "Island wide Delivery",
+    Sinfo: "Delivery right to your doorstep",
+  },
+  {
+    id: 2,
+    image: "/assets/HomePage/banner/headphones 1.png",
+    Service: "Customer Support 24/7",
+    Sinfo: "Delivery right to your doorstep",
+  },
+  {
+    id: 3,
+    image: "/assets/HomePage/banner/Group-1.png",
+    Service: "100% Secure Payment",
+    Sinfo: "We ensure your money is safe",
+  },
+  {
+    id: 4,
+    image: "/assets/HomePage/banner/Group.png",
+    Service: "Money-Back Guarantee",
+    Sinfo: "30 days money back guarantee",
+  },
+];
+
+const icons = [
   {
     id: 1,
     image: "/assets/HomePage/banner/delivery-truck 1.png",
@@ -35,9 +63,7 @@ const services = [
 const Banner = () => {
   return (
     <>
-
       <div className="mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36 py-2 md:mt-10 sm:mt-6 -mt-4    ">
-
         {/* Banner 1st part */}
         <div
           className="bg-center bg-no-repeat bg-cover max-h-[400px] rounded-lg  sm:-mt-10 md:-mt-0 sm:max-h-[400px] md:max-h-[600px] inset-0   "
@@ -87,16 +113,15 @@ const Banner = () => {
 
         {/* banner 2nd part */}
 
-        <div className=" flex flex-col md:shadow-lg md:rounded-lg md:mt-4 sm:pt-1">
+        <div className=" md:flex md:flex-col md:shadow-lg md:rounded-lg md:mt-4 sm:pt-1 hidden sm:hidden">
           <div className="flex flex-row md:flex-row md:justify-between md:mx-[14px] ">
             {services.map(({ id, image, Service, Sinfo }) => (
               <div
                 key={id}
                 className="flex flex-col md:flex-row py-4 md:py-[40px] px-4 md:justify-center w-full items-center"
               >
-
- {/* sm banner2 */}
- {/* <div className="items-center justify-center md:block lg:hidden">
+                {/* sm banner2 */}
+                {/* <div className="items-center justify-center md:block lg:hidden">
   <div className="hidden md:flex lg:hidden image-container sm:flex sm:flex-row items-center sm:justify-center">
     <Image
       src={image}
@@ -114,21 +139,16 @@ const Banner = () => {
   </div>
 </div> */}
 
-
-                <div className="image-container flex flex-row pr-2 md:pr-5 max-w-full rounded-full sm:hover:shadow-sm md:hover:shadow-none items-center">
+                <div className=" flex flex-row pr-2 md:pr-5 max-w-full rounded-full sm:hover:shadow-sm md:hover:shadow-none items-center">
                   <Image
                     src={image}
                     alt={""}
                     width={40}
                     height={27.27}
-                    className=" max-w-full hidden sm:hidden md:block "
+                    className=" max-w-full hidden sm:hidden md:block object-contain "
                   />
-
-
-                 
-                  
                 </div>
-                <div className="text-container hidden md:flex md:flex-col">
+                <div className=" hidden md:flex md:flex-col">
                   <div className="">
                     <p className="text-base md:text-sm font-semibold text-black pb-2 lg:text-lg">
                       {Service}
@@ -143,6 +163,30 @@ const Banner = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className=" md:hidden flex flex-row justify-between">
+          {icons.map(({ id, image, Service }) => (
+            <div
+              key={id}
+              className="flex flex-col md:flex-row py-4 md:py-[40px] px-4 md:justify-center w-full items-center"
+            >
+              <div className="rounded-full w-[40px] h-[40px] flex items-center justify-center mb-1 shadow-md">
+                <Image
+                  src={image}
+                  alt=""
+                  width={20}
+                  height={27.27}
+                  className="mx-2 object-contain"
+                />
+              </div>
+              <div className="">
+                <p className=" text-[8px] font-medium text-black  text-center ">
+                  {Service}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </>
