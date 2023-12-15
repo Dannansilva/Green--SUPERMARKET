@@ -46,7 +46,7 @@ const Navbar = () => {
                   src="/assets/mappin.png"
                   width={15}
                   height={18}
-                  alt="Picture of the author"
+                  alt="location"
                   className=" mr-1"
                 />
                 <p className=" sm:text-xs">
