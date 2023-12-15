@@ -8,7 +8,7 @@ const footer = () => {
   return (
     <div className="justify-center items-center bg-green-950 flex flex-col pt-12 px-16 max-md:px-5">
       <div className="flex w-full max-w-[1320px] flex-col items-stretch mt-2.5 max-md:max-w-full">
-        <div className="flex items-start justify-between gap-5 pr-20 max-md:max-w-full max-md:flex-wrap max-md:pr-5">
+        <div className="flex items-start justify-between gap-5 pr-20  lg:pr-10 max-md:max-w-full max-md:flex-wrap max-md:pr-5">
           <div className="items-stretch self-stretch flex grow basis-[0%] flex-col">
             <div className="items-center flex justify-between gap-2">
                 {/* logo image */}
@@ -39,7 +39,7 @@ const footer = () => {
           </div>
           {/* pages */}
           <div className="items-stretch self-center flex basis-[0%] flex-col my-auto pb-8 ">
-            <div className="text-white text-base font-medium leading-6 whitespace-nowrap">
+            <div className="text-white text-base font-medium leading-6 whitespace-nowrap ">
               My Account
             </div>
             <div className="text-neutral-400 text-sm leading-5 whitespace-nowrap mt-5">
@@ -52,7 +52,7 @@ const footer = () => {
               Shopping Cart
             </div>
           </div>
-          <div className="items-stretch self-center flex basis-[0%] flex-col my-auto">
+          <div className="items-stretch self-center flex basis-[0%] flex-col my-auto md:ml-8">
             <div className="text-white text-base font-medium leading-6">
               Help
             </div>
@@ -67,7 +67,7 @@ const footer = () => {
               Privacy Policy
             </div>
           </div>
-          <div className="items-stretch self-center flex basis-[0%] flex-col my-auto pb-8">
+          <div className="items-stretch self-center flex basis-[0%] flex-col my-auto pb-8 md:ml-8">
             <div className="text-white text-base font-medium leading-6 whitespace-nowrap">
               Proxy
             </div>
