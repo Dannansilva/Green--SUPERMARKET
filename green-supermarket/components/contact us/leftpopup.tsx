@@ -6,7 +6,7 @@ import Phoneicon from "../../public/assets/Contact us images/PhoneCall.png"
 
 const leftpopup = () => {
   return (
-    <div className=' px-5  md:max-w-[312px] bg-white rounded-lg flex-col items-start justify-items-center grid md:inline-flex shadow-2xl'>
+    <div className=' px-5  md:w-max bg-white rounded-lg flex-col items-start justify-items-center grid md:inline-flex shadow-2xl'>
         {/* Location */}
         <div className=' py-6 rounded-[10px] flex-col justify-start items-center gap-4 inline-flex'>
             <Image src={Mapicon} alt="mapicon" width={45} height={45} />
