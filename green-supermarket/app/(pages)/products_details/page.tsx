@@ -2,7 +2,52 @@
 import React, { useEffect, useState } from "react";
 import { FaArrowAltCircleRight, FaStar } from "react-icons/fa";
 import { useParams } from "next/navigation";
+import Products from "@/public/assets/Products";
+import Image from "next/image";
 
+
+
+// interface Product {
+//   id: string;
+//   title: string;
+//   category: string;
+//   price: number;
+//   image: string;
+// }
+
+
+
+
+
+  
+
+
+
+// const SingleProducts: React.FC = () => {
+//   const { id } = useParams();
+//   const [product, setProduct] = useState<Product | null>(null);
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch("/Products.json");
+  //       const data = await response.json();
+  //       const productData = data.find((p: Product) => p.id === id);
+  //       console.log(productData);
+  //       setProduct(productData || null);
+  //     } catch (error) {
+  //       console.log("ERROR FETCHING DATA:", error);
+  //     }
+  //   };
+  //   fetchData();
+  // }, [id]);
+
+  // if (!product) {
+  //   return <div>Loading...</div>;
+  // }
+
+  // const { title, price, image } = product;
+  const SingleProducts = () => {
 
 interface Product {
   id: string;
@@ -43,13 +88,23 @@ const SingleProducts: React.FC<{ id: string }> = ({ id }) => {
           <a href="/shop" className=" font-bold text-black"> / Shop</a>
         </div>
         <div className=" mt-6 sm:mt-10">
-          <div className=" grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-6">
+          {Products.map(({id , location , name}) => (
+
+          
+          <div key={id} className=" grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-6">
             <div>
-              <img src={image} alt="" className=" w-full" />
+              <Image
+               alt=""
+               src={location}
+               width={10}
+               height={10}
+               className=" w-full"/>
+               
             </div>
+           
             {/* Products details */}
             <div>
-              <h1 className=" title text-left">{title}</h1>
+              <h1 className=" title text-left">{name}</h1>
               <p className=" mt-3 text-gray-600 text-base leading-6  text-justify sm:text-left sm:mt-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Obcaecati provident placeat perspiciatis nam veniam repudiandae.
@@ -63,7 +118,7 @@ const SingleProducts: React.FC<{ id: string }> = ({ id }) => {
                     <FaStar/>
                     <FaStar/>
                 </span>
-              <p className=" text-xl text-red-500 font-semibold sm:text-2xl">${price}</p>
+              <p className=" text-xl text-red-500 font-semibold sm:text-2xl">$</p>
               <div className=" mt-4">
               <div className=" text-left flex flex-col gap-2 w-full">
                 <label className=" font-semibold">Quantity</label>
@@ -77,6 +132,7 @@ const SingleProducts: React.FC<{ id: string }> = ({ id }) => {
             
 
           </div>
+           ))}
         </div>
         <div className=" mt-12 text-black">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ex, ipsum vero, similique eligendi possimus dolorum optio, sint sequi iure dolore odit suscipit excepturi et hic! Dicta facere voluptatibus quis magni sed vitae soluta, doloribus quaerat exercitationem impedit aspernatur! Impedit blanditiis minus sapiente similique repellat libero illo dicta maiores atque.</p>
@@ -87,6 +143,9 @@ const SingleProducts: React.FC<{ id: string }> = ({ id }) => {
       </div>
     </div>
   );
-};
+          };
+
+
+
 
 export default SingleProducts;

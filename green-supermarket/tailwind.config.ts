@@ -16,11 +16,15 @@ const config: Config = {
       colors: {
         Gray: '#666666',
         Gray2:'#4D4D4D',
+
         Green: '#2DC653',
         DarkGreen: '#265932',
         Lightgray: '#999999',
         Lightgray2:'#E6E6E6',
-        Black1:'#1A1A1A',
+        Lightgray3:"#F2F2F2",
+        Black1:"#1A1A1A",
+        LightRed:"#EA4B48",
+        Yellow:"#FFD449",
 
       },
       screens: {
