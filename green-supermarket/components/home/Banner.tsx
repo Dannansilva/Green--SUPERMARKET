@@ -6,6 +6,7 @@ import Bannar from "../../public/assets/Bannar.png";
 // import HomeButton from "../Button/HomeButton";
 import { CiDeliveryTruck } from "react-icons/ci";
 
+
 const services = [
   {
     id: 1,
@@ -63,7 +64,7 @@ const icons = [
 const Banner = () => {
   return (
     <>
-      <div className="mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36 py-2 md:mt-10 sm:mt-6 -mt-4    ">
+      <div className="mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36 pt-2 md:mt-10 sm:mt-6 -mt-4    ">
         {/* Banner 1st part */}
         <div
           className="bg-center bg-no-repeat bg-cover max-h-[400px] rounded-lg  sm:-mt-10 md:-mt-0 sm:max-h-[400px] md:max-h-[600px] inset-0   "
@@ -106,7 +107,7 @@ const Banner = () => {
             </div>
 
             <div className="round-full">
-              <button className="text-Green bg-white rounded-full px-[20px] py-[10px] md:px-[40px] md:py-[16px] font-semibold text-xs md:text-base hover:bg-Green hover:text-white hover:shadow-xl hover:text-md hover:font-bold hover:shadow-green-300">{`Shop now -> `}</button>
+              <button className="text-Green bg-white rounded-full px-[20px] py-[10px] md:px-[40px] md:py-[16px] font-semibold text-xs md:text-base hover:bg-Green hover:text-white hover:shadow-lg hover:text-md hover:font-bold hover:shadow-green-300">{`Shop now -> `}</button>
             </div>
           </div>
         </div>
