@@ -58,7 +58,7 @@ const shop = () => {
                       alt=""
                       src={image}
                       width={100}
-                      height={20}
+                      height={200}
                       className="w-full"
                     />
                   </div>
