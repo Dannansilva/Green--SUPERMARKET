@@ -20,6 +20,8 @@ const config: Config = {
         DarkGreen: '#265932',
         Lightgray: '#999999',
         Lightgray2:'#E6E6E6',
+        Black1:'#1A1A1A',
+
       },
       screens: {
         'sm': '300px', 
@@ -27,6 +29,7 @@ const config: Config = {
         'lg': '1024px',
         'xl': '1280px',
       },
+      
     },
   },
   plugins: [],
