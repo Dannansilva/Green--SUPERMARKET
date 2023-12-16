@@ -1,15 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Products from "@/public/assets/Products";
-import Link from "next/link";
-import Productsdetails from "../../app/(pages)/products_details/page"
 
-// const Category = [
-//   {
-//     id: 1,
-//     location: "/assets/products images/Categoryimages/image 1.png",
-//     name: "Fresh Fruit",
-//   },
+
 
 //   {
 //     id: 2,
@@ -83,37 +76,25 @@ const PopCategories = () => {
           </div>
         </div>
 
-        {/* second row */}
-
-        <div className="  grid grid-cols-3 place-items-center sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 pt-5 gap-2">
-          {Products.map(({ id, location, name }) => (
-            <Link key={id} href={`/products_details`}>
-            <div
-              key={id}
-              className="border py-4 px-2 rounded-md hover:border-DarkGreen hover:shadow-sm hover:shadow-Green w-full "
-            >
-              <div>
-                <Image
-                  alt=""
-                  src={location}
-                  width={150}
-                  height={100}
-                  className="w-full"
-                />
-              </div>
-              <div className="text-center md:pt-[16px] ">
-                <p className="sm:text-[10px] md:text-sm font-semibold text-Black1 pt-2">
-                  {name}
-                </p>
-              </div>
-            </div>
-            </Link> 
-          ))}
-          
-
-        </div>
-        
+      {/* second row */}
+  
+      <div className="  grid grid-cols-3 place-items-center sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 pt-5 gap-2">
+  {Products.map(({ id, location, name }) => (
+    <div key={id} className="border py-4 px-2 rounded-md hover:border-DarkGreen hover:shadow-sm hover:shadow-Green w-full ">
+      <div>
+        <Image alt="" src={location} width={150} height={100} className="w-full" />
       </div>
+      <div className="text-center md:pt-[16px] ">
+        <p className="sm:text-[10px] md:text-sm font-semibold text-Black1 pt-2">{name}</p>
+      </div>
+    </div>
+  ))}
+</div>
+
+      
+
+
+    </div>
     </>
   );
 };

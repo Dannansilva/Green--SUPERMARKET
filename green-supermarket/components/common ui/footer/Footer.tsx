@@ -23,7 +23,7 @@ const footer = () => {
               At Green Supermarket, we are dedicated to providing you with a
               green and sustainable shopping experience.
             </div>
-            <div className="items-center flex gap-4 mt-4 pr-14 max-md:pr-5">
+            <div className="items-center flex gap-4 mt-4 pr-14 max-md:pr-">
                 {/* number */}
               <div className="text-white text-sm font-medium leading-5 whitespace-nowrap justify-center items-stretch shadow-sm bg-green-950 self-stretch grow py-1.5">
                 112 657 876
