@@ -173,57 +173,54 @@ const Navbar = () => {
             </div>
 
             {/* md, lg ,xl menu */}
-            
 
             {/* search bar for sm */}
           </div>
           <div className="bg-DarkGreen h-[60px] hidden  md:flex lg:flex xl:flex lg:flex-row xl:flex-row justify-between items-center md:h-12 lg:h-[55px] xl:h-[55px] md:-mt-2  ">
-              <div className="h-full flex flex-row md:text-xs lg:text-sm xl:text-md inset-0">
-                <ul className="flex items-center md:gap-[30px] lg:gap-[40px] xl:gap-[50px] text-Lightgray2 md:mx-16 lg:mx-24 xl:mx-36">
-                  {navItems.map(({ title, path }) => (
-                    <li
-                      key={title}
-                      className="hover:text-white duration-500 ease-in-out transform cursor-pointer hover:scale-105 hover:font-semibold hover:text-md hover:flex-grow-0  w-max"
-                    >
-                      <Link className="" href={path}>
-                        {title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* sm screen menu */}
-              <div className="sm:hidden md:hidden lg:hidden xl:hidden ">
-                <button onClick={toggleMenu}>
-                  <RiMenu3Fill size={18} className="font-bold text-black" />
-                </button>
-                <ul
-                  className={`bg-white text-Brown px-4 py-2 ${
-                    isMenuOpen ? "" : "hidden"
-                  }`}
-                >
-                  {navItems.map(({ title, path }) => (
-                    <li
-                      key={title}
-                      className="hover:text-white duration-500 ease-in-out transform cursor-pointer hover:scale-105 hover:font-semibold hover:text-lg "
-                    >
-                      <Link href={path}>{title}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* call */}
-              <div className="flex felx-row justify-between items-center px-2 text-white font-light text-xs md:text-sm lg:text-sm xl:text-sm md:mx-16 lg:mx-24 xl:mx-36 w-max">
-                <FiPhoneCall size={16} className="text-white mr-2" />
-                <div className=" w-max">
-                  <p className=" ">+94 762630010</p>
-                </div>
-                
-              </div>
+            <div className="h-full flex flex-row md:text-xs lg:text-sm xl:text-md inset-0">
+              <ul className="flex items-center md:gap-[30px] lg:gap-[40px] xl:gap-[50px] text-Lightgray2 md:mx-16 lg:mx-24 xl:mx-36">
+                {navItems.map(({ title, path }) => (
+                  <li
+                    key={title}
+                    className="hover:text-white duration-500 ease-in-out transform cursor-pointer hover:scale-105 hover:font-semibold hover:text-md hover:flex-grow-0  w-max"
+                  >
+                    <Link className="" href={path}>
+                      {title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
 
+            {/* sm screen menu */}
+            <div className="sm:hidden md:hidden lg:hidden xl:hidden ">
+              <button onClick={toggleMenu}>
+                <RiMenu3Fill size={18} className="font-bold text-black" />
+              </button>
+              <ul
+                className={`bg-white text-Brown px-4 py-2 ${
+                  isMenuOpen ? "" : "hidden"
+                }`}
+              >
+                {navItems.map(({ title, path }) => (
+                  <li
+                    key={title}
+                    className="hover:text-white duration-500 ease-in-out transform cursor-pointer hover:scale-105 hover:font-semibold hover:text-lg "
+                  >
+                    <Link href={path}>{title}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* call */}
+            <div className="flex felx-row justify-between items-center px-2 text-white font-light text-xs md:text-sm lg:text-sm xl:text-sm md:mx-16 lg:mx-24 xl:mx-36 w-max">
+              <FiPhoneCall size={16} className="text-white mr-2" />
+              <div className=" w-max">
+                <p className=" ">+94 762630010</p>
+              </div>
+            </div>
+          </div>
         </nav>
       </>
     </header>

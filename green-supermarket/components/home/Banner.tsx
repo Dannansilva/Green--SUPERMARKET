@@ -6,7 +6,6 @@ import Bannar from "../../public/assets/Bannar.png";
 // import HomeButton from "../Button/HomeButton";
 import { CiDeliveryTruck } from "react-icons/ci";
 
-
 const services = [
   {
     id: 1,
