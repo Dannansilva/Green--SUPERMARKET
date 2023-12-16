@@ -52,6 +52,7 @@ const TopProducts = [
     productname: (
       <p className=" text-Lightgray hover:text-DarkGreen ">Eggplant</p>
     ),
+
     price: "LKR 120.00",
     image2: <SlHandbag className=" " />,
   },
@@ -157,7 +158,6 @@ const TopSales = () => {
               </div>
               <div className="items-center">
                 <button className="items-center rounded-full bg-Lightgray2 text-black  hover:text-white hover:bg-Green p-3">
-                  {" "}
                   {image2}
                 </button>
               </div>
