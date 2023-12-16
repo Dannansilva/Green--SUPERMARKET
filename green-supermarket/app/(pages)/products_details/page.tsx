@@ -6,6 +6,7 @@ import Products from "@/public/assets/Products";
 import Image from "next/image";
 
 
+
 // interface Product {
 //   id: string;
 //   title: string;
@@ -48,6 +49,37 @@ import Image from "next/image";
   // const { title, price, image } = product;
   const SingleProducts = () => {
 
+interface Product {
+  id: string;
+  title: string;
+  category: string;
+  price: number;
+  image: string;
+}
+
+const SingleProducts: React.FC<{ id: string }> = ({ id }) => {
+  const [product, setProduct] = useState<Product | null>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/Products.json");
+        const data = await response.json();
+        const productData = data.find((p: Product) => p.id === id);
+        console.log(productData);
+        setProduct(productData || null);
+      } catch (error) {
+        console.log("ERROR FETCHING DATA:", error);
+      }
+    };
+    fetchData();
+  }, [id]);
+
+  if (!product) {
+    return <div>Loading...</div>;
+  }
+
+  const { title, price, image } = product;
   return (
     <div className=" mt-28 max-w-screen-2xl container mx-auto  xl:px-28 px-4">
       <div className=" p-3 max-w-7xl m-auto">
