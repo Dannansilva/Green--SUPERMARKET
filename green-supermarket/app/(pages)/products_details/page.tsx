@@ -12,8 +12,7 @@ interface Product {
   image: string;
 }
 
-const SingleProducts: React.FC = () => {
-  const { id } = useParams();
+const SingleProducts: React.FC<{ id: string }> = ({ id }) => {
   const [product, setProduct] = useState<Product | null>(null);
 
   useEffect(() => {
