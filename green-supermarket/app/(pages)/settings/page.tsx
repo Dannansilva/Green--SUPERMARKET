@@ -1,15 +1,24 @@
 import React from "react";
-import Navigationpopup from "../../../components/settings page/navigationpopup";
+import dynamic from "next/dynamic";
+import Accountsettings from "../../../components/settings page/accountsettings";
+import Billinginfo from "../../../components/settings page/billinginfo";
 import Container from "../../../components/container/container";
 
-const page = () => {
+const NavigationPopup = dynamic(
+  () => import("../../../components/settings page/navigationpopup"),
+  { ssr: false }
+);
+
+function Page() {
   return (
     <div>
       <Container>
-        <Navigationpopup />
+        <NavigationPopup />
+        <Accountsettings />
+        <Billinginfo /> 
       </Container>
     </div>
   );
-};
+}
 
-export default page;
+export default Page;
