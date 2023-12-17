@@ -6,6 +6,10 @@ import { IoStarSharp } from "react-icons/io5";
 import { FaPlus, FaMinus } from "react-icons/fa6";
 import { useState } from "react";
 import checkicon from "../../public/assets/About us images/Checkicon.png";
+import customer1 from "../../public/assets/customers/Image1.png";
+import customer2 from "../../public/assets/customers/Image2.png";
+import customer3 from "../../public/assets/customers/Image3.png";
+import user from "../../public/assets/customers/User 1.png";
 const productesdetails = () => {
   const [quantity, setQuantity] = useState(1);
 
@@ -136,13 +140,10 @@ const productesdetails = () => {
         </div>
       </div>
       {/* description */}
-      <div className="items-center shadow-sm bg-white self-stretch flex w-full flex-col justify-center px-16 max-md:max-w-full max-md:px-5">
+      <div className="items-center  bg-white self-stretch flex w-full flex-col justify-center px-16 max-md:max-w-full max-md:px-5 mt-5">
         <div className="flex items-stretch gap-0">
-          <div className="text-zinc-900 text-base font-medium leading-6 whitespace-nowrap items-stretch shadow-sm bg-white grow justify-center p-4">
+          <div className="text-zinc-900 text-base font-medium  leading-normal">
             Descriptions
-          </div>
-          <div className="text-zinc-500 text-base font-medium leading-6 whitespace-nowrap items-stretch bg-white grow justify-center p-4">
-            Customer Feedback
           </div>
         </div>
       </div>
@@ -194,6 +195,128 @@ const productesdetails = () => {
           Cras et diam maximus, accumsan sapien et, sollicitudin velit. Nulla
           blandit eros non turpis lobortis iaculis at ut massa.{" "}
         </p>
+        <hr />
+        <div className="items-center  bg-white self-stretch flex w-full flex-col justify-center px-16 max-md:max-w-full max-md:px-5">
+          <div className="flex items-stretch gap-0">
+            <div className="text-zinc-900 text-base font-medium  leading-normal mb-8  lg:mb-16 lg:mt-10">
+              Customer Feedback
+            </div>
+          </div>
+        </div>
+        {/* customer feedback */}
+        <div className="items-stretch flex max-w-[760px] flex-col">
+          <div className="flex w-full items-stretch justify-between gap-5 px-5 max-md:max-w-full max-md:flex-wrap">
+            <div className="flex items-stretch justify-between gap-3">
+              <Image
+                src={customer1}
+                alt="customer1"
+                className="aspect-square object-contain object-center w-[41px] overflow-hidden shrink-0 max-w-full rounded-[50%]"
+              />
+              <div className="items-stretch flex grow basis-[0%] flex-col pr-5 py-px">
+                <div className="text-zinc-900 text-sm font-medium leading-5 whitespace-nowrap">
+                  Kristin Watson
+                </div>
+                <div className=" inline-flex gap-2 text-yellow-500">
+                  <IoStarSharp />
+                  <IoStarSharp />
+                  <IoStarSharp />
+                  <IoStarSharp />
+                  <IoStarSharp />
+                </div>
+              </div>
+            </div>
+            <div className="text-neutral-400 text-right text-sm leading-5 self-center my-auto">
+              2 min ago
+            </div>
+          </div>
+          <div className="text-zinc-500 text-sm leading-5 w-full mt-3 max-md:max-w-full">
+            Duis at ullamcorper nulla, eu dictum eros.
+          </div>
+          <div className="flex w-full items-stretch justify-between gap-5 mt-10 px-5 max-md:max-w-full max-md:flex-wrap">
+            <div className="flex items-stretch justify-between gap-3">
+              <Image
+                src={user}
+                alt="user"
+                className="aspect-square object-contain object-center w-[41px] overflow-hidden shrink-0 max-w-full"
+              />
+              <div className="items-stretch flex grow basis-[0%] flex-col pr-4 py-px">
+                <div className="text-zinc-900 text-sm font-medium leading-5 whitespace-nowrap">
+                  Jane Cooper
+                </div>
+                <div className=" inline-flex gap-2 text-yellow-500">
+                  <IoStarSharp />
+                  <IoStarSharp />
+                  <IoStarSharp />
+                  <IoStarSharp />
+                  <IoStarSharp />
+                </div>
+              </div>
+            </div>
+            <div className="text-neutral-400 text-right text-sm leading-5 self-center my-auto">
+              30 Apr, 2021
+            </div>
+          </div>
+          <div className="text-zinc-500 text-sm leading-5 w-full mt-3 max-md:max-w-full">
+            Keep the soil evenly moist for the healthiest growth. If the sun
+            gets too hot, Chinese cabbage tends to &quot;bolt&quot; or go to
+            seed; in long periods of heat, some kind of shade may be helpful.
+            Watch out for snails, as they will harm the plants.
+          </div>
+          <div className="flex w-full items-stretch justify-between gap-5 mt-10 px-5 max-md:max-w-full max-md:flex-wrap">
+            <div className="flex items-stretch justify-between gap-3">
+              <Image
+                src={customer2}
+                alt="user"
+                className="aspect-square object-contain object-center w-[41px] overflow-hidden shrink-0 max-w-full rounded-[50%]"
+              />
+              <div className="items-stretch flex grow basis-[0%] flex-col py-px">
+                <div className="text-zinc-900 text-sm font-medium leading-5 whitespace-nowrap">
+                  Jacob Jones
+                </div>
+                <div className=" inline-flex gap-2 text-yellow-500">
+                  <IoStarSharp />
+                  <IoStarSharp />
+                  <IoStarSharp />
+                  <IoStarSharp />
+                </div>
+              </div>
+            </div>
+            <div className="text-neutral-400 text-right text-sm leading-5 self-center my-auto">
+              2 min ago
+            </div>
+          </div>
+          <div className="text-zinc-500 text-sm leading-5 w-full mt-3 max-md:max-w-full">
+            {" "}
+            Vivamus eget euismod magna. Nam sed lacinia nibh, et lacinia lacus.
+          </div>
+          <div className="flex w-full items-stretch justify-between gap-5 mt-10 px-5 max-md:max-w-full max-md:flex-wrap">
+            <div className="flex items-stretch justify-between gap-3">
+              <Image
+                src={customer3}
+                alt="customer3"
+                className="aspect-square object-contain object-center w-[41px] overflow-hidden shrink-0 max-w-full rounded-[50%]"
+              />
+              <div className="items-stretch flex grow basis-[0%] flex-col py-px">
+                <div className="text-zinc-900 text-sm font-medium leading-5 whitespace-nowrap">
+                  Ralph Edwards
+                </div>
+                <div className=" inline-flex gap-2 text-yellow-500">
+                  <IoStarSharp />
+                  <IoStarSharp />
+                  <IoStarSharp />
+                </div>
+              </div>
+            </div>
+            <div className="text-neutral-400 text-right text-sm leading-5 self-center my-auto">
+              2 min ago
+            </div>
+          </div>
+          <div className="text-zinc-500 text-sm leading-5 w-full mt-3 max-md:max-w-full lg:mb-8 mb-7">
+            200+ Canton Pak Choi Bok Choy Chinese Cabbage Seeds Heirloom Non-GMO
+            Productive Brassica rapa VAR. chinensis, a.k.a. Canton's Choice, Bok
+            Choi, from USA
+          </div>
+        </div>
       </div>
     </div>
   );
