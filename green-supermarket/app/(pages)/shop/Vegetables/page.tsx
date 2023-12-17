@@ -49,7 +49,7 @@ const Vegetables = () => {
               {Vegetable.map(({ id, name, image, price, image2 }) => (
                 <div
                   key={id}
-                  className=" px-2 hover:border-DarkGreen hover:shadow-sm hover:shadow-Green w-full border rounded-md  "
+                  className=" px-2 hover:border-DarkGreen hover:shadow-sm hover:shadow-Green w-full border rounded-md py-4 "
                 >
                   <div>
                     <Image
