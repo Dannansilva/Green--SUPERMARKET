@@ -8,7 +8,7 @@ import Image from "next/image";
 const TopProducts = [
   {
     id: 1,
-    sale: "Sale 50%",
+    sale: "50%",
     image: "/assets/TopSales/Image.png",
     productname: (
       <p className=" text-Lightgray hover:text-DarkGreen ">Green apple</p>
@@ -18,7 +18,7 @@ const TopProducts = [
   },
   {
     id: 2,
-    sale: "Sale 20%",
+    sale: "20%",
     image: "/assets/TopSales/Image-1.png",
     productname: <p className=" text-Lightgray hover:text-DarkGreen">Orange</p>,
     price: "LKR 120.00",
@@ -26,7 +26,7 @@ const TopProducts = [
   },
   {
     id: 3,
-    sale: "Sale 20%",
+    sale: "20%",
     image: "/assets/TopSales/Image-8.png",
     productname: (
       <p className=" text-Lightgray hover:text-DarkGreen ">Cabbage</p>
@@ -36,7 +36,7 @@ const TopProducts = [
   },
   {
     id: 4,
-    sale: "Sale 20%",
+    sale: "20%",
     image: "/assets/TopSales/Image-5.png",
     productname: (
       <p className=" text-Lightgray hover:text-DarkGreen ">Green Lettuce</p>
@@ -47,7 +47,7 @@ const TopProducts = [
 
   {
     id: 5,
-    sale: "Sale 20%",
+    sale: "20%",
     image: "/assets/TopSales/Image-6.png",
     productname: (
       <p className=" text-Lightgray hover:text-DarkGreen ">Eggplant</p>
@@ -58,7 +58,7 @@ const TopProducts = [
   },
   {
     id: 6,
-    sale: "Sale 20%",
+    sale: "20%",
     image: "/assets/TopSales/Image-3.png",
     productname: (
       <p className=" text-Lightgray hover:text-DarkGreen ">Potatoes</p>
@@ -68,7 +68,7 @@ const TopProducts = [
   },
   {
     id: 7,
-    sale: "Sale 20%",
+    sale: "20%",
     image: "/assets/TopSales/Image-2.png",
     productname: (
       <p className=" text-Lightgray hover:text-DarkGreen ">Sweet potato</p>
@@ -78,7 +78,7 @@ const TopProducts = [
   },
   {
     id: 8,
-    sale: "Sale 20%",
+    sale: "20%",
     image: "/assets/TopSales/Image-4.png",
     productname: (
       <p className=" text-Lightgray hover:text-DarkGreen ">Fresh Cauliflower</p>
@@ -89,7 +89,7 @@ const TopProducts = [
   },
   {
     id: 9,
-    sale: "Sale 20%",
+    sale: "20%",
     image: "/assets/TopSales/Product Image.png",
     productname: (
       <p className=" text-Lightgray hover:text-DarkGreen ">Green Capsicum</p>
@@ -99,7 +99,7 @@ const TopProducts = [
   },
   {
     id: 10,
-    sale: "Sale 20%",
+    sale: "20%",
     image: "/assets/TopSales/Image-7.png",
     productname: (
       <p className=" text-Lightgray hover:text-DarkGreen ">Green Chili</p>
@@ -129,7 +129,7 @@ const TopSales = () => {
         {TopProducts.map(({ id, sale, image, productname, price, image2 }) => (
           <div
             key={id}
-            className="border py-4 px-2 hover:border-DarkGreen hover:shadow-sm hover:shadow-Green w-full "
+            className="border py-4 px-2 hover:border-Green hover:shadow-lg hover:shadow-green-100 w-full hover:rounded-md "
           >
             <div>
               <span className="bg-LightRed text-[14px] font-normal text-white  rounded-md px-2 py-1">
@@ -146,7 +146,7 @@ const TopSales = () => {
               />
             </div>
             <div className="  hover:text-DarkGreen ">
-              <p className="sm:text-[10px] md:text-[14px] font-light text-Gray   ">
+              <p className="sm:text-[10px] md:text-[14px] font-light text-Gray  hover:text-DarkGreen ">
                 {productname}
               </p>
             </div>
