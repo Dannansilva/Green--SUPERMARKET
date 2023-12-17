@@ -91,14 +91,14 @@ const PopCategories = () => {
           <Link key={id} href={`/products_details`}>
             <div
               key={id}
-              className="border py-4 px-2 rounded-md hover:border-Green hover:shadow-lg hover:shadow-green-100 w-full  "
+              className="border py-4 px-2 rounded-md hover:border-Green hover:shadow-lg hover:shadow-green-100 w-full"
             >
               <div>
                 <Image
                   alt=""
                   src={location}
-                  width={150}
-                  height={100}
+                  width={300}
+                  height={300}
                   className="w-full"
                 />
               </div>
