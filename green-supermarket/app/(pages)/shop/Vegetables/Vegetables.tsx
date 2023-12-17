@@ -1,5 +1,5 @@
 import React from 'react'
-import { SlHandbag } from 'react-icons/sl'
+import { SlHandbag } from "react-icons/sl";
 
 const Vegetable = [
 
