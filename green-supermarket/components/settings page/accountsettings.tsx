@@ -1,4 +1,6 @@
+import Image from "next/image";
 import React from "react";
+import unionicon from "../../public/assets/Settings images/imageforhuman.png"
 
 const accountsettings = () => {
   return (
@@ -11,9 +13,9 @@ const accountsettings = () => {
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
             <div className="flex flex-col items-stretch w-[34%] max-md:w-full max-md:ml-0">
               <div className="flex flex-col items-center max-md:mt-10">
-                <img
+                <Image
                   loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/195128baf2de98fedc744ad2bb86a40c3c0d6baeffc81179dc4b6641a56a4aae?apiKey=e23887ebcb4d49baa3ffa634cde245df&"
+                  src={unionicon}
                   className="aspect-[1.14] object-contain object-center w-[184px] fill-black overflow-hidden"
                   alt="User avatar"
                 />
