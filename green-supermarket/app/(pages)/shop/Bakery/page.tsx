@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { LiaHomeSolid } from 'react-icons/lia'
 import Vegetable from "../Vegetables/Vegetables"
+import Bakery from './Bakery'
 const Vegetables = () => {
   return (
     <>
@@ -31,7 +32,7 @@ const Vegetables = () => {
               <p className="  ">{`>`}</p>
             </div>
             <div className="flex">
-              <p className="text-Green hover:text-white">Vegetables</p>
+              <p className="text-Green hover:text-white">Bread & Bakery</p>
             </div>
           </div>
         </div>
@@ -43,10 +44,10 @@ const Vegetables = () => {
           {/* Third part */}
           <div>
             {/* first div */}
-            <div className=" py-4 justify-end"><span className="flex items-center text-center"><p className=" font-bold text-lg pr-2">21</p><p>Results Found</p></span></div>
+            <div className=" py-4 justify-end"><span className="flex items-center text-center"><p className=" font-bold text-lg pr-2">10</p><p>Results Found</p></span></div>
             {/* second div */}
             <div className="  grid grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-2 cursor-pointer ">
-              {Vegetable.map(({ id, name, image, price, image2 }) => (
+              {Bakery.map(({ id, name, image, price, image2 }) => (
                 <div
                   key={id}
                   className=" px-2 hover:border-DarkGreen hover:shadow-sm hover:shadow-Green w-full border rounded-md  "

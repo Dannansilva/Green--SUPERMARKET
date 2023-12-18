@@ -33,7 +33,7 @@ const shop = () => {
               <p className="  ">{`>`}</p>
             </div>
             <div className="flex">
-              <p className="text-Green hover:text-white">Vegetables</p>
+              <p className="text-Green hover:text-white">Fruits</p>
             </div>
           </div>
         </div>
