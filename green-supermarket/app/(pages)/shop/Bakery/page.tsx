@@ -66,7 +66,7 @@ const Vegetables = () => {
                       {name}
                     </p>
                   </div>
-                  <div className="flex flex-row items-center justify-between m-1">
+                  <div className="flex flex-row items-center justify-between m-1 pb-4">
                     <div>
                       <p className="sm:text-[14px] md:text-[16px] font-semibold text-black">
                         {price}

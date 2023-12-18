@@ -51,7 +51,7 @@ const shop = () => {
               {Fruits.map(({ id, name, image, price, image2 }) => (
                 <div
                   key={id}
-                  className="borde px-2 hover:border-DarkGreen hover:shadow-sm hover:shadow-Green w-full py-3 border rounded-md  "
+                  className="borde px-2 hover:border-DarkGreen hover:shadow-sm hover:shadow-Green w-full   border rounded-md  "
                 >
                   <div>
                     <Image
@@ -67,7 +67,7 @@ const shop = () => {
                       {name}
                     </p>
                   </div>
-                  <div className="flex flex-row items-center justify-between m-1">
+                  <div className="flex flex-row items-center justify-between m-1 pb-4">
                     <div>
                       <p className="sm:text-[14px] md:text-[16px] font-semibold text-black">
                         {price}
