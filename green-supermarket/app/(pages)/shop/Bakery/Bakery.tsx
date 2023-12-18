@@ -62,16 +62,23 @@ import { SlHandbag } from "react-icons/sl";
                 image2: <SlHandbag/>
             },
             {
-                id:8,
+                id:9,
                 name:<p className=" text-Lightgray hover:text-DarkGreen ">Chocolate chip Cookie</p>,
                 image:"/assets/ShopPage/Bakery/Chocolate chip cookies.png",
                 price:"LKR 100.00",
                 image2: <SlHandbag/>
             },
             {
-                id:8,
+                id:10,
                 name:<p className=" text-Lightgray hover:text-DarkGreen ">Chocolate Brownies</p>,
                 image:"/assets/ShopPage/Bakery/Brownies.png",
+                price:"LKR 100.00",
+                image2: <SlHandbag/>
+            },
+            {
+                id:11,
+                name:<p className=" text-Lightgray hover:text-DarkGreen ">Biscuits</p>,
+                image:"/assets/ShopPage/Bakery/biscuits.jpg",
                 price:"LKR 100.00",
                 image2: <SlHandbag/>
             },
