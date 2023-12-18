@@ -20,19 +20,19 @@ const Vegetables = () => {
         >
           <div className="flex flex-row items-center mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36  gap-3 flex-1 cursor-pointer">
             <div>
-              <LiaHomeSolid className="text-Lightgray hover:text-white" />
+              <LiaHomeSolid className="text-Lightgray hover:text-white sm:text-xs md:text-base lg:text-md" />
             </div>
             <div className=" text-Lightgray hover:text-white cursor-auto ">
-              <p className="  ">{`>`}</p>
+              <p className=" sm:text-xs md:text-base lg:text-md ">{`>`}</p>
             </div>
             <div className="flex text-Lightgray hover:text-white ">
-              <p className="">Categories</p>
+              <p className="sm:text-xs md:text-base lg:text-md">Categories</p>
             </div>
             <div className=" text-Lightgray hover:text-white  cursor-auto">
-              <p className="  ">{`>`}</p>
+              <p className=" sm:text-xs md:text-base lg:text-md ">{`>`}</p>
             </div>
             <div className="flex">
-              <p className="text-Green hover:text-white">Meat & Fish</p>
+              <p className="text-Green hover:text-white sm:text-xs md:text-base lg:text-md">Meat & Fish</p>
             </div>
           </div>
         </div>
@@ -44,7 +44,7 @@ const Vegetables = () => {
           {/* Third part */}
           <div>
             {/* first div */}
-            <div className=" py-4 justify-end"><span className="flex items-center text-center"><p className=" font-bold text-lg pr-2">10</p><p>Results Found</p></span></div>
+            <div className=" py-4 justify-end"><span className="flex items-center text-center"><p className=" font-bold text-xs pr-2 sm:text-xs md:text-base lg:text-md">10</p><p className='sm:text-xs md:text-base lg:text-md'>Results Found</p></span></div>
             {/* second div */}
             <div className="  grid grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-2 cursor-pointer py-4 ">
               {Meat.map(({ id, name, image, price, image2 }) => (

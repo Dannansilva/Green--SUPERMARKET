@@ -24,7 +24,7 @@ const shop = () => {
               <LiaHomeSolid className="text-Lightgray hover:text-white sm:text-xs md:text-base lg:text-md" />
             </div>
             <div className=" text-Lightgray hover:text-white cursor-auto ">
-              <p className=" sm:text-xs md:text-base lg:text-md ">{`>`}</p>
+              <p className="sm:text-xs md:text-base lg:text-md  ">{`>`}</p>
             </div>
             <div className="flex text-Lightgray hover:text-white ">
               <p className="sm:text-xs md:text-base lg:text-md">Categories</p>
