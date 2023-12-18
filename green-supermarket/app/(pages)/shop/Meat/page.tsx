@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { LiaHomeSolid } from 'react-icons/lia'
 import Vegetable from "../Vegetables/Vegetables"
 import Meat from './Meat'
-const Vegetables = () => {
+const meat = () => {
   return (
     <>
       <div>
@@ -58,7 +58,7 @@ const Vegetables = () => {
                       src={image}
                       width={500}
                       height={500}
-                      className="w-full h-auto px-4 py-10"
+                      className="w-full h-[200px] px-4 py-10"
                     />
                   </div>
                   <div className="  hover:text-DarkGreen m-1 ">
@@ -88,4 +88,4 @@ const Vegetables = () => {
   )
 }
 
-export default Vegetables
+export default meat

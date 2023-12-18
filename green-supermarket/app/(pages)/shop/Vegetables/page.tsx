@@ -57,7 +57,7 @@ const Vegetables = () => {
                       src={image}
                       width={500}
                       height={500}
-                      className="w-full h-auto px-4 py-10"
+                      className="w-full h-[200px] px-4 py-10"
                     />
                   </div>
                   <div className="  hover:text-DarkGreen m-1 ">

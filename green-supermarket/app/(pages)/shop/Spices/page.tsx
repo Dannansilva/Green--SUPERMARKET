@@ -1,11 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
 import { LiaHomeSolid } from 'react-icons/lia'
-import Vegetable from "../Vegetables/Vegetables"
-import Spices from './Spices'
+import spices from './Spices'
 
-
-const spices = () => {
+const Spices = () => {
   return (
     <>
       <div>
@@ -49,7 +47,7 @@ const spices = () => {
             <div className=" py-4 justify-end"><span className="flex items-center text-center"><p className=" font-bold text-xs pr-2 sm:text-xs md:text-base lg:text-md">21</p><p className='sm:text-xs md:text-base lg:text-md'>Results Found</p></span></div>
             {/* second div */}
             <div className="  grid grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-2 cursor-pointer ">
-              {Spices.map(({ id, name, image, price, image2 }) => (
+              {spices.map(({ id, name, image, price, image2 }) => (
                 <div
                   key={id}
                   className=" px-2 hover:border-DarkGreen hover:shadow-sm hover:shadow-Green w-full border rounded-md "
@@ -60,7 +58,7 @@ const spices = () => {
                       src={image}
                       width={500}
                       height={500}
-                      className="w-full h-auto px-4 py-10"
+                      className="w-full h-[200px] px-4 py-10"
                     />
                   </div>
                   <div className="  hover:text-DarkGreen m-1 ">
@@ -90,4 +88,4 @@ const spices = () => {
   )
 }
 
-export default spices
+export default Spices

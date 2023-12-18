@@ -1,7 +1,7 @@
 import React from 'react'
 import { SlHandbag } from "react-icons/sl";
 
-const Spices = [
+const spices = [
 
     
         {
@@ -74,4 +74,4 @@ const Spices = [
         },
         
 ]
-export default Spices
+export default spices
