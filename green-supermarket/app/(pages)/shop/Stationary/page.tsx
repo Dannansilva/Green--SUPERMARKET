@@ -34,7 +34,7 @@ const Stationary = () => {
               <p className=" sm:text-xs md:text-base lg:text-md ">{`>`}</p>
             </div>
             <div className="flex">
-              <p className="text-Green hover:text-white sm:text-xs md:text-base lg:text-md">Spices</p>
+              <p className="text-Green hover:text-white sm:text-xs md:text-base lg:text-md">Stationary</p>
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@ const Stationary = () => {
                       src={image}
                       width={500}
                       height={500}
-                      className="w-full h-auto px-4 py-10"
+                      className="w-full h-[200px] px-4 py-10"
                     />
                   </div>
                   <div className="  hover:text-DarkGreen m-1 ">
