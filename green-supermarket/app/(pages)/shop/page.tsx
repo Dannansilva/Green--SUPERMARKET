@@ -1,10 +1,26 @@
-import { url } from "inspector";
+"use client";
 import React from "react";
-import { LiaHomeSolid } from "react-icons/lia";
-import Fruits from "./Fruits";
 import Image from "next/image";
+import { LiaHomeSolid } from "react-icons/lia";
+import Products from "./Products";
+import { RiArrowDropDownLine } from "react-icons/ri";
+import { useState } from "react";
 
-const shop = () => {
+
+const Product: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const [selectedSort, setSelectedSort] = useState<string>("sort");
+
+  const toggleDown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleSortOption = (Option: string) => {
+    setSelectedSort(Option);
+    setIsOpen(false);
+  };
+
   return (
     <>
       <div>
@@ -33,7 +49,9 @@ const shop = () => {
               <p className=" sm:text-xs md:text-base lg:text-md ">{`>`}</p>
             </div>
             <div className="flex">
-              <p className="text-Green hover:text-white sm:text-xs md:text-base lg:text-md">Fruits</p>
+              <p className="text-Green hover:text-white sm:text-xs md:text-base lg:text-md">
+                Cosmetics & Detergents
+              </p>
             </div>
           </div>
         </div>
@@ -45,21 +63,68 @@ const shop = () => {
           {/* Third part */}
           <div>
             {/* first div */}
-            <div className=" py-4 justify-end"><span className="flex items-center text-center"><p className=" font-bold text-xs pr-2 sm:text-xs md:text-base lg:text-md">17</p><p className="sm:text-xs md:text-base lg:text-md">Results Found</p></span></div>
+            <div className="flex md:flex-row justify-between ">
+              <div className="flex flex-row gap-2 items-center">
+                <div>
+                  <p className="font-normal text-sm">sort by: </p>
+                </div>
+                <div className="relative w-[166px]">
+                  <button
+                    className="w-full border rounded-[4px] h-[40px] py-1 px-2 flex flex-row justify-between items-center"
+                    onClick={toggleDown}
+                  >
+                    <p className="items-start justify-start font-normal text-sm">
+                      {selectedSort}
+                    </p>
+                    <RiArrowDropDownLine className=" font-extralight text-[20px]" />
+                  </button>
+                  {isOpen && (
+                    <div className="absolute top-[40px] left-0 bg-white border rounded shadow flex flex-col w-full ">
+                      <a
+                        className=" hover:bg-Green hover:border hover:border-white hover:text-white "
+                        onClick={() => handleSortOption("Price")}
+                        href="#"
+                      >
+                        Price
+                      </a>
+                      <a
+                        className=" hover:bg-Green hover:border hover:border-white hover:text-white "
+                        onClick={() => handleSortOption("Date")}
+                        href="#"
+                      >
+                        Date
+                      </a>
+                      {/* Add other sorting options as needed */}
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              <div className=" py-4 justify-end">
+                <span className="flex items-center text-center">
+                  <p className=" font-bold text-xs pr-2 sm:text-xs md:text-base lg:text-md">
+                  {}
+                  </p>
+                  <p className="sm:text-xs md:text-base lg:text-md">
+                  
+                  </p>
+                </span>
+              </div>
+            </div>
             {/* second div */}
-            <div className="  grid grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-2 cursor-pointer ">
-              {Fruits.map(({ id, name, image, price, image2 }) => (
+            <div className="  grid grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-2 cursor-pointer py-4 h-full ">
+              {Products.map(({ id, name, image, price, image2 }) => (
                 <div
                   key={id}
-                  className="borde px-2 hover:border-DarkGreen hover:shadow-sm hover:shadow-Green w-full   border rounded-md  "
+                  className=" px-2 hover:border-DarkGreen hover:shadow-sm hover:shadow-Green w-full border rounded-md  "
                 >
                   <div>
                     <Image
                       alt=""
                       src={image}
                       width={500}
-                      height={700}
-                      className="w-full h-[200px] px-4 py-10"
+                      height={500}
+                      className="w-full max-h-[250px] px-4 py-10"
                     />
                   </div>
                   <div className="  hover:text-DarkGreen m-1 ">
@@ -89,4 +154,4 @@ const shop = () => {
   );
 };
 
-export default shop;
+export default Product;
