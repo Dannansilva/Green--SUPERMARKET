@@ -8,8 +8,18 @@ import { useRouter } from "next/router";
 import { useMemo } from "react";
 import Product from "../page";
 import Products from "../Products";
+import { useState } from "react";
+
 
 const ProductCard = ({ params }: any) => {
+
+  /* filter button in sm devices */
+  const [showCategories, setShowCategories] = useState(false);
+
+  const handleFilterClick = () => {
+    setShowCategories(!showCategories);
+  };
+
   const category = Category.find(
     (category) => category.id === parseInt(params.slug)
   );
@@ -17,6 +27,18 @@ const ProductCard = ({ params }: any) => {
   if (!category) {
     return <p>Category not found.</p>;
   }
+
+  
+  
+    const CategoryFilter = [
+      { id: 1, name: 'Fruits' },
+      { id: 2, name: 'Vegetables' },
+      { id: 3, name: 'Bread & Bakery' },
+      { id: 4, name: 'Meat & Fish' },
+      { id: 5, name: 'Spices' },
+      { id: 6, name: 'Stationary' },
+      { id: 7, name: 'Detergents' },
+    ];
 
   const filteredProducts = Products.filter(
     (product) => product.category === category.id
@@ -95,23 +117,26 @@ const ProductCard = ({ params }: any) => {
 
         {/* sm devices filter */}
 
-        <div className=" flex flex-col sm:py-4 md:py-6 lg:py-8 sm:hidden ">
-          <div className=" items-center text-center">
-            <h2 className=" font-medium text-[15px]">All Categories</h2>
-          </div>
-          <div className=" sm:flex px-6 flex flex-col items-center text-center ">
-            {Category.map((category) => (
-              <Link key={category.id} href={`/shop/${category.id}`}>
-                <button
-                  key={category.id}
-                  onClick={() => category.id}
-                  className="mx-2 text-Green hover:text-DarkGreen flex flex-col items-center text-center"
-                >
-                  {category.name}
-                </button>
-              </Link>
-            ))}
-          </div>
+        {/* second part */}
+        <div className=" sm:flex sm:justify-end sm:pr-4 md:pr-8 lg:pr-12 xl:pr-16">
+          <button onClick={handleFilterClick} className="mx-2 text-Green hover:text-DarkGreen">
+        FILTER
+      </button>
+      {showCategories && (
+        <>
+          {Category.map((category) => (
+            <Link key={category.id} href={`/shop/${category.id}`}>
+              <button
+                key={category.id}
+                onClick={() => console.log(category.id)} // Adjust this function as needed
+                className="mx-2 text-Green hover:text-DarkGreen"
+              >
+                {category.name}
+              </button>
+            </Link>
+          ))}
+        </>
+      )}
         </div>
 
         <div className=" flex flex-col ">

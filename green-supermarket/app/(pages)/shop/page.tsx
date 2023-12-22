@@ -25,6 +25,23 @@ const Product: React.FC = () => {
     setIsOpen(false);
   };
 
+
+  /* filter button in sm devices */
+  const [showCategories, setShowCategories] = useState(false);
+
+  const handleFilterClick = () => {
+    setShowCategories(!showCategories);
+  };
+
+  const Category = [
+    { id: 1, name: 'Fruits' },
+    { id: 2, name: 'Vegetables' },
+    { id: 3, name: 'Bread & Bakery' },
+    { id: 4, name: 'Meat & Fish' },
+    { id: 5, name: 'Spices' },
+    { id: 6, name: 'Stationary' },
+    { id: 7, name: 'Detergents' },
+  ];
   return (
     <>
       <div>
@@ -40,9 +57,11 @@ const Product: React.FC = () => {
           }}
         >
           <div className="flex flex-row items-center mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36  gap-3 flex-1 cursor-pointer">
+            <Link href={`/home/`}>
             <div>
               <LiaHomeSolid className="text-Lightgray hover:text-white sm:text-xs md:text-base lg:text-md" />
             </div>
+          </Link>
             <div className=" text-Lightgray hover:text-white cursor-auto ">
               <p className=" sm:text-xs md:text-base lg:text-md ">{`>`}</p>
             </div>
@@ -63,17 +82,24 @@ const Product: React.FC = () => {
         <div className="sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36 flex-col flex py-10">
           {/* second part */}
           <div className=" sm:flex sm:justify-end sm:pr-4 md:pr-8 lg:pr-12 xl:pr-16">
+          <button onClick={handleFilterClick} className="mx-2 text-Green hover:text-DarkGreen">
+        FILTER
+      </button>
+      {showCategories && (
+        <>
           {Category.map((category) => (
             <Link key={category.id} href={`/shop/${category.id}`}>
-            <button
-              key={category.id}
-              onClick={() => (category.id)}
-              className="mx-2 text-Green hover:text-white"
-            >
-              {category.name}
-            </button>
+              <button
+                key={category.id}
+                onClick={() => console.log(category.id)} // Adjust this function as needed
+                className="mx-2 text-Green hover:text-DarkGreen"
+              >
+                {category.name}
+              </button>
             </Link>
           ))}
+        </>
+      )}
         </div>
 
           {/* Third part */}
