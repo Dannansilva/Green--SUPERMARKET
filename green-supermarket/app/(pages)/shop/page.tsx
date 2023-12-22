@@ -5,9 +5,13 @@ import { LiaHomeSolid } from "react-icons/lia";
 import Products from "./Products";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { useState } from "react";
+import Link from "next/link";
+import { Category } from "@/components/home/Categories";
 
 
 const Product: React.FC = () => {
+
+  
   const [isOpen, setIsOpen] = useState(false);
 
   const [selectedSort, setSelectedSort] = useState<string>("sort");
@@ -43,22 +47,34 @@ const Product: React.FC = () => {
               <p className=" sm:text-xs md:text-base lg:text-md ">{`>`}</p>
             </div>
             <div className="flex text-Lightgray hover:text-white ">
-              <p className="sm:text-xs md:text-base lg:text-md">Categories</p>
+              <p className="text-Green hover:text-white sm:text-xs md:text-base lg:text-md">Shop</p>
             </div>
-            <div className=" text-Lightgray hover:text-white  cursor-auto">
+            {/* <div className=" text-Lightgray hover:text-white  cursor-auto">
               <p className=" sm:text-xs md:text-base lg:text-md ">{`>`}</p>
-            </div>
-            <div className="flex">
+            </div> */}
+            {/* <div className="flex">
               <p className="text-Green hover:text-white sm:text-xs md:text-base lg:text-md">
                 Cosmetics & Detergents
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
 
         <div className="sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36 flex-col flex py-10">
           {/* second part */}
-          <div className=""> FILTER</div>
+          <div className=" sm:flex sm:justify-end sm:pr-4 md:pr-8 lg:pr-12 xl:pr-16">
+          {Category.map((category) => (
+            <Link key={category.id} href={`/shop/${category.id}`}>
+            <button
+              key={category.id}
+              onClick={() => (category.id)}
+              className="mx-2 text-Green hover:text-white"
+            >
+              {category.name}
+            </button>
+            </Link>
+          ))}
+        </div>
 
           {/* Third part */}
           <div>
