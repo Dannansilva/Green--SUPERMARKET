@@ -8,10 +8,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Category } from "@/components/home/Categories";
 
-
 const Product: React.FC = () => {
-
-  
   const [isOpen, setIsOpen] = useState(false);
 
   const [selectedSort, setSelectedSort] = useState<string>("sort");
@@ -25,7 +22,6 @@ const Product: React.FC = () => {
     setIsOpen(false);
   };
 
-
   /* filter button in sm devices */
   const [showCategories, setShowCategories] = useState(false);
 
@@ -34,13 +30,13 @@ const Product: React.FC = () => {
   };
 
   const Category = [
-    { id: 1, name: 'Fruits' },
-    { id: 2, name: 'Vegetables' },
-    { id: 3, name: 'Bread & Bakery' },
-    { id: 4, name: 'Meat & Fish' },
-    { id: 5, name: 'Spices' },
-    { id: 6, name: 'Stationary' },
-    { id: 7, name: 'Detergents' },
+    { id: 1, name: "Fruits" },
+    { id: 2, name: "Vegetables" },
+    { id: 3, name: "Bread & Bakery" },
+    { id: 4, name: "Meat & Fish" },
+    { id: 5, name: "Spices" },
+    { id: 6, name: "Stationary" },
+    { id: 7, name: "Detergents" },
   ];
   return (
     <>
@@ -57,16 +53,18 @@ const Product: React.FC = () => {
           }}
         >
           <div className="flex flex-row items-center mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36  gap-3 flex-1 cursor-pointer">
-            <Link href={`/home/`}>
-            <div>
-              <LiaHomeSolid className="text-Lightgray hover:text-white sm:text-xs md:text-base lg:text-md" />
-            </div>
-          </Link>
+           <a href="/home">
+              <div>
+                <LiaHomeSolid className="text-Lightgray hover:text-white sm:text-xs md:text-base lg:text-md" />
+              </div>
+              </a>
             <div className=" text-Lightgray hover:text-white cursor-auto ">
               <p className=" sm:text-xs md:text-base lg:text-md ">{`>`}</p>
             </div>
             <div className="flex text-Lightgray hover:text-white ">
-              <p className="text-Green hover:text-white sm:text-xs md:text-base lg:text-md">Shop</p>
+              <p className="text-Green hover:text-white sm:text-xs md:text-base lg:text-md">
+                Shop
+              </p>
             </div>
             {/* <div className=" text-Lightgray hover:text-white  cursor-auto">
               <p className=" sm:text-xs md:text-base lg:text-md ">{`>`}</p>
@@ -81,31 +79,45 @@ const Product: React.FC = () => {
 
         <div className="sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36 flex-col flex py-10">
           {/* second part */}
+          <div className=" flex flex-row">
+          <div className="flex flex-col">
           <div className=" sm:flex sm:justify-end sm:pr-4 md:pr-8 lg:pr-12 xl:pr-16">
-          <button onClick={handleFilterClick} className="mx-2 text-Green hover:text-DarkGreen">
-        FILTER
-      </button>
-      {showCategories && (
-        <>
-          {Category.map((category) => (
-            <Link key={category.id} href={`/shop/${category.id}`}>
-              <button
-                key={category.id}
-                onClick={() => console.log(category.id)} // Adjust this function as needed
-                className="mx-2 text-Green hover:text-DarkGreen"
-              >
-                {category.name}
-              </button>
-            </Link>
-          ))}
-        </>
-      )}
-        </div>
+            <div className=" flex flex-row ">
+            <button
+              onClick={handleFilterClick}
+              className=" bg-Green text-white rounded-full py-1 px-4 items-center text-center hover:shadow-lg  "
+            >
+              Filter
+            </button>
+            </div>
+            <div className="flex flex-col">
+            {showCategories && (
+              <>
+                {Category.map((category) => (
+                  <Link key={category.id} href={`/shop/${category.id}`}>
+                  
+                    <div className=" flex flex-col border ">
+                    <button
+                      key={category.id}
+                      onClick={() => console.log(category.id)} // Adjust this function as needed
+                      className="mx-2 text-Green hover:text-DarkGreen items-center text-center"
+                    >
+                      {category.name}
+                    </button>
+                    </div>
+                   
+                  </Link>
+                ))}
+              </>
+            )}
+             </div>
+          </div>
+          </div>
 
           {/* Third part */}
-          <div>
+          <div className="flex flex-col">
             {/* first div */}
-            <div className="flex md:flex-row justify-between ">
+            <div className="flex md:flex-row justify-between">
               <div className="flex flex-row gap-2 items-center">
                 <div>
                   <p className="font-normal text-sm">sort by: </p>
@@ -145,11 +157,9 @@ const Product: React.FC = () => {
               <div className=" py-4 justify-end">
                 <span className="flex items-center text-center">
                   <p className=" font-bold text-xs pr-2 sm:text-xs md:text-base lg:text-md">
-                  {}
+                    {}
                   </p>
-                  <p className="sm:text-xs md:text-base lg:text-md">
-                  
-                  </p>
+                  <p className="sm:text-xs md:text-base lg:text-md"></p>
                 </span>
               </div>
             </div>
@@ -189,6 +199,7 @@ const Product: React.FC = () => {
                 </div>
               ))}
             </div>
+          </div>
           </div>
         </div>
       </div>

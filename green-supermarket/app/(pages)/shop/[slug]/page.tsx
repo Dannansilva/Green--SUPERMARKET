@@ -10,16 +10,26 @@ import Product from "../page";
 import Products from "../Products";
 import { useState } from "react";
 
-
 const ProductCard = ({ params }: any) => {
-
   /* filter button in sm devices */
+  // const [showCategories, setShowCategories] = useState(false);
+
+  // const handleFilterClick = () => {
+  //   setShowCategories(!showCategories);
+  // };
+
+
   const [showCategories, setShowCategories] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState<string>(''); // Explicitly set the type to string
 
   const handleFilterClick = () => {
     setShowCategories(!showCategories);
   };
 
+  const handleCategoryChange = (category: any) => {
+    setSelectedCategory(category.id.toString()); // Convert the id to a string
+    // You can perform additional actions when a category is selected here
+  };
   const category = Category.find(
     (category) => category.id === parseInt(params.slug)
   );
@@ -28,17 +38,21 @@ const ProductCard = ({ params }: any) => {
     return <p>Category not found.</p>;
   }
 
-  
-  
-    const CategoryFilter = [
-      { id: 1, name: 'Fruits' },
-      { id: 2, name: 'Vegetables' },
-      { id: 3, name: 'Bread & Bakery' },
-      { id: 4, name: 'Meat & Fish' },
-      { id: 5, name: 'Spices' },
-      { id: 6, name: 'Stationary' },
-      { id: 7, name: 'Detergents' },
-    ];
+
+
+ 
+
+
+ 
+  const CategoryFilter = [
+    { id: 1, name: "Fruits" },
+    { id: 2, name: "Vegetables" },
+    { id: 3, name: "Bread & Bakery" },
+    { id: 4, name: "Meat & Fish" },
+    { id: 5, name: "Spices" },
+    { id: 6, name: "Stationary" },
+    { id: 7, name: "Detergents" },
+  ];
 
   const filteredProducts = Products.filter(
     (product) => product.category === category.id
@@ -118,26 +132,43 @@ const ProductCard = ({ params }: any) => {
         {/* sm devices filter */}
 
         {/* second part */}
-        <div className=" sm:flex sm:justify-end sm:pr-4 md:pr-8 lg:pr-12 xl:pr-16">
-          <button onClick={handleFilterClick} className="mx-2 text-Green hover:text-DarkGreen">
-        FILTER
-      </button>
-      {showCategories && (
-        <>
-          {Category.map((category) => (
-            <Link key={category.id} href={`/shop/${category.id}`}>
-              <button
-                key={category.id}
-                onClick={() => console.log(category.id)} // Adjust this function as needed
-                className="mx-2 text-Green hover:text-DarkGreen"
-              >
-                {category.name}
-              </button>
-            </Link>
-          ))}
-        </>
-      )}
+        <div className="flex flex-col">
+        <div className="flex flex-col">
+      <div className="sm:flex sm:justify-end sm:pr-4 md:pr-8 lg:pr-12 xl:pr-16">
+        <div className="flex flex-row">
+          <button
+            onClick={handleFilterClick}
+            className="bg-Green text-white rounded-full py-1 px-4 items-center text-center hover:shadow-lg"
+          >
+            Filter
+          </button>
         </div>
+        <div className="flex flex-col mt-2">
+        {showCategories && (
+          <>
+            {Category.map((category) => (
+              <div key={category.id} className="border mb-2">
+                <input
+                  type="radio"
+                  id={String(category.id)} // Convert the id to a string
+                  name="category"
+                  checked={selectedCategory === String(category.id)} // Convert the id to a string
+                  onChange={() => handleCategoryChange(category)}
+                  className="hidden"
+                />
+                <label
+                  htmlFor={String(category.id)} // Convert the id to a string
+                  className="mx-2 text-Green hover:text-DarkGreen cursor-pointer py-2 px-4 block"
+                >
+                  {category.name}
+                </label>
+              </div>
+            ))}
+          </>
+        )}
+      </div>
+      </div>
+    </div>
 
         <div className=" flex flex-col ">
           <div className="sm:flex sm:items-center sm:justify-end sm:py-4 md:py-6 lg:py-8 ">
@@ -163,6 +194,7 @@ const ProductCard = ({ params }: any) => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
