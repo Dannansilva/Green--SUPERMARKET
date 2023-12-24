@@ -53,11 +53,13 @@ const Product: React.FC = () => {
           }}
         >
           <div className="flex flex-row items-center mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36  gap-3 flex-1 cursor-pointer">
-            <a href="/home">
+            
               <div>
+              <a href="/home">
                 <LiaHomeSolid className="text-Lightgray hover:text-white sm:text-xs md:text-base lg:text-md" />
+              </a>
               </div>
-            </a>
+           
             <div className=" text-Lightgray hover:text-white cursor-auto ">
               <p className=" sm:text-xs md:text-base lg:text-md ">{`>`}</p>
             </div>
@@ -155,11 +157,13 @@ const Product: React.FC = () => {
                 </div>
               </div> */}
             {/* <div className=" sm:flex sm:flex-row flex lg"> */}
+
+            
             <div className="flex flex-col">
               {/* number of products */}
               <div className="flex flex-row py-2">
                 {/* sm: filter */}
-                <div className=" flex flex-row md:hidden  ">
+                <div className=" flex flex-row md:hidden ">
                   <div className="items-center justify-center text-center">
                     <button
                       onClick={handleFilterClick}
@@ -172,12 +176,13 @@ const Product: React.FC = () => {
                   </div>
                 
 
-                <div className="flex flex-col md:hidden">
+                <div className=" absolute flex flex-col md:hidden z-10 mt-8 bg-white ">
                   {showCategories && (
                     <>
                       {Category.map((category) => (
                         <Link key={category.id} href={`/shop/${category.id}`}>
-                          <div className=" flex flex-col">
+                          <div className=" flex flex-col hover:font-semibold justify-start text-start px-2 hover:transition hover:duration-500 hover:ease-in-out hover:rounded-md
+                          ">
                             <div className=" flex flex-row items-center text-center">
                               <GoSquareFill className=" text-green-400 w-[10px] h-[10px]" />
                               <button
@@ -223,7 +228,7 @@ const Product: React.FC = () => {
                 </div> */}
 
               {/* second div */}
-              <div className="  grid grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-2 cursor-pointer py-4 h-full ">
+              <div className="  grid grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-2 cursor-pointer py-4 h-full  ">
                 {Products.map(({ id, name, image, price, image2 }) => (
                   <div
                     key={id}
