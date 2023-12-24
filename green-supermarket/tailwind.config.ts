@@ -35,6 +35,7 @@ const config: Config = {
         'xl': '1280px',
       },
       
+      
     },
   },
   plugins: [],

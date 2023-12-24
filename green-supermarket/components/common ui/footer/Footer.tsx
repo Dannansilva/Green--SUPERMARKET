@@ -9,11 +9,11 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className="bg-DarkGreen2 flex flex-col items-center sm:py-5 sm:px-2 md:px-16 lg:px-24 xl:px-36 md:py-10 ">
-      <div className="flex flex-col items-center md:items-stretch w-full sm:pt-2 ">
-        <div className="flex sm:flex-col lg:flex-row justify-between gap-5 lg:pb-[50px] lg:gap-[112px] md:gap-[20px] ">
+      <div className="flex flex-col items-center md:items-stretch w-full sm:pt-2 pt-2 ">
+        <div className="flex flex-col sm:flex-col lg:flex-row justify-between gap-5 lg:pb-[50px] lg:gap-[112px] md:gap-[20px] ">
           {/* Logo */}
           <div className="flex flex-col lg:max-w-[350px] sm:w-full">
-            <div className="flex items-center sm:justify-center md:justify-between ">
+            <div className="flex items-center justify-center sm:justify-center md:justify-between ">
               <Image
                 src={Logoimg}
                 alt="logo"
@@ -23,7 +23,7 @@ const Footer = () => {
             {/* Company Info */}
             <div className="flex flex-col md:mt-0 ">
               <div className="text-Lightgray4 text-sm py-4 justify-normal ">
-                <p className=" md:text-justify  sm:justify-center sm:text-center ">
+                <p className=" md:text-justify  sm:justify-center sm:text-center text-center">
                   {" "}
                   Welcome to Green Supermarket, where freshness meets
                   convenience! At Green Supermarket, we are dedicated to
@@ -31,16 +31,16 @@ const Footer = () => {
                   experience.
                 </p>
               </div>
-              <div className="flex gap-4 sm:justify-center lg:justify-between">
+              <div className="flex gap-4 justify-center sm:justify-center lg:justify-between">
                 {/* Phone Number */}
-                <div className="text-white text-sm  md:font-medium sm:font-normal leading-5 bg-DarkGreen2 py-1.5">
+                <div className="text-white text-sm  md:font-medium sm:font-normal font-normal leading-5 bg-DarkGreen2 py-1.5">
                   112 657 876
                 </div>
-                <div className="text-zinc-500 text-base leading-6 my-auto md:font-medium sm:font-normal ">
+                <div className="text-zinc-500 text-base leading-6 my-auto md:font-medium sm:font-normal font-normal ">
                   or
                 </div>
                 {/* Email */}
-                <div className="text-white text-sm  sm:font-norm md:font-medium leading-5 bg-DarkGreen2 py-1.5">
+                <div className="text-white text-sm font-normal  sm:font-normal md:font-medium leading-5 bg-DarkGreen2 py-1.5">
                   green.s.lk@gmail.com
                 </div>
               </div>
@@ -48,13 +48,13 @@ const Footer = () => {
           </div>
         
 
-          <hr className=" md:block lg:hidden border-Lightgray4 sm:mx-2"/>
+          <hr className=" md:block lg:hidden border-Lightgray4 sm:mx-2 mx-2"/>
 
           <div className="  flex-row w-full justify-between  ">
-            <div className=" grid sm:grid-cols-3  md:grid-cols-3">
+            <div className=" grid sm:grid-cols-3 grid-cols-3  md:grid-cols-3">
                <div className={`  md:justify-start md:text-start justify-between`}>
-                <ul className=" flex flex-col text-Lightgray md:leading-7  sm:text-xs sm:leading-6  md:text-base sm:text-center lg:text-start ">
-                  <h2 className=" text-white font-semibold md:text-lg md:pb-4 sm:pb-2 sm:text-base">Proxy</h2>
+                <ul className=" flex flex-col text-Lightgray md:leading-7  sm:text-xs text-xs leading-4 sm:leading-6  md:text-base sm:text-center text-center lg:text-start ">
+                  <h2 className=" text-white font-semibold md:text-lg md:pb-4 sm:pb-2 pb-2 sm:text-base text-base">Proxy</h2>
                   <Link href={``}>
                     <li className=" hover:text-white">Home</li>
                     <li className=" hover:text-white">Shop</li>
@@ -66,8 +66,8 @@ const Footer = () => {
               </div>
 
               <div className="  md:justify-start md:text-start">
-                <ul className=" flex flex-col text-Lightgray md:leading-7  sm:text-xs sm:leading-6  md:text-base sm:text-center lg:text-start ">
-                  <h2 className=" text-white font-semibold md:text-lg md:pb-4 sm:pb-2 sm:text-base">Proxy</h2>
+                <ul className=" flex flex-col text-Lightgray md:leading-7  sm:text-xs text-xs  sm:leading-6  leading-4 md:text-base sm:text-center text-center lg:text-start ">
+                  <h2 className=" text-white font-semibold md:text-lg md:pb-4 sm:pb-2 pb-2 sm:text-base text-base">Proxy</h2>
                   <Link href={``}>
                     <li className=" hover:text-white">Home</li>
                     <li className=" hover:text-white">Shop</li>
@@ -79,8 +79,8 @@ const Footer = () => {
               </div>
 
               <div className=" md:justify-start md:text-start  ">
-                <ul className=" flex flex-col text-Lightgray md:leading-7 sm:text-xs sm:leading-6 md:text-base sm:text-center lg:text-start">
-                  <h2 className=" text-white font-semibold md:text-lg md:pb-4 sm:pb-2 sm:text-base">Proxy</h2>
+                <ul className=" flex flex-col text-Lightgray md:leading-7 sm:text-xs text-xs sm:leading-6 leading-4 md:text-base sm:text-center text-center lg:text-start">
+                  <h2 className=" text-white font-semibold md:text-lg md:pb-4 sm:pb-2 pb-2 sm:text-base text-base">Proxy</h2>
                   <Link href={``}>
                     <li className=" hover:text-white">Home</li>
                     <li className=" hover:text-white">Shop</li>
@@ -110,7 +110,7 @@ const Footer = () => {
           {/* Copyright and Payment Options */}
           <div className="flex flex-col md:flex-row justify-between items-center shadow-sm bg-DarkGreen2 w-full gap-5 mt-8 pb-2  ">
             {/* Copyright */}
-            <div className="text-zinc-500 md:text-sm leading-5 md:mr-auto sm:text-xs ">
+            <div className="text-zinc-500 md:text-sm leading-5 md:mr-auto sm:text-xs  text-xs">
               GREEN Supermarket © 2023. All Rights Reserved
             </div>
             {/* Payment Options */}
