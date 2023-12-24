@@ -11,24 +11,17 @@ import Products from "../Products";
 import { useState } from "react";
 
 const ProductCard = ({ params }: any) => {
-  /* filter button in sm devices */
-  // const [showCategories, setShowCategories] = useState(false);
-
-  // const handleFilterClick = () => {
-  //   setShowCategories(!showCategories);
-  // };
 
 
   const [showCategories, setShowCategories] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<string>(''); // Explicitly set the type to string
+  const [selectedCategory, setSelectedCategory] = useState<string>(""); // Explicitly set the type to string
 
   const handleFilterClick = () => {
     setShowCategories(!showCategories);
   };
 
   const handleCategoryChange = (category: any) => {
-    setSelectedCategory(category.id.toString()); // Convert the id to a string
-    // You can perform additional actions when a category is selected here
+    setSelectedCategory(category.id.toString());
   };
   const category = Category.find(
     (category) => category.id === parseInt(params.slug)
@@ -38,12 +31,6 @@ const ProductCard = ({ params }: any) => {
     return <p>Category not found.</p>;
   }
 
-
-
- 
-
-
- 
   const CategoryFilter = [
     { id: 1, name: "Fruits" },
     { id: 2, name: "Vegetables" },
@@ -133,68 +120,68 @@ const ProductCard = ({ params }: any) => {
 
         {/* second part */}
         <div className="flex flex-col">
-        <div className="flex flex-col">
-      <div className="sm:flex sm:justify-end sm:pr-4 md:pr-8 lg:pr-12 xl:pr-16">
-        <div className="flex flex-row">
-          <button
-            onClick={handleFilterClick}
-            className="bg-Green text-white rounded-full py-1 px-4 items-center text-center hover:shadow-lg"
-          >
-            Filter
-          </button>
-        </div>
-        <div className="flex flex-col mt-2">
-        {showCategories && (
-          <>
-            {Category.map((category) => (
-              <div key={category.id} className="border mb-2">
-                <input
-                  type="radio"
-                  id={String(category.id)} // Convert the id to a string
-                  name="category"
-                  checked={selectedCategory === String(category.id)} // Convert the id to a string
-                  onChange={() => handleCategoryChange(category)}
-                  className="hidden"
-                />
-                <label
-                  htmlFor={String(category.id)} // Convert the id to a string
-                  className="mx-2 text-Green hover:text-DarkGreen cursor-pointer py-2 px-4 block"
+          <div className="flex flex-col">
+            <div className="sm:flex sm:justify-end sm:pr-4 md:pr-8 lg:pr-12 xl:pr-16">
+              <div className="flex flex-row">
+                <button
+                  onClick={handleFilterClick}
+                  className="bg-Green text-white rounded-full py-1 px-4 items-center text-center hover:shadow-lg"
                 >
-                  {category.name}
-                </label>
+                  Filter
+                </button>
               </div>
-            ))}
-          </>
-        )}
-      </div>
-      </div>
-    </div>
-
-        <div className=" flex flex-col ">
-          <div className="sm:flex sm:items-center sm:justify-end sm:py-4 md:py-6 lg:py-8 ">
-            <span className="flex items-center text-center">
-              <p className="font-bold text-xs pr-2 sm:text-xs md:text-base lg:text-sm ">
-                {filteredProducts.length}
-              </p>
-              <p className="sm:text-xs md:text-base lg:text-xs">
-                {filteredProducts.length > 0
-                  ? "Results Found"
-                  : "Results not found"}
-              </p>
-            </span>
+              <div className="flex flex-col mt-2">
+                {showCategories && (
+                  <>
+                    {Category.map((category) => (
+                      <div key={category.id} className="border mb-2">
+                        <input
+                          type="radio"
+                          id={String(category.id)} // Convert the id to a string
+                          name="category"
+                          checked={selectedCategory === String(category.id)} // Convert the id to a string
+                          onChange={() => handleCategoryChange(category)}
+                          className="hidden"
+                        />
+                        <label
+                          htmlFor={String(category.id)} // Convert the id to a string
+                          className="mx-2 text-Green hover:text-DarkGreen cursor-pointer py-2 px-4 block"
+                        >
+                          {category.name}
+                        </label>
+                      </div>
+                    ))}
+                  </>
+                )}
+              </div>
+            </div>
           </div>
 
-          {/* Products */}
-          <div className="grid grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-2 cursor-pointer">
-            {filteredProducts.length > 0 ? (
-              filteredProducts
-            ) : (
-              <p>No products found for the selected category.</p>
-            )}
+          <div className=" flex flex-col ">
+            <div className="sm:flex sm:items-center sm:justify-end sm:py-4 md:py-6 lg:py-8 ">
+              <span className="flex items-center text-center">
+                <p className="font-bold text-xs pr-2 sm:text-xs md:text-base lg:text-sm ">
+                  {filteredProducts.length}
+                </p>
+                <p className="sm:text-xs md:text-base lg:text-xs">
+                  {filteredProducts.length > 0
+                    ? "Results Found"
+                    : "Results not found"}
+                </p>
+              </span>
+            </div>
+
+            {/* Products */}
+            <div className="grid grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-2 cursor-pointer">
+              {filteredProducts.length > 0 ? (
+                filteredProducts
+              ) : (
+                <p>No products found for the selected category.</p>
+              )}
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };
