@@ -10,14 +10,14 @@ import { IoSearch } from "react-icons/io5";
 import { PiHandbagFill } from "react-icons/pi";
 import { FaUser } from "react-icons/fa6";
 import { RiMenu3Fill } from "react-icons/ri";
+import path from "path";
+import { IoClose } from "react-icons/io5";
+import { title } from "process";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-    // console.log('buttonclick')
-  };
+  const [navbar, setnavbar] = useState(false);
 
   const [isClicked, setIsClicked] = useState(false);
 
@@ -68,7 +68,7 @@ const Navbar = () => {
               {/* logo */}
 
               <div className="flex items-center md:h-6 lg:h-full xl:h-full">
-                <Link href="/">
+                <a href={``}>
                   <Image
                     src={logo}
                     alt="Logo"
@@ -76,7 +76,7 @@ const Navbar = () => {
                     width={137}
                     className="img-fluid md:h-full "
                   />
-                </Link>
+                </a>
               </div>
 
               {/* search bar for md, lg,xl*/}
@@ -141,20 +141,25 @@ const Navbar = () => {
                         size={14}
                         className=" text-black  sm:block md:hidden lg:hidden xl:hidden"
                       />
-                      <div className="sm:flex sm:flex-row md:hidden lg:hidden xl:hidden justify-center items-center pl-2">
-                        <button onClick={toggleMenu}>
-                          {isMenuOpen ? (
-                            <RiMenu3Fill
-                              size={18}
-                              className=" font-bold text-black sm:block md:hidden lg:hidden xl:hidden w-auto"
-                            />
-                          ) : (
-                            <RiMenu3Fill
-                              size={18}
-                              className=" font-bold text-black sm:block md:hidden lg:hidden xl:hidden"
-                            />
-                          )}
+                      <div className="sm:flex sm:flex-row md:hidden justify-center items-center pl-2">
+                        <button onClick={() => setnavbar(!navbar)}>
+                          {navbar ? <IoClose /> : <RiMenu3Fill />}
                         </button>
+                      </div>
+                      <div
+                        className={`justify-self-center mt-5 p-2 pt-32 ${
+                          navbar ? "p-12 md:p-0 block" : "hidden"
+                        }`}
+                      >
+                        <ul className="bg-white text-Brown px-4 py-2">
+                          {navItems.map(({ title, path }) => (
+                            <a href={path} key={title}>
+                              <li className="hover:text-white duration-500 ease-in-out transform cursor-pointer hover:scale-105 hover:font-semibold hover:text-lg">
+                                {title}
+                              </li>
+                            </a>
+                          ))}
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -173,8 +178,6 @@ const Navbar = () => {
             </div>
 
             {/* md, lg ,xl menu */}
-
-            {/* search bar for sm */}
           </div>
           <div className="bg-DarkGreen h-[60px] hidden  md:flex lg:flex xl:flex lg:flex-row xl:flex-row justify-between items-center md:h-12 lg:h-[55px] xl:h-[55px] md:-mt-2  ">
             <div className="h-full flex flex-row md:text-xs lg:text-sm xl:text-md inset-0">
@@ -193,7 +196,7 @@ const Navbar = () => {
             </div>
 
             {/* sm screen menu */}
-            <div className="sm:hidden md:hidden lg:hidden xl:hidden ">
+            {/* <div className="sm:hidden md:hidden lg:hidden xl:hidden ">
               <button onClick={toggleMenu}>
                 <RiMenu3Fill size={18} className="font-bold text-black" />
               </button>
@@ -203,15 +206,15 @@ const Navbar = () => {
                 }`}
               >
                 {navItems.map(({ title, path }) => (
-                  <li
+                
+                    <a href={path}>{title}</a>
+                  </li>  <li
                     key={title}
                     className="hover:text-white duration-500 ease-in-out transform cursor-pointer hover:scale-105 hover:font-semibold hover:text-lg "
                   >
-                    <Link href={path}>{title}</Link>
-                  </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
 
             {/* call */}
             <div className="flex felx-row justify-between items-center px-2 text-white font-light text-xs md:text-sm lg:text-sm xl:text-sm md:mx-16 lg:mx-24 xl:mx-36 w-max">
