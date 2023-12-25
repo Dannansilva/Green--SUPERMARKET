@@ -55,7 +55,7 @@ const Product: React.FC = () => {
           <div className="flex flex-row items-center mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36  gap-3 flex-1 cursor-pointer">
             
               <div>
-              <a href="/home">
+              <a href={`/home`}>
                 <LiaHomeSolid className="text-Lightgray hover:text-white sm:text-xs md:text-base lg:text-md" />
               </a>
               </div>
