@@ -104,10 +104,11 @@ const Banner = () => {
                 </div>
               </div>
             </div>
-
+            <a href={`/shop`}>
             <div className="round-full">
               <button className="text-Green bg-white rounded-full px-[20px] py-[10px] md:px-[40px] md:py-[16px] font-semibold text-xs md:text-base hover:bg-Green hover:text-white hover:shadow-lg hover:text-md hover:font-bold hover:shadow-green-300">{`Shop now -> `}</button>
             </div>
+            </a>
           </div>
         </div>
 

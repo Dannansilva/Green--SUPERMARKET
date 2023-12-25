@@ -98,9 +98,11 @@ const ProductCard = ({ params }: any) => {
         }}
       >
         <div className="flex flex-row items-center mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36  gap-3 flex-1 cursor-pointer">
+          <a href={`/home`}>
           <div>
             <LiaHomeSolid className="text-Lightgray hover:text-white sm:text-xs md:text-base lg:text-md" />
           </div>
+          </a>
           <div className="text-Lightgray hover:text-white cursor-auto ">
             <p className="sm:text-xs md:text-base lg:text-md ">{`>`}</p>
           </div>
@@ -219,7 +221,7 @@ const ProductCard = ({ params }: any) => {
                 </div>
 
 
-          <div className="sm:flex flex sm:items-center sm:justify-end justify-end flex-row w-full ">
+          <div className="sm:flex flex sm:items-center sm:justify-end justify-end flex-row w-full pb-3 ">
           <span className="flex items-center text-center">
           <p className="font-bold text-xs pr-2 sm:text-xs  ">
                   {filteredProducts.length}
