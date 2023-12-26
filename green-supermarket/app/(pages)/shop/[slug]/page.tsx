@@ -89,7 +89,8 @@ const ProductCard = ({ params }: any) => {
       <div
         className="flex w-full bg-cover bg-no-repeat items-center max-h-[90px] sm:max-h-[60px] md:max-h-[90px] "
         style={{
-          backgroundImage: " linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25)), url('/assets/ShopPage/Breadcrumbs.png')",
+          backgroundImage:
+            " linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25)), url('/assets/ShopPage/Breadcrumbs.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -99,9 +100,9 @@ const ProductCard = ({ params }: any) => {
       >
         <div className="flex flex-row items-center mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36  gap-3 flex-1 cursor-pointer">
           <a href={`/home`}>
-          <div>
-            <LiaHomeSolid className="text-Lightgray hover:text-white sm:text-xs md:text-base lg:text-md" />
-          </div>
+            <div>
+              <LiaHomeSolid className="text-Lightgray hover:text-white sm:text-xs md:text-base lg:text-md" />
+            </div>
           </a>
           <div className="text-Lightgray hover:text-white cursor-auto ">
             <p className="sm:text-xs md:text-base lg:text-md ">{`>`}</p>
@@ -124,7 +125,6 @@ const ProductCard = ({ params }: any) => {
 
       <div className="sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36 flex-col flex sm:py-2 md:py-4">
         {/* Filter */}
-
 
         {/* second part */}
         <div className="flex sm:flex-col md:flex-row gap-4 ">
@@ -172,32 +172,31 @@ const ProductCard = ({ params }: any) => {
             </div>
           </div>
 
-
-
           <div className="flex flex-col">
-              {/* number of products */}
-              <div className="flex flex-row py-2">
-                {/* sm: filter */}
-                <div className=" flex flex-row md:hidden sm:mt-1 ">
-                  <div className="items-center justify-center text-center">
-                    <button
-                      onClick={handleFilterClick}
-                      className=" w-[55px] sm:block md:hidden bg-Green text-white rounded-full py-1 px-2  hover:shadow-lg mb-2 "
-                    >
-                      <p className=" text-center text-xs justify-center">
-                        Filter
-                      </p>
-                    </button>
-                  </div>
+            {/* number of products */}
+            <div className="flex flex-row py-2">
+              {/* sm: filter */}
+              <div className=" flex flex-row md:hidden sm:mt-1 ">
+                <div className="items-center justify-center text-center">
+                  <button
+                    onClick={handleFilterClick}
+                    className=" w-[55px] sm:block md:hidden bg-Green text-white rounded-full py-1 px-2  hover:shadow-lg mb-2 "
+                  >
+                    <p className=" text-center text-xs justify-center">
+                      Filter
+                    </p>
+                  </button>
+                </div>
 
-
-                  <div className=" absolute flex flex-col md:hidden z-10 mt-8 bg-white ">
+                <div className=" absolute flex flex-col md:hidden z-10 mt-8 bg-white ">
                   {showCategories && (
                     <>
                       {Category.map((category) => (
                         <Link key={category.id} href={`/shop/${category.id}`}>
-                          <div className=" flex flex-col hover:font-semibold justify-start text-start px-2 hover:transition hover:duration-500 hover:ease-in-out hover:rounded-md
-                          ">
+                          <div
+                            className=" flex flex-col hover:font-semibold justify-start text-start px-2 hover:transition hover:duration-500 hover:ease-in-out hover:rounded-md
+                          "
+                          >
                             <div className=" flex flex-row items-center text-center">
                               <GoSquareFill className=" text-green-400 w-[10px] h-[10px]" />
                               <button
@@ -218,21 +217,28 @@ const ProductCard = ({ params }: any) => {
                     </>
                   )}
                 </div>
+              </div>
+
+              <div className="sm:flex flex sm:items-end sm:justify-end justify-between md:flex-row md:justify-between w-full pb-3 items-center ">
+                <div className=" sm:hidden md:flex items-center ">
+                  <h2 className=" font-semibold sm:text-md md:text-xl text-DarkGreen">{category.name}</h2>
                 </div>
-
-
-          <div className="sm:flex flex sm:items-center sm:justify-end justify-end flex-row w-full pb-3 ">
-          <span className="flex items-center text-center">
-          <p className="font-bold text-xs pr-2 sm:text-xs  ">
-                  {filteredProducts.length}
-                </p>
-                    <p className="sm:text-xs text-xs ">
-                  {filteredProducts.length > 0
-                    ? "Results Found"
-                    : "Results not found"}
-                </p>
-              </span>
+                <div className="flex items-center text-center sm:justify-end">
+                  <p className="font-bold text-xs pr-2 sm:text-xs  ">
+                    {filteredProducts.length}
+                  </p>
+                  <p className="sm:text-xs text-xs ">
+                    {filteredProducts.length > 0
+                      ? "Results Found"
+                      : "Results not found"}
+                  </p>
+                </div>
+              </div>
             </div>
+
+            <div className=" flex flex-row justify-start md:hidden -mt-2 mb-3 ml-1">
+            <h2 className=" font-semibold text-lg text-DarkGreen">{category.name}</h2>
+
             </div>
 
             {/* Products */}
@@ -243,12 +249,11 @@ const ProductCard = ({ params }: any) => {
                 <p>No products found for the selected category.</p>
               )}
             </div>
-            </div>
-            
-            </div>
           </div>
-          </div>
-      );
-    };
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default ProductCard;
