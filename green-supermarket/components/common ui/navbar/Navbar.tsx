@@ -13,11 +13,10 @@ import { RiMenu3Fill } from "react-icons/ri";
 import path from "path";
 import { IoClose } from "react-icons/io5";
 import { title } from "process";
+import { IoMdArrowDropleft } from "react-icons/io";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const [navbar, setnavbar] = useState(false);
 
   const [isClicked, setIsClicked] = useState(false);
 
@@ -25,12 +24,19 @@ const Navbar = () => {
     setIsClicked(true);
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
   const navItems = [
-    { title: "Home", path: "/" },
-    { title: "Shop", path: "/shop" },
-    { title: "Account", path: "/" },
-    { title: "About Us", path: "/aboutus" },
-    { title: "Contact Us", path: "/contactus" },
+    { title: "HOME", path: "/" },
+    { title: "SHOP", path: "/shop" },
+    { title: "ACCOUNT", path: "/" },
+    { title: "ABOUT US", path: "/aboutus" },
+    { title: "CONTACT US", path: "/contactus" },
   ];
 
   return (
@@ -141,26 +147,80 @@ const Navbar = () => {
                         size={14}
                         className=" text-black  sm:block md:hidden lg:hidden xl:hidden"
                       />
-                      <div className="sm:flex sm:flex-row md:hidden justify-center items-center pl-2">
-                        <button onClick={() => setnavbar(!navbar)}>
-                          {navbar ? <IoClose /> : <RiMenu3Fill />}
+                      
+                      <div className="sm:flex md:hidden lg:hidden xl:hidden ">
+                        <button
+                          onClick={isMenuOpen ? closeMenu : toggleMenu}
+                          className=" pl-2"
+                        >
+                          {isMenuOpen ? <IoClose /> : <RiMenu3Fill />}
                         </button>
+
+                        {isMenuOpen && (
+                          <div
+                            className="fixed top-0 left-0 w-full h-full bg-black opacity-50"
+                            onClick={closeMenu}
+                          />
+                        )}
+                        {isMenuOpen && (
+                          <div
+                            className={`fixed top-0 right-0 bg-DarkGreen h-full w-[264px] transition-transform duration-300 ease-in-out transform z-50 ${
+                              isMenuOpen ? "translate-x-0" : "translate-x-full"
+                            }`}
+                          >
+                            {/* button inside */}
+                            <div className=" flex flex-row items-center justify-end mt-8  mr-4 ">
+                              <button
+                                onClick={isMenuOpen ? closeMenu : toggleMenu}
+                                className="text-white"
+                              >
+                                {isMenuOpen ? <IoClose /> : <RiMenu3Fill />}
+                              </button>
+                            </div>
+
+                            {/* searchbar sm: */}
+                            <div className="  flex-row hidden sm:flex md:hidden ">
+                              <form
+                                action="input"
+                                className={`  first-letter:relative w-max items-start ${
+                                  isClicked ? "centered" : ""
+                                }`}
+                              >
+                                <div className=" relative items-center ml-4 mt-4">
+                                  <input
+                                    type="search"
+                                    placeholder="Search"
+                                    className=" cursor-pointer relative z-10 h-12 border rounded-full bg-white pl-4 outline-DarkGreen2 border-DarkGreen2  w-full focus:w-full focus:cursor-text focus:-mr-2 hover:shadow-md px-8 focus:pl-4 focus:pr-10"
+                                    onClick={handleClick}
+                                  />
+                                </div>
+                              </form>
+                            </div>
+
+                            {/* navitems sm: */}
+                            <ul className="px-4 py-2 mt-2">
+                              {navItems.map(({ title, path }) => (
+                                <Link
+                                  key={title}
+                                  href={path}
+                                  onClick={closeMenu}
+                                >
+                                  <li className="py-4 text-white flex items-center justify-between">
+                                    <IoMdArrowDropleft className="mr-2" />
+                                    {title}
+                                  </li>
+                                </Link>
+                              ))}
+                            </ul>
+
+                            <hr className=" mx-4 border-Lightgray mt-4" />
+
+                            {/* Profile */}
+                          </div>
+                        )}
                       </div>
-                      <div
-                        className={`justify-self-center mt-5 p-2 pt-32 ${
-                          navbar ? "p-12 md:p-0 block" : "hidden"
-                        }`}
-                      >
-                        <ul className="bg-white text-Brown px-4 py-2">
-                          {navItems.map(({ title, path }) => (
-                            <a href={path} key={title}>
-                              <li className="hover:text-white duration-500 ease-in-out transform cursor-pointer hover:scale-105 hover:font-semibold hover:text-lg">
-                                {title}
-                              </li>
-                            </a>
-                          ))}
-                        </ul>
-                      </div>
+
+                      {/* md: lg: xl: */}
                     </div>
                   </div>
                 </div>
