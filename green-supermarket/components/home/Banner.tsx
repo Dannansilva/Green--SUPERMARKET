@@ -91,7 +91,7 @@ const Banner = () => {
                     <div className="text-white text-[16px] md:text-[20px] font-medium mr-[5px] md:mr-[8px]">
                       Sale Upto
                     </div>
-                    <span className="font-semibold bg-[#FF8A00] px-[8px] md:px-[12px] rounded-md py-[3px] md:py-[4px] text-[16px] md:text-[20px] text-white">
+                    <span className=" font-semibold bg-[#FF8A00] px-[8px] md:px-[12px] rounded-md py-[3px] md:py-[4px] text-[16px] md:text-[20px] text-white">
                       30% OFF
                     </span>
                   </div>
