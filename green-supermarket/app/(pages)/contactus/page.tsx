@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const page = () => {
   return (
-    <div className="flex sm:flex-col lg:flex-row my-8 mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36 justify-between sm:gap-4 md:gap-8 lg:gap-2 sm:-mt-2 ">
+    <div className="flex sm:flex-col lg:flex-row my-8 mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36 justify-between sm:gap-4 md:gap-8 lg:gap-2 sm:-mt-2 lg:mt-8 ">
       {/* first div */}
-      <div className=" flex flex-col px-[20px] py-[px] sm:m-1 lg:m-1 shadow-lg rounded-md shadow-Lightgray border-opacity-30 border border-y-Lightgray">
+      <div className=" flex flex-col px-[20px] py-[px] sm:m-1 lg:m-1 shadow-lg rounded-md shadow-Lightgray border-opacity-30 sm:border sm:border-y-Lightgray md:border-white ">
         <div className=" items-center sm:justify-between text-center my-2 ">
           <div className=" items-center justify-center text-center flex flex-row  py-[15px]">
             <Image
@@ -61,7 +61,7 @@ const page = () => {
         </div>
       </div>
       {/* second div */}
-      <div className=" lg:gap-[24px] lg:p-[50px] sm:py-[25px] sm:px-[20px] sm:m-1 lg:m-1  shadow-lg rounded-md shadow-Lightgray border-opacity-30 border border-y-Lightgray ">
+      <div className=" lg:gap-[24px] lg:p-[50px] sm:py-[25px] sm:px-[20px] sm:m-1 lg:m-1  shadow-lg rounded-md shadow-Lightgray border-opacity-30 border sm:border-y-Lightgray md:border-white  ">
         <div className=" flex flex-col">
           <div className=" flex flex-row text-xl mb-2 font-bold">
             <h2>Just Say Hello!</h2>
