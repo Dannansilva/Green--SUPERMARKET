@@ -63,7 +63,7 @@ const icons = [
 const Banner = () => {
   return (
     <>
-      <div className="mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36 pt-2 md:mt-10 sm:mt-6 -mt-4    ">
+      <div className="mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36 pt-2 lg:mt-10 md  md:-mt-4 sm:mt-4 -mt-10   ">
         {/* Banner 1st part */}
         <div
           className="bg-center bg-no-repeat bg-cover max-h-[400px] rounded-lg  sm:-mt-10 md:-mt-0 sm:max-h-[400px] md:max-h-[600px] inset-0   "

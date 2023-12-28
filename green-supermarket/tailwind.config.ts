@@ -16,7 +16,9 @@ const config: Config = {
       colors: {
         Gray: '#666666',
         Gray2:'#4D4D4D',
+        Gray3:'#333333', 
         Green: '#2DC653',
+        Green2:'#00B207',
         DarkGreen: '#265932',
         DarkGreen2:'#173B1A',
         Lightgray: '#999999',

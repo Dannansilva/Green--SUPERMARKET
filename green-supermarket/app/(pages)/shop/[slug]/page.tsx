@@ -127,9 +127,9 @@ const ProductCard = ({ params }: any) => {
         {/* Filter */}
 
         {/* second part */}
-        <div className="flex sm:flex-col md:flex-row gap-4 ">
-          <div className=" hidden sm:hidden md:flex md:pr-8 lg:pr-12 xl:pr-16">
-            <div className="md:flex py-2 md:w-max">
+        <div className="flex sm:flex-col lg:flex-row gap-4 ">
+          <div className=" hidden sm:hidden lg:flex lg:pr-12 xl:pr-16">
+            <div className="lg:flex py-2 md:w-max">
               <div className="flex flex-col">
                 <button
                   onClick={handleFilterClick}
@@ -143,11 +143,11 @@ const ProductCard = ({ params }: any) => {
                   </h2>
                 </div>
 
-                <div className=" sm:hidden hidden md:flex md:flex-col gap-0.5 items-start text-start pt-2 ">
+                <div className=" sm:hidden hidden lg:flex lg:flex-col gap-0.5 items-start text-start pt-2 ">
                   <>
                     {Category.map((category) => (
                       <Link key={category.id} href={`/shop/${category.id}`}>
-                        <div className=" flex flex-col md:w-max   ">
+                        <div className=" flex flex-col lg:w-max   ">
                           <div className="flex flex-row items-center">
                             <GoSquareFill className=" text-green-400 w-[10px] h-[10px]" />
 
@@ -176,25 +176,26 @@ const ProductCard = ({ params }: any) => {
             {/* number of products */}
             <div className="flex flex-row py-2">
               {/* sm: filter */}
-              <div className=" flex flex-row md:hidden sm:mt-1 ">
+              <div className=" flex flex-row lg:hidden sm:mt-1 ">
                 <div className="items-center justify-center text-center">
                   <button
                     onClick={handleFilterClick}
-                    className=" w-[55px] sm:block md:hidden bg-Green text-white rounded-full py-1 px-2  hover:shadow-lg mb-2 "
+                    className=" w-[55px] h-[25px] sm:block lg:hidden bg-Green text-white rounded-full py-1 px-2  hover:shadow-lg mb-2 "
                   >
                     <p className=" text-center text-xs justify-center">
                       Filter
                     </p>
+                    
                   </button>
                 </div>
 
-                <div className=" absolute flex flex-col md:hidden z-10 mt-8 bg-white ">
+                <div className=" absolute flex flex-col lg:hidden z-50 mt-8 bg-white ">
                   {showCategories && (
                     <>
                       {Category.map((category) => (
                         <Link key={category.id} href={`/shop/${category.id}`}>
                           <div
-                            className=" flex flex-col hover:font-semibold justify-start text-start px-2 hover:transition hover:duration-500 hover:ease-in-out hover:rounded-md
+                            className=" flex flex-col hover:font-semibold justify-start text-start px-2 hover:transition hover:duration-300 hover:ease-in-out hover:rounded-md
                           "
                           >
                             <div className=" flex flex-row items-center text-center">
@@ -219,9 +220,9 @@ const ProductCard = ({ params }: any) => {
                 </div>
               </div>
 
-              <div className="sm:flex flex sm:items-end sm:justify-end justify-between md:flex-row md:justify-between w-full pb-3 items-center ">
-                <div className=" sm:hidden md:flex items-center ">
-                  <h2 className=" font-semibold sm:text-md md:text-xl text-DarkGreen">{category.name}</h2>
+              <div className="sm:flex sm:-mb-8 flex lg:-mb-0  sm:justify-end justify-between lg:flex-row lg:justify-between w-full pb-3 items-center ">
+                <div className=" sm:hidden lg:flex items-center ">
+                  <h2 className=" font-semibold sm:text-md lg:text-xl text-DarkGreen">{category.name}</h2>
                 </div>
                 <div className="flex items-center text-center sm:justify-end">
                   <p className="font-bold text-xs pr-2 sm:text-xs  ">
@@ -236,7 +237,7 @@ const ProductCard = ({ params }: any) => {
               </div>
             </div>
 
-            <div className=" flex flex-row justify-start md:hidden -mt-2 mb-3 ml-1">
+            <div className=" flex flex-row justify-start lg:hidden -mt-2 mb-3 ml-1">
             <h2 className=" font-semibold text-lg text-DarkGreen">{category.name}</h2>
 
             </div>
