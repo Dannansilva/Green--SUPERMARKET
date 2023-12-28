@@ -21,6 +21,7 @@ const config: Config = {
         Green2:'#00B207',
         DarkGreen: '#265932',
         DarkGreen2:'#173B1A',
+        DarkGreen3:'#2F6F3E',
         Lightgray: '#999999',
         Lightgray2:'#E6E6E6',
         Lightgray3:"#F2F2F2",
