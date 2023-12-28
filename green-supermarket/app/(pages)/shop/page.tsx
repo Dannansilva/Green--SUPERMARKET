@@ -73,12 +73,12 @@ const Product: React.FC = () => {
 
         <div className="sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36 flex-col flex sm:py-2 md:py-4">
           {/* second part */}
-          <div className=" flex sm:flex-col md:flex-row gap-4   ">
-            <div className=" hidden sm:hidden md:flex md:pr-8 lg:pr-12 xl:pr-16 ">
+          <div className=" flex sm:flex-col lg:flex-row gap-4   ">
+            <div className=" hidden sm:hidden md:hidden md:pr-8 lg:pr-12 xl:pr-16 ">
               {/* md: lg: and xl: devices filter */}
-              <div className="md:flex py-2 md:w-max">
+              <div className="lg:flex py-2 lg:w-max">
                 <div className="flex flex-col">
-                  <button className=" w-[80px] hidden sm:hidden md:block  bg-Green text-white rounded-full py-1 px-2 items-center text-center hover:shadow-lg mb-2 ">
+                  <button className=" w-[80px] hidden sm:hidden lg:block  bg-Green text-white rounded-full py-1 px-2 items-center text-center hover:shadow-lg mb-2 ">
                     {" "}
                     <p>Filter</p>
                   </button>
@@ -88,11 +88,11 @@ const Product: React.FC = () => {
                     </h2>
                   </div>
 
-                  <div className=" sm:hidden hidden md:flex md:flex-col gap-0.5 items-start text-start pt-2 ">
+                  <div className=" sm:hidden hidden lg:flex lg:flex-col gap-0.5 items-start text-start pt-2 ">
                     <>
                       {Category.map((category) => (
                         <Link key={category.id} href={`/shop/${category.id}`}>
-                          <div className=" flex flex-col md:w-max   ">
+                          <div className=" flex flex-col lg:w-max   ">
                             <div className="flex flex-row items-center">
                               <GoSquareFill className=" text-green-400 w-[10px] h-[10px]" />
                               <button
@@ -163,11 +163,11 @@ const Product: React.FC = () => {
               {/* number of products */}
               <div className="flex flex-row py-2">
                 {/* sm: filter */}
-                <div className=" flex flex-row md:hidden ">
+                <div className=" flex flex-row lg:hidden ">
                   <div className="items-center justify-center text-center">
                     <button
                       onClick={handleFilterClick}
-                      className=" w-[55px] sm:block md:hidden bg-Green text-white rounded-full py-1 px-2  hover:shadow-lg mb-2 "
+                      className=" w-[55px] sm:block lg:hidden bg-Green text-white rounded-full py-1 px-2  hover:shadow-lg mb-2 "
                     >
                       <p className=" text-center text-xs justify-center">
                         Filter
@@ -176,7 +176,7 @@ const Product: React.FC = () => {
                   </div>
                 
 
-                <div className=" absolute flex flex-col md:hidden z-10 mt-8 bg-white ">
+                <div className=" absolute flex flex-col lg:hidden z-50 mt-8 bg-white ">
                   {showCategories && (
                     <>
                       {Category.map((category) => (

@@ -2,8 +2,8 @@ import React from "react";
 
 const rightpopup = () => {
   return (
-    <div className="px-5  md:w-max md:px-16 mt-6 md:pr-7 bg-white rounded-lg flex-col items-start justify-items-center grid md:inline-flex shadow-2xl">
-      <div>
+    <div className="px-5  lg:w-max lg:px-16 mt-6 md:pr-7 bg-white rounded-lg flex-col items-start justify-items-center grid md:inline-flex shadow-2xl">
+      <div className=" w-full">
         {/* Heading with text */}
         <h1 className="text-2xl  font-semibold leading-9 mt-8 text-zinc-900">
           Just Say Hello!
@@ -14,9 +14,9 @@ const rightpopup = () => {
           issues.
         </p>
       </div>
-      <div className="  md:flex md:items-stretch md:justify-between md:gap-4  max-md:max-w-full max-md:flex-wrap">
+      <div className="  lg:flex lg:items-stretch lg:justify-between lg:gap-4  max-lg:max-w-full max-lg:flex-wrap">
         {/* Name box */}
-        <div className=" pt-4 pb-4">
+        <div className=" pt-4 pb-4 w-full">
           <input
             type="text"
             placeholder="Type in your name"
@@ -26,7 +26,7 @@ const rightpopup = () => {
         </div>
 
         {/* Email box */}
-        <div className="pb-6 md:pt-4">
+        <div className="pb-6 lg:pt-4 w-full">
           <input
             type="text"
             placeholder="Enter your email"
@@ -37,7 +37,7 @@ const rightpopup = () => {
       </div>
 
       {/* Message box */}
-      <div className=" pb-10">
+      <div className=" pb-6 w-full">
         <textarea
           placeholder="Type your message here"
           className="text-neutral-400 pl-4 pr-4 py-2 bg-white rounded-md border border-neutral-200 w-[400px] overflow-visible"
@@ -51,6 +51,7 @@ const rightpopup = () => {
         </div>
       </div>
     </div>
+    // <div>a</div>
   );
 };
 
