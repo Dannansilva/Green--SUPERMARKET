@@ -147,73 +147,79 @@ const Navbar = () => {
                         size={14}
                         className=" text-black  sm:block md:hidden lg:hidden xl:hidden"
                       />
-                      
+
                       <div className="sm:flex md:flex lg:hidden xl:hidden">
-  <button onClick={isMenuOpen ? closeMenu : toggleMenu} className="pl-2">
-    {isMenuOpen ? <IoClose /> : <RiMenu3Fill />}
-  </button>
+                        <button
+                          onClick={isMenuOpen ? closeMenu : toggleMenu}
+                          className="pl-2"
+                        >
+                          {isMenuOpen ? <IoClose /> : <RiMenu3Fill />}
+                        </button>
 
-  {isMenuOpen && (
-    <div
-      className="fixed top-0 left-0 w-full h-full bg-black opacity-50"
-      onClick={closeMenu}
-    />
-  )}
+                        {isMenuOpen && (
+                          <div
+                            className="fixed top-0 left-0 w-full h-full bg-black opacity-50"
+                            onClick={closeMenu}
+                          />
+                        )}
 
-  {isMenuOpen && (
-    <div
-      className={`fixed top-0 right-0 bg-DarkGreen h-full w-[260px] duration-300 ease-in-out transform z-50 ${
-        isMenuOpen ? "translate-x-0" : "translate-x-full"
-      }`}
-    >
-      {/* button inside */}
-      <div className="flex flex-row items-center justify-end mt-8 mr-4">
-        <button
-          onClick={isMenuOpen ? closeMenu : toggleMenu}
-          className="text-white"
-        >
-          {isMenuOpen ? <IoClose /> : <RiMenu3Fill />}
-        </button>
-      </div>
+                        {isMenuOpen && (
+                          <div
+                            className={`fixed top-0 right-0 bg-DarkGreen h-full w-[260px] duration-300 ease-in-out transform z-50 ${
+                              isMenuOpen ? "translate-x-0" : "translate-x-full"
+                            }`}
+                          >
+                            {/* button inside */}
+                            <div className="flex flex-row items-center justify-end mt-8 mr-4">
+                              <button
+                                onClick={isMenuOpen ? closeMenu : toggleMenu}
+                                className="text-white"
+                              >
+                                {isMenuOpen ? <IoClose /> : <RiMenu3Fill />}
+                              </button>
+                            </div>
 
-      {/* searchbar sm: */}
-      <div className="flex-row hidden sm:flex md:flex lg:hidden">
-        <form
-          action="input"
-          className={`first-letter:relative w-max items-start ${
-            isClicked ? "centered" : ""
-          }`}
-        >
-          <div className="relative items-center ml-4 mt-4">
-            <input
-              type="search"
-              placeholder="Search"
-              className="cursor-pointer relative z-10 h-12 border rounded-full bg-white pl-4 outline-DarkGreen2 border-DarkGreen2 w-full focus:w-full focus:cursor-text focus:-mr-2 hover:shadow-md px-8 focus:pl-4 focus:pr-10"
-              onClick={handleClick}
-            />
-          </div>
-        </form>
-      </div>
+                            {/* searchbar sm: */}
+                            <div className="flex-row hidden sm:flex md:flex lg:hidden">
+                              <form
+                                action="input"
+                                className={`first-letter:relative w-max items-start ${
+                                  isClicked ? "centered" : ""
+                                }`}
+                              >
+                                <div className="relative items-center ml-4 mt-4">
+                                  <input
+                                    type="search"
+                                    placeholder="Search"
+                                    className="cursor-pointer relative z-10 h-12 border rounded-full bg-white pl-4 outline-DarkGreen2 border-DarkGreen2 w-full focus:w-full focus:cursor-text focus:-mr-2 hover:shadow-md px-8 focus:pl-4 focus:pr-10"
+                                    onClick={handleClick}
+                                  />
+                                </div>
+                              </form>
+                            </div>
 
-      {/* navitems sm: */}
-      <ul className="px-4 py-2 mt-2">
-        {navItems.map(({ title, path }) => (
-          <Link key={title} href={path} onClick={closeMenu}>
-            <li className="py-4 text-white flex items-center justify-between">
-              <IoMdArrowDropleft className="mr-2" />
-              {title}
-            </li>
-          </Link>
-        ))}
-      </ul>
+                            {/* navitems sm: */}
+                            <ul className="px-4 py-2 mt-2">
+                              {navItems.map(({ title, path }) => (
+                                <Link
+                                  key={title}
+                                  href={path}
+                                  onClick={closeMenu}
+                                >
+                                  <li className="py-4 text-white flex items-center justify-between">
+                                    <IoMdArrowDropleft className="mr-2" />
+                                    {title}
+                                  </li>
+                                </Link>
+                              ))}
+                            </ul>
 
-      <hr className="mx-4 border-Lightgray mt-4" />
+                            <hr className="mx-4 border-Lightgray mt-4" />
 
-      {/* Profile */}
-    </div>
-  )}
-</div>
-
+                            {/* Profile */}
+                          </div>
+                        )}
+                      </div>
 
                       {/* md: lg: xl: */}
                     </div>
@@ -240,7 +246,7 @@ const Navbar = () => {
                 {navItems.map(({ title, path }) => (
                   <li
                     key={title}
-                    className="hover:text-white duration-200 ease-in-out transform cursor-pointer hover:scale-105 hover:font-semibold hover:text-md hover:flex-grow-0  w-max"
+                    className="hover:text-white duration-300 ease-in-out transform cursor-pointer hover:scale-105  hover:flex-grow-0 w-max"
                   >
                     <Link className="" href={path}>
                       {title}
