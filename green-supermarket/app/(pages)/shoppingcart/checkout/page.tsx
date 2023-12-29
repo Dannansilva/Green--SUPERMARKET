@@ -262,32 +262,31 @@ const Checkout: React.FC = () => {
                 </div>
 
                 {/* 3rd line */}
-                <div className="flex sm:flex-row md:flex-row justify-between sm:gap-5 md:gap-5 px-4 py-2">
-                  <div className="flex flex-col w-full">
-                    <span className="text-xs lg:text-sm font-medium">
+                <div className="flex sm:flex-col md:flex-row md:gap-5 py-3 md:mt-0 pb-8">
+                    <div className="flex flex-row justify-between">
+                  <div className="flex flex-col w-full px-4">
+                    <span className="text-xs lg:text-sm font-medium ">
                       Expiry Date
                     </span>
                     <div className="w-full pt-1">
-                      <div className="absolute inset-y-0 right-0 flex items-center px-2 text-Green pointer-events-none">
-                        <MdOutlineKeyboardArrowDown className="h-3 w-3 text-Gray mt-1" />
-                      </div>
-                      <CustomDatePicker/>
+                      <CustomDatePicker />
                     </div>
                   </div>
 
-                  <div className="flex flex-col w-full">
-                    <span className="text-xs lg:text-sm font-medium">CVV</span>
+                  <div className="flex flex-col w-full px-4 md:mt-0">
+                    <span className="text-xs lg:text-sm font-medium">CVV </span>
                     <div className="w-full pt-1">
                       <input
                         type="text"
-                        placeholder="xxxxx"
-                        className="pl-4 pr-4 py-3 bg-white rounded-md border border-Green focus:outline-none focus:border-DarkGreen3 focus:border-2 w-full sm:text-xs md:text-sm lg:text-md"
+                        placeholder="xxx"
+                        className="px-4 py-3 bg-white rounded-md border border-Green focus:outline-none focus:border-DarkGreen3 focus:border-2 w-full sm:text-xs md:text-sm lg:text-md"
                       />
                     </div>
                   </div>
+                  </div>
 
-                  <div className="flex flex-col  px-4">
-                    <span className="text-xs lg:text-sm font-medium">OTP</span>
+                  <div className="flex flex-col w-full px-4 sm:mt-4  md:-ml-4 md:mt-0">
+                    <span className="text-xs lg:text-sm font-medium">OTP </span>
                     <div className="w-full pt-1">
                       <input
                         type="text"
@@ -295,24 +294,6 @@ const Checkout: React.FC = () => {
                         className="pl-4 pr-4 py-3 bg-white rounded-md border border-Green focus:outline-none focus:border-DarkGreen3 focus:border-2 w-full sm:text-xs md:text-sm lg:text-md"
                       />
                     </div>
-
-                </div>
-
-                {/* 4th line */}
-                {/* <div className="flex sm:flex-row md:flex-row md:gap-5 md:mt-0 py-2 pb-8">
-                  <div className="flex flex-col w-full px-4">
-                    <span className="text-xs lg:text-sm font-medium">OTP</span>
-                    <div className="w-full pt-1">
-                      <input
-                        type="text"
-                        placeholder="******"
-                        className="pl-4 pr-4 py-3 bg-white rounded-md border border-Green focus:outline-none focus:border-DarkGreen3 focus:border-2 w-full sm:text-xs md:text-sm lg:text-md"
-                      />
-                    </div>
-                  </div> */}
-
-                  <div className="flex flex-col w-full sm:px-0 md:px-4 py-2 md:mt-0">
-                    <div className="  w-full hidden lg:flex md:flex"></div>
                   </div>
                 </div>
               </div>
