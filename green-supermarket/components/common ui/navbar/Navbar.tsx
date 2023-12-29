@@ -217,6 +217,18 @@ const Navbar = () => {
                             <hr className="mx-4 border-Lightgray mt-4" />
 
                             {/* Profile */}
+                            <div className=" flex flex-row py-4 text-white items-center justify-between px-4">
+                              <IoMdArrowDropleft className="mr-2" />
+                              <div className=" flex flex-row gap-2">
+                                <a href="">
+                                  <span>LOGIN</span>
+                                </a>
+                                <span>/</span>
+                                <a href="">
+                                  <span>REGISTER</span>
+                                </a>
+                              </div>
+                            </div>
                           </div>
                         )}
                       </div>
