@@ -55,9 +55,9 @@ const Navbar = () => {
               </div>
               {/* sign in/sign up */}
               <div className="hidden md:flex lg:flex xl:flex md:flex-row lg:flex-row xl:flex-row">
-                <p className=" pr-1">Sign In</p>
+                <a href="/login" className=" pr-1">Login</a>
                 <p className=" pr-1">/</p>
-                <p className=" pr-1">Sign Up</p>
+                <p className=" pr-1">Create Account</p>
               </div>
             </div>
 
