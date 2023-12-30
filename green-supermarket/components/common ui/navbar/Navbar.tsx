@@ -106,10 +106,10 @@ const Navbar = () => {
 
               <div className="flex flex-row items-center focus:mr-10 justify-center mr-4">
                 {/* md search bar */}
-                <div className="  flex-row hidden sm:hidden lg:flex xl:flex md:hidden ">
+                <div className="  flex-row hidden sm:hidden lg:flex xl:flex md:hidden  ">
                   <form
                     action="input"
-                    className={`  first-letter:relative mx-auto w-max items-center  ${
+                    className={`  first-letter:relative mx-auto w-max items-center focus:outline-0 focus:border-0 ${
                       isClicked ? "centered" : ""
                     }`}
                   >

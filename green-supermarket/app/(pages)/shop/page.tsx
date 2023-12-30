@@ -163,11 +163,11 @@ const Product: React.FC = () => {
               {/* number of products */}
               <div className="flex flex-row py-2">
                 {/* sm: filter */}
-                <div className=" flex flex-row lg:hidden ">
+                <div className=" flex flex-row  ">
                   <div className="items-center justify-center text-center">
                     <button
                       onClick={handleFilterClick}
-                      className=" w-[55px] sm:block lg:hidden bg-Green text-white rounded-full py-1 px-2  hover:shadow-lg mb-2 "
+                      className=" w-[55px] sm:block  bg-Green text-white rounded-full py-1 px-2  hover:shadow-lg mb-2 "
                     >
                       <p className=" text-center text-xs justify-center">
                         Filter
@@ -176,7 +176,7 @@ const Product: React.FC = () => {
                   </div>
                 
 
-                <div className=" absolute flex flex-col lg:hidden z-50 mt-8 bg-white ">
+                <div className=" absolute flex flex-col  z-50 mt-8 bg-white ">
                   {showCategories && (
                     <>
                       {Category.map((category) => (

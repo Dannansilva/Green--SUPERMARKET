@@ -35,10 +35,10 @@ const page = () => {
         </div>
       </div>
 
-      <div className="flex sm:flex-col lg:flex-row my-8 mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36 justify-between sm:gap-4 md:gap-8 lg:gap-2 sm:mt-10 md:mt-10  ">
+      <div className="flex sm:flex-col lg:flex-row my-8 mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36 justify-between sm:gap-4 md:gap-8 lg:gap-2 xl:gap-2 sm:mt-10 md:mt-10  ">
         {/* first div */}
-        <div className=" flex flex-col px-[20px] py-[px] sm:m-1 lg:m-1 shadow-2xl rounded-md shadow-Lightgray lg:max-h-[350px]  ">
-          <div className=" items-center sm:justify-between text-center my-2 ">
+        <div className=" flex flex-col px-[20px] py-[px] sm:m-1 lg:m-1 shadow-2xl lg:w-1/4 xl:w-1/6  rounded-md shadow-Lightgray lg:max-h-[350px]  ">
+          <div className=" items-center sm:justify-between text-center my-2 w-full ">
             <div className=" items-center justify-center text-center flex flex-row  py-[15px]">
               <Image
                 src="/assets/Contact us images/Map Pin.png"
@@ -97,7 +97,7 @@ const page = () => {
           </div>
         </div>
         {/* second div */}
-        <div className=" lg:gap-[24px] lg:p-[50px] sm:py-[25px] sm:px-[20px] sm:m-1 lg:m-1  shadow-2xl rounded-md sm:mt-8 ">
+        <div className=" lg:gap-[24px] lg:p-[50px] sm:py-[25px] sm:px-[20px] sm:m-1 lg:m-1 lg:w-full  shadow-2xl rounded-md sm:mt-8 ">
           <div className=" flex flex-col">
             <div className=" flex flex-row text-xl mb-2 font-bold">
               <h2>Just Say Hello!</h2>
