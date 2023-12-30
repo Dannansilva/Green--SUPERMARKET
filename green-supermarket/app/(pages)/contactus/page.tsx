@@ -3,6 +3,8 @@ import Image from "next/image";
 import { LiaHomeSolid } from "react-icons/lia";
 
 const page = () => {
+  const navItems = [{ home: "Home", path: "/" }];
+
   return (
     <>
       <div
@@ -19,9 +21,13 @@ const page = () => {
       >
         <div className="flex flex-row items-center mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36  gap-3 flex-1 cursor-pointer">
           <div>
-            <a href={`/home`}>
+          {navItems.map(({home, path}) => (
+          <a key={home} href={path}>
+            <div>
               <LiaHomeSolid className="text-Lightgray hover:text-white sm:text-xs md:text-base lg:text-md" />
-            </a>
+            </div>
+          </a>
+          ))}
           </div>
 
           <div className=" text-Lightgray hover:text-white cursor-auto ">

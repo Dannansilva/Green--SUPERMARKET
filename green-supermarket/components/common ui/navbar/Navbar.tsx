@@ -32,11 +32,11 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
   const navItems = [
-    { title: "HOME", path: "/" },
-    { title: "SHOP", path: "/shop" },
-    { title: "ACCOUNT", path: "/" },
-    { title: "ABOUT US", path: "/aboutus" },
-    { title: "CONTACT US", path: "/contactus" },
+    { title: "Home", path: "/" },
+    { title: "Shop", path: "/shop" },
+    { title: "Settings", path: "/settings" },
+    { title: "About us", path: "/aboutus" },
+    { title: "Contact us", path: "/contactus" },
   ];
 
   return (
@@ -61,9 +61,9 @@ const Navbar = () => {
               </div>
               {/* sign in/sign up */}
               <div className="hidden md:flex lg:flex xl:flex md:flex-row lg:flex-row xl:flex-row">
-                <p className=" pr-1">Sign In</p>
+                <a href={`/login`}><p className=" pr-1">Login</p></a>
                 <p className=" pr-1">/</p>
-                <p className=" pr-1">Sign Up</p>
+                <a href={`/registration`}><p className=" pr-1">Register</p></a>
               </div>
             </div>
 
@@ -104,19 +104,19 @@ const Navbar = () => {
 
               {/* shopping cart */}
 
-              <div className="flex flex-row items-center focus:mr-10 justify-center mr-4">
+              <div className="flex flex-row items-center justify-center ">
                 {/* md search bar */}
                 <div className="  flex-row hidden sm:hidden lg:flex xl:flex md:hidden  ">
                   <form
                     action="input"
-                    className={`  first-letter:relative mx-auto w-max items-center focus:outline-0 focus:border-0 ${
+                    className={`  first-letter:relative mx-auto w-full items-center focus:outline-0 focus:border-0 ${
                       isClicked ? "centered" : ""
                     }`}
                   >
                     <div className="mr-2 relative items-center 0">
                       <input
                         type="search"
-                        className="peer cursor-pointer relative z-10 sm:z-10 md:z-20 lg:z-20 xl:z-30 h-12 w-12 rounded-full bg-transparent pl-12 outline-none focus:w-full focus:cursor-text focus:pl-14 focus:pr-4 hover:shadow-md "
+                        className="peer border-white  cursor-pointer relative z-10 sm:z-10 md:z-20 lg:z-20 xl:z-30 h-12 w-12 rounded-full bg-transparent  outline-none focus:w-full focus:cursor-text focus:pl-14 focus:pr-4 hover:shadow-md focus:shadow-md focus:border-none focus:outline-none  "
                         onClick={handleClick}
                       />
                       <div className="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -187,11 +187,11 @@ const Navbar = () => {
                                   isClicked ? "centered" : ""
                                 }`}
                               >
-                                <div className="relative items-center ml-4 mt-4">
+                                <div className="relative items-center ml-4 mt-4 mr-3 focus:border-none focus:outline-none">
                                   <input
                                     type="search"
                                     placeholder="Search"
-                                    className="cursor-pointer relative z-10 h-12 border rounded-full bg-white pl-4 outline-DarkGreen2 border-DarkGreen2 w-full focus:w-full focus:cursor-text focus:-mr-2 hover:shadow-md px-8 focus:pl-4 focus:pr-10"
+                                    className="cursor-pointer  relative z-10 h-12 border rounded-full bg-white pl-4 outline-DarkGreen2 border-DarkGreen2 w-full focus:w-full focus:cursor-text focus:-mr-2 hover:shadow-md px-8 focus:pl-4 focus:pr-10 focus:border-none focus:outline-none "
                                     onClick={handleClick}
                                   />
                                 </div>
