@@ -10,6 +10,7 @@ import Product from "../page";
 import Products from "../Products";
 import { useState } from "react";
 import { GoSquareFill } from "react-icons/go";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 const ProductCard = ({ params }: any) => {
   const [showCategories, setShowCategories] = useState(false);
@@ -46,6 +47,10 @@ const ProductCard = ({ params }: any) => {
     { id: 5, name: "Spices" },
     { id: 6, name: "Stationary" },
     { id: 7, name: "Detergents" },
+  ];
+
+  const navItems = [
+    { home: "Home", path: "/" },
   ];
 
   const filteredProducts = Products.filter(
@@ -99,16 +104,18 @@ const ProductCard = ({ params }: any) => {
         }}
       >
         <div className="flex flex-row items-center mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36  gap-3 flex-1 cursor-pointer">
-          <a href={`/home`}>
+          {navItems.map(({home, path}) => (
+          <a key={home} href={path}>
             <div>
               <LiaHomeSolid className="text-Lightgray hover:text-white sm:text-xs md:text-base lg:text-md" />
             </div>
           </a>
+          ))}
           <div className="text-Lightgray hover:text-white cursor-auto ">
             <p className="sm:text-xs md:text-base lg:text-md ">{`>`}</p>
           </div>
           <div className="flex text-Lightgray hover:text-white ">
-            <Link href={`/shop/`}>
+            <Link href={`/shop`}>
               <p className="sm:text-xs md:text-base lg:text-md">Shop</p>
             </Link>
           </div>
@@ -133,41 +140,50 @@ const ProductCard = ({ params }: any) => {
               <div className="flex flex-col">
                 <button
                   onClick={handleFilterClick}
-                  className=" w-[80px] hidden sm:hidden md:block  bg-Green text-white rounded-full py-1 px-2 items-center text-center hover:shadow-lg mb-2"
+                  className=" w-[72px] hidden text-sm sm:hidden md:block  bg-Green text-white rounded-full py-1 items-center text-center hover:shadow-lg mb-2"
                 >
-                  <p>Filter</p>
+                  {" "}
+                  <div className="flex flex-row items-center justify-between gap-1 px-2 py-0.5   text-sm font-medium">
+                    <p className="pl-1">Filter</p>
+                    <MdKeyboardArrowDown className="pt- h-[15px] w-[15px]" />
+                  </div>
                 </button>
-                <div className="flex flex-row pt-2">
-                  <h2 className=" text-lg text-black font-semibold">
-                    All Categories
-                  </h2>
-                </div>
 
-                <div className=" sm:hidden hidden lg:flex lg:flex-col gap-0.5 items-start text-start pt-2 ">
-                  <>
-                    {Category.map((category) => (
-                      <Link key={category.id} href={`/shop/${category.id}`}>
-                        <div className=" flex flex-col lg:w-max   ">
-                          <div className="flex flex-row items-center">
-                            <GoSquareFill className=" text-green-400 w-[10px] h-[10px]" />
+                {showCategories && (
+                  <div>
+                    <div className="flex flex-row pt-2">
+                      <h2 className=" text-md text-black font-semibold ">
+                        All Categories
+                      </h2>
+                    </div>
 
-                            <button
-                              key={String(category.id)} // Convert the id to a string
-                              onClick={() => handleClick(category.id)}
-                              className={`mx-2 text-black items-center text-center text-sm m-2 transition duration-300 ease-in-out hover:font-semibold ${
-                                clickedButtonId === category.id
-                                  ? "border-b-4 border-b-Green pb-1 text-DarkGreen font-semibold"
-                                  : ""
-                              }`}
-                            >
-                              {category.name}
-                            </button>
-                          </div>
-                        </div>
-                      </Link>
-                    ))}
-                  </>
-                </div>
+                    <div className=" sm:hidden hidden lg:flex lg:flex-col gap-0.5 items-start text-start pt-2 ">
+                      <>
+                        {Category.map((category) => (
+                          <Link key={category.id} href={`/shop/${category.id}`}>
+                            <div className=" flex flex-col lg:w-max   ">
+                              <div className="flex flex-row items-center">
+                                <GoSquareFill className=" text-green-400 w-[10px] h-[10px]" />
+
+                                <button
+                                  key={String(category.id)} // Convert the id to a string
+                                  onClick={() => handleClick(category.id)}
+                                  className={`mx-2 text-black items-center text-center text-sm m-2 transition duration-300 ease-in-out hover:font-semibold ${
+                                    clickedButtonId === category.id
+                                      ? "border-b-4 border-b-Green pb-1 text-DarkGreen font-semibold"
+                                      : ""
+                                  }`}
+                                >
+                                  {category.name}
+                                </button>
+                              </div>
+                            </div>
+                          </Link>
+                        ))}
+                      </>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -185,7 +201,6 @@ const ProductCard = ({ params }: any) => {
                     <p className=" text-center text-xs justify-center">
                       Filter
                     </p>
-                    
                   </button>
                 </div>
 
@@ -222,7 +237,9 @@ const ProductCard = ({ params }: any) => {
 
               <div className="sm:flex sm:-mb-8 flex lg:-mb-0  sm:justify-end justify-between lg:flex-row lg:justify-between w-full pb-3 items-center ">
                 <div className=" sm:hidden lg:flex items-center ">
-                  <h2 className=" font-semibold sm:text-md lg:text-xl text-DarkGreen">{category.name}</h2>
+                  <h2 className=" font-semibold sm:text-md lg:text-xl text-DarkGreen">
+                    {category.name}
+                  </h2>
                 </div>
                 <div className="flex items-center text-center sm:justify-end">
                   <p className="font-bold text-xs pr-2 sm:text-xs  ">
@@ -238,8 +255,9 @@ const ProductCard = ({ params }: any) => {
             </div>
 
             <div className=" flex flex-row justify-start lg:hidden -mt-2 mb-3 ml-1">
-            <h2 className=" font-semibold text-lg text-DarkGreen">{category.name}</h2>
-
+              <h2 className=" font-semibold text-lg text-DarkGreen">
+                {category.name}
+              </h2>
             </div>
 
             {/* Products */}

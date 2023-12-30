@@ -7,6 +7,8 @@ import mastercard from "../../../public/assets/Footer img/master.png";
 import Link from "next/link";
 
 const Footer = () => {
+  const navItems = [{ home: "Home", path: "/" }];
+
   return (
     <div className="bg-DarkGreen2 flex flex-col items-center sm:py-5 sm:px-2 md:px-16 lg:px-24 xl:px-36 md:py-10 ">
       <div className="flex flex-col items-center md:items-stretch w-full sm:pt-2 pt-2 ">
@@ -46,47 +48,85 @@ const Footer = () => {
               </div>
             </div>
           </div>
-        
 
-          <hr className=" md:block lg:hidden border-Lightgray4 sm:mx-2 mx-2"/>
+          <hr className=" md:block lg:hidden border-Lightgray4 sm:mx-2 mx-2" />
 
           <div className="  flex-row w-full justify-between  ">
             <div className=" grid sm:grid-cols-3 grid-cols-3  md:grid-cols-3">
-               <div className={`  md:justify-start md:text-start justify-between`}>
+              <div
+                className={`  md:justify-start md:text-start justify-between`}
+              >
                 <ul className=" flex flex-col text-Lightgray md:leading-7  sm:text-xs text-xs leading-4 sm:leading-6  md:text-base sm:text-center text-center lg:text-start ">
-                  <h2 className=" text-white font-semibold md:text-lg md:pb-4 sm:pb-2 pb-2 sm:text-base text-base">Proxy</h2>
-                  <Link href={``}>
-                    <li className=" hover:text-white">Home</li>
+                  <h2 className=" text-white font-semibold md:text-lg md:pb-4 sm:pb-2 pb-2 sm:text-base text-base">
+                    Proxy
+                  </h2>
+                  {navItems.map(({ home, path }) => (
+                    <a key={``} href={path}>
+                      <li className=" hover:text-white">Home</li>
+                    </a>
+                  ))}
+                  <a href={`/shop`}>
                     <li className=" hover:text-white">Shop</li>
-                    <li className=" hover:text-white">Account</li>
+                  </a>
+                  <a href={`/settings`}>
+                    <li className=" hover:text-white">Settings</li>
+                  </a>
+                  <a href={`/aboutus`}>
                     <li className=" hover:text-white">About us</li>
+                  </a>
+                  <a href={`/contactus`}>
+                    {" "}
                     <li className=" hover:text-white">Contact us</li>
-                  </Link>
+                  </a>
                 </ul>
               </div>
 
               <div className="  md:justify-start md:text-start">
                 <ul className=" flex flex-col text-Lightgray md:leading-7  sm:text-xs text-xs  sm:leading-6  leading-4 md:text-base sm:text-center text-center lg:text-start ">
-                  <h2 className=" text-white font-semibold md:text-lg md:pb-4 sm:pb-2 pb-2 sm:text-base text-base">Proxy</h2>
+                  <h2 className=" text-white font-semibold md:text-lg md:pb-4 sm:pb-2 pb-2 sm:text-base text-base">
+                    Proxy
+                  </h2>
                   <Link href={``}>
-                    <li className=" hover:text-white">Home</li>
-                    <li className=" hover:text-white">Shop</li>
-                    <li className=" hover:text-white">Account</li>
-                    <li className=" hover:text-white">About us</li>
-                    <li className=" hover:text-white">Contact us</li>
+                    <a href={``}>
+                      <li className=" hover:text-white">Home</li>
+                    </a>
+                    <a href={``}>
+                      <li className=" hover:text-white">Shop</li>
+                    </a>
+                    <a href={``}>
+                      <li className=" hover:text-white">Settings</li>
+                    </a>
+                    <a href={``}>
+                      <li className=" hover:text-white">About us</li>
+                    </a>
+                    <a href={``}>
+                      <li className=" hover:text-white">Contact us</li>
+                    </a>
                   </Link>
                 </ul>
               </div>
 
               <div className=" md:justify-start md:text-start  ">
                 <ul className=" flex flex-col text-Lightgray md:leading-7 sm:text-xs text-xs sm:leading-6 leading-4 md:text-base sm:text-center text-center lg:text-start">
-                  <h2 className=" text-white font-semibold md:text-lg md:pb-4 sm:pb-2 pb-2 sm:text-base text-base">Proxy</h2>
+                  <h2 className=" text-white font-semibold md:text-lg md:pb-4 sm:pb-2 pb-2 sm:text-base text-base">
+                    Proxy
+                  </h2>
                   <Link href={``}>
-                    <li className=" hover:text-white">Home</li>
-                    <li className=" hover:text-white">Shop</li>
-                    <li className=" hover:text-white">Account</li>
-                    <li className=" hover:text-white">About us</li>
-                    <li className=" hover:text-white">Contact us</li>
+                    <a href={``}>
+                      <li className=" hover:text-white">Home</li>
+                    </a>
+                    <a href={``}>
+                      <li className=" hover:text-white">Shop</li>
+                    </a>
+                    <a href={``}>
+                      <li className=" hover:text-white">Settings</li>
+                    </a>
+                    <a href={``}>
+                      <li className=" hover:text-white">About us</li>
+                    </a>
+                    <a href={``}>
+                      <li className=" hover:text-white">Contact us</li>
+                    </a>
                   </Link>
                 </ul>
               </div>
@@ -105,33 +145,32 @@ const Footer = () => {
               </div> */}
             </div>
           </div>
-
+        </div>
+        {/* Copyright and Payment Options */}
+        <div className="flex flex-col md:flex-row justify-between items-center shadow-sm bg-DarkGreen2 w-full gap-5 mt-8 pb-2  ">
+          {/* Copyright */}
+          <div className="text-zinc-500 md:text-sm leading-5 md:mr-auto sm:text-xs  text-xs">
+            GREEN Supermarket © 2023. All Rights Reserved
           </div>
-          {/* Copyright and Payment Options */}
-          <div className="flex flex-col md:flex-row justify-between items-center shadow-sm bg-DarkGreen2 w-full gap-5 mt-8 pb-2  ">
-            {/* Copyright */}
-            <div className="text-zinc-500 md:text-sm leading-5 md:mr-auto sm:text-xs  text-xs">
-              GREEN Supermarket © 2023. All Rights Reserved
-            </div>
-            {/* Payment Options */}
-            <div className="flex gap-2 md:justify-center">
-              <Image src={visa} alt="visa" className="w-full h-[31.76px]" />
-              <Image
-                src={mastercard}
-                alt="mastercard"
-                className="w-full h-[31.76px]"
-              />
-              <div className="border bg-zinc-900 flex flex-col px-1 py-1 rounded-md text-center w-full h-[31.76px]">
-                <div className="flex items-center gap-0.5">
-                  <BiLockAlt className="w-[8px] h-[8px] fill-white" />
-                  <div className="text-white text-[8px] ">Secure</div>
-                </div>
-                <div className="text-white text-[8px] font-semibold ">
-                  Payment
-                </div>
+          {/* Payment Options */}
+          <div className="flex gap-2 md:justify-center">
+            <Image src={visa} alt="visa" className="w-full h-[31.76px]" />
+            <Image
+              src={mastercard}
+              alt="mastercard"
+              className="w-full h-[31.76px]"
+            />
+            <div className="border bg-zinc-900 flex flex-col px-1 py-1 rounded-md text-center w-full h-[31.76px]">
+              <div className="flex items-center gap-0.5">
+                <BiLockAlt className="w-[8px] h-[8px] fill-white" />
+                <div className="text-white text-[8px] ">Secure</div>
+              </div>
+              <div className="text-white text-[8px] font-semibold ">
+                Payment
               </div>
             </div>
           </div>
+        </div>
       </div>
     </div>
   );
