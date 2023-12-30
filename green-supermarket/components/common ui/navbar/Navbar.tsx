@@ -70,7 +70,7 @@ const Navbar = () => {
             <hr className=" hidden md:block lg:block xl:block" />
 
             {/* navbar second row */}
-            <div className="h-[110px] flex flex-row items-center w-full justify-between md:justify-between lg:justify-between xl:justify-between  sm:-mt-6 sm:ml-2 pt-4 py-0">
+            <div className="h-[110px] flex flex-row items-center w-full justify-between md:justify-between lg:justify-between xl:justify-between  sm:-mt-6  pt-4 py-0">
               {/* logo */}
 
               <div className="flex items-center md:h-6 lg:h-full xl:h-full">
@@ -170,7 +170,7 @@ const Navbar = () => {
                             }`}
                           >
                             {/* button inside */}
-                            <div className="flex flex-row items-center justify-end mt-8 mr-4">
+                            <div className="flex flex-row items-center justify-end mt-8 mr-2">
                               <button
                                 onClick={isMenuOpen ? closeMenu : toggleMenu}
                                 className="text-white"
@@ -191,7 +191,7 @@ const Navbar = () => {
                                   <input
                                     type="search"
                                     placeholder="Search"
-                                    className="cursor-pointer  relative z-10 h-12 border rounded-full bg-white pl-4 outline-DarkGreen2 border-DarkGreen2 w-full focus:w-full focus:cursor-text focus:-mr-2 hover:shadow-md px-8 focus:pl-4 focus:pr-10 focus:border-none focus:outline-none "
+                                    className="cursor-pointer  relative z-10 h-12 border rounded-full bg-white pl-4 outline-DarkGreen2 border-DarkGreen2 w-full focus:w-full focus:cursor-text focus:-mr-2 hover:shadow-md px-8 focus:pl-4 focus:pr-10 "
                                     onClick={handleClick}
                                   />
                                 </div>
