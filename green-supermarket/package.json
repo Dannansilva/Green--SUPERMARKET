@@ -9,8 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "countries-list":"3.0.6",
-    "@tailwindcss/forms": "^0.4.0",
+<<<<<<< HEAD
+    "@tailwindcss/forms": "^0.5.7",
+=======
+    "countries-list": "^3.0.6",
+>>>>>>> 2880e96e953915075d7f8ffefeffcf644e2de798
     "next": "^14.0.4",
     "react": "^18",
     "react-datepicker": "^4.25.0",
