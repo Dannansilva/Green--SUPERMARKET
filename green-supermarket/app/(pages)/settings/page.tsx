@@ -2,6 +2,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 import Accountsettings from "../../../components/settings page/accountsettings";
 import Billinginfo from "../../../components/settings page/billinginfo";
+import Updatepassword from "../../../components/settings page/updatepassword"
 import Container from "../../../components/container/container";
 
 const NavigationPopup = dynamic(
@@ -16,6 +17,7 @@ function Page() {
         <NavigationPopup />
         <Accountsettings />
         <Billinginfo /> 
+        <Updatepassword />
       </Container>
     </div>
   );

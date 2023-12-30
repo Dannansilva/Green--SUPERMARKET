@@ -10,14 +10,13 @@ import { IoSearch } from "react-icons/io5";
 import { PiHandbagFill } from "react-icons/pi";
 import { FaUser } from "react-icons/fa6";
 import { RiMenu3Fill } from "react-icons/ri";
+import path from "path";
+import { IoClose } from "react-icons/io5";
+import { title } from "process";
+import { IoMdArrowDropleft } from "react-icons/io";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-    // console.log('buttonclick')
-  };
 
   const [isClicked, setIsClicked] = useState(false);
 
@@ -25,12 +24,19 @@ const Navbar = () => {
     setIsClicked(true);
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
   const navItems = [
-    { title: "Home", path: "/" },
-    { title: "Shop", path: "/shop" },
-    { title: "Account", path: "/" },
-    { title: "About Us", path: "/aboutus" },
-    { title: "Contact Us", path: "/contactus" },
+    { title: "HOME", path: "/" },
+    { title: "SHOP", path: "/shop" },
+    { title: "ACCOUNT", path: "/" },
+    { title: "ABOUT US", path: "/aboutus" },
+    { title: "CONTACT US", path: "/contactus" },
   ];
 
   return (
@@ -68,7 +74,7 @@ const Navbar = () => {
               {/* logo */}
 
               <div className="flex items-center md:h-6 lg:h-full xl:h-full">
-                <Link href="/">
+                <a href={``}>
                   <Image
                     src={logo}
                     alt="Logo"
@@ -76,7 +82,7 @@ const Navbar = () => {
                     width={137}
                     className="img-fluid md:h-full "
                   />
-                </Link>
+                </a>
               </div>
 
               {/* search bar for md, lg,xl*/}
@@ -100,7 +106,7 @@ const Navbar = () => {
 
               <div className="flex flex-row items-center focus:mr-10 justify-center mr-4">
                 {/* md search bar */}
-                <div className="  flex-row hidden sm:hidden lg:flex xl:flex md:flex ">
+                <div className="  flex-row hidden sm:hidden lg:flex xl:flex md:hidden ">
                   <form
                     action="input"
                     className={`  first-letter:relative mx-auto w-max items-center  ${
@@ -123,15 +129,15 @@ const Navbar = () => {
                 <div>
                   <SlHandbag
                     size={35}
-                    className="pr-3 text-black  hidden sm:hidden md:block lg:block xl:block "
+                    className="pr-3 text-DarkGreen  hidden sm:hidden md:hidden lg:block xl:block "
                   />
                   <div className="flex flex-row items-center">
                     <div className="flex flex-row justify-between justify items-center">
                       <SlHandbag
                         size={24}
-                        className=" pr-2 text-black sm:block md:hidden lg:hidden xl:hidden"
+                        className=" pr-2 sm:block md:block lg:hidden xl:hidden text-DarkGreen"
                       />
-                      <p className="pr-2 text-black text-[11px] sm:block md:hidden lg:hidden xl:hidden font-semibold">
+                      <p className="pr-2 text-black text-[11px] sm:block md:block lg:hidden xl:hidden font-semibold">
                         Rs.0.00
                       </p>
                       <div className="sm:block md:hidden lg:hidden xl:hidden pr-2">
@@ -141,21 +147,93 @@ const Navbar = () => {
                         size={14}
                         className=" text-black  sm:block md:hidden lg:hidden xl:hidden"
                       />
-                      <div className="sm:flex sm:flex-row md:hidden lg:hidden xl:hidden justify-center items-center pl-2">
-                        <button onClick={toggleMenu}>
-                          {isMenuOpen ? (
-                            <RiMenu3Fill
-                              size={18}
-                              className=" font-bold text-black sm:block md:hidden lg:hidden xl:hidden w-auto"
-                            />
-                          ) : (
-                            <RiMenu3Fill
-                              size={18}
-                              className=" font-bold text-black sm:block md:hidden lg:hidden xl:hidden"
-                            />
-                          )}
+
+                      <div className="sm:flex md:flex lg:hidden xl:hidden">
+                        <button
+                          onClick={isMenuOpen ? closeMenu : toggleMenu}
+                          className="pl-2"
+                        >
+                          {isMenuOpen ? <IoClose /> : <RiMenu3Fill />}
                         </button>
+
+                        {isMenuOpen && (
+                          <div
+                            className="fixed top-0 left-0 w-full h-full bg-black opacity-50"
+                            onClick={closeMenu}
+                          />
+                        )}
+
+                        {isMenuOpen && (
+                          <div
+                            className={`fixed top-0 right-0 bg-DarkGreen h-full w-[260px] duration-300 ease-in-out transform z-50 ${
+                              isMenuOpen ? "translate-x-0" : "translate-x-full"
+                            }`}
+                          >
+                            {/* button inside */}
+                            <div className="flex flex-row items-center justify-end mt-8 mr-4">
+                              <button
+                                onClick={isMenuOpen ? closeMenu : toggleMenu}
+                                className="text-white"
+                              >
+                                {isMenuOpen ? <IoClose /> : <RiMenu3Fill />}
+                              </button>
+                            </div>
+
+                            {/* searchbar sm: */}
+                            <div className="flex-row hidden sm:flex md:flex lg:hidden">
+                              <form
+                                action="input"
+                                className={`first-letter:relative w-max items-start ${
+                                  isClicked ? "centered" : ""
+                                }`}
+                              >
+                                <div className="relative items-center ml-4 mt-4">
+                                  <input
+                                    type="search"
+                                    placeholder="Search"
+                                    className="cursor-pointer relative z-10 h-12 border rounded-full bg-white pl-4 outline-DarkGreen2 border-DarkGreen2 w-full focus:w-full focus:cursor-text focus:-mr-2 hover:shadow-md px-8 focus:pl-4 focus:pr-10"
+                                    onClick={handleClick}
+                                  />
+                                </div>
+                              </form>
+                            </div>
+
+                            {/* navitems sm: */}
+                            <ul className="px-4 py-2 mt-2">
+                              {navItems.map(({ title, path }) => (
+                                <Link
+                                  key={title}
+                                  href={path}
+                                  onClick={closeMenu}
+                                >
+                                  <li className="py-4 text-white flex items-center justify-between">
+                                    <IoMdArrowDropleft className="mr-2" />
+                                    {title}
+                                  </li>
+                                </Link>
+                              ))}
+                            </ul>
+
+                            <hr className="mx-4 border-Lightgray mt-4" />
+
+                            {/* Profile */}
+                            <div className=" flex flex-row py-4 text-white items-center justify-between px-4">
+                              <IoMdArrowDropleft className="mr-2" />
+                              <div className=" flex flex-row gap-2">
+                                <a href="">
+                                  <span>LOGIN</span>
+                                </a>
+                                <span>/</span>
+                                <a href="">
+                                  <span>REGISTER</span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        )}
                       </div>
+
+                      {/* md: lg: xl: */}
                     </div>
                   </div>
                 </div>
@@ -164,7 +242,7 @@ const Navbar = () => {
                     <p className="pr-1 text-Gray2 text-[11px] hidden md:hidden lg:hidden xl:hidden font-medium text-sm">
                       Shopping cart:
                     </p>
-                    <p className="pr-1 text-Gray text-[11px] hidden md:block lg:block xl:block font-semibold">
+                    <p className="pr-1 text-Gray text-[11px] hidden md:hidden lg:block xl:block font-semibold">
                       Rs.0.00
                     </p>
                   </div>
@@ -173,16 +251,14 @@ const Navbar = () => {
             </div>
 
             {/* md, lg ,xl menu */}
-
-            {/* search bar for sm */}
           </div>
-          <div className="bg-DarkGreen h-[60px] hidden  md:flex lg:flex xl:flex lg:flex-row xl:flex-row justify-between items-center md:h-12 lg:h-[55px] xl:h-[55px] md:-mt-2  ">
+          <div className="bg-DarkGreen h-[60px] hidden  md:hidden lg:flex xl:flex lg:flex-row xl:flex-row justify-between items-center md:h-12 lg:h-[55px] xl:h-[55px] md:-mt-2  ">
             <div className="h-full flex flex-row md:text-xs lg:text-sm xl:text-md inset-0">
               <ul className="flex items-center md:gap-[30px] lg:gap-[40px] xl:gap-[50px] text-Lightgray2 md:mx-16 lg:mx-24 xl:mx-36">
                 {navItems.map(({ title, path }) => (
                   <li
                     key={title}
-                    className="hover:text-white duration-500 ease-in-out transform cursor-pointer hover:scale-105 hover:font-semibold hover:text-md hover:flex-grow-0  w-max"
+                    className="hover:text-white duration-300 ease-in-out transform cursor-pointer hover:scale-105  hover:flex-grow-0 w-max"
                   >
                     <Link className="" href={path}>
                       {title}
@@ -193,7 +269,7 @@ const Navbar = () => {
             </div>
 
             {/* sm screen menu */}
-            <div className="sm:hidden md:hidden lg:hidden xl:hidden ">
+            {/* <div className="sm:hidden md:hidden lg:hidden xl:hidden ">
               <button onClick={toggleMenu}>
                 <RiMenu3Fill size={18} className="font-bold text-black" />
               </button>
@@ -203,15 +279,15 @@ const Navbar = () => {
                 }`}
               >
                 {navItems.map(({ title, path }) => (
-                  <li
+                
+                    <a href={path}>{title}</a>
+                  </li>  <li
                     key={title}
                     className="hover:text-white duration-500 ease-in-out transform cursor-pointer hover:scale-105 hover:font-semibold hover:text-lg "
                   >
-                    <Link href={path}>{title}</Link>
-                  </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
 
             {/* call */}
             <div className="flex felx-row justify-between items-center px-2 text-white font-light text-xs md:text-sm lg:text-sm xl:text-sm md:mx-16 lg:mx-24 xl:mx-36 w-max">

@@ -4,13 +4,14 @@ import React from "react";
 import drink from "../../public/assets/products images/Beverages.jpg";
 import { IoStarSharp } from "react-icons/io5";
 import { FaPlus, FaMinus } from "react-icons/fa6";
-import { useState } from "react";
 import checkicon from "../../public/assets/About us images/Checkicon.png";
 import customer1 from "../../public/assets/customers/Image1.png";
 import customer2 from "../../public/assets/customers/Image2.png";
 import customer3 from "../../public/assets/customers/Image3.png";
 import user from "../../public/assets/customers/User 1.png";
-const productesdetails = () => {
+import { useState } from "react";
+
+const Productesdetails = () => {
   const [quantity, setQuantity] = useState(1);
 
   const increaseValue = () => {
@@ -312,9 +313,9 @@ const productesdetails = () => {
             </div>
           </div>
           <div className="text-zinc-500 text-sm leading-5 w-full mt-3 max-md:max-w-full lg:mb-8 mb-7">
-            200+ Canton Pak Choi Bok Choy Chinese Cabbage Seeds Heirloom Non-GMO
+            {`200+ Canton Pak Choi Bok Choy Chinese Cabbage Seeds Heirloom Non-GMO
             Productive Brassica rapa VAR. chinensis, a.k.a. Canton's Choice, Bok
-            Choi, from USA
+            Choi, from USA`}
           </div>
         </div>
       </div>
@@ -322,4 +323,4 @@ const productesdetails = () => {
   );
 };
 
-export default productesdetails;
+export default Productesdetails;
