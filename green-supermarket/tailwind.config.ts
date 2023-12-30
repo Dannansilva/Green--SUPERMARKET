@@ -1,5 +1,7 @@
 import type { Config } from 'tailwindcss'
 
+
+
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,6 +10,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        PrimaryFont: ['Poppins','Inter']
+      },
+
+
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -41,6 +48,8 @@ const config: Config = {
       
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
 export default config
