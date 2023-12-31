@@ -57,77 +57,69 @@ const Footer = () => {
                 className={`  md:justify-start md:text-start justify-between`}
               >
                 <ul className=" flex flex-col text-Lightgray md:leading-7  sm:text-xs text-xs leading-4 sm:leading-6  md:text-base sm:text-center text-center lg:text-start ">
-                  <h2 className=" text-white font-semibold md:text-lg md:pb-4 sm:pb-2 pb-2 sm:text-base text-base">
+                  <h2 className=" text-green-600 font-semibold md:text-lg md:pb-4 sm:pb-2 pb-2 sm:text-base text-base">
                     Proxy
                   </h2>
                   {navItems.map(({ home, path }) => (
                     <a key={``} href={path}>
-                      <li className=" hover:text-white">Home</li>
+                      <li className=" hover:text-green-100">Home</li>
                     </a>
                   ))}
                   <a href={`/shop`}>
-                    <li className=" hover:text-white">Shop</li>
+                    <li className=" hover:text-green-100">Shop</li>
                   </a>
                   <a href={`/settings`}>
-                    <li className=" hover:text-white">Settings</li>
-                  </a>
-                  <a href={`/aboutus`}>
-                    <li className=" hover:text-white">About us</li>
-                  </a>
-                  <a href={`/contactus`}>
-                    {" "}
-                    <li className=" hover:text-white">Contact us</li>
-                  </a>
+                    <li className=" hover:text-green-100">Settings</li>
+                 </a>
                 </ul>
               </div>
 
               <div className="  md:justify-start md:text-start">
                 <ul className=" flex flex-col text-Lightgray md:leading-7  sm:text-xs text-xs  sm:leading-6  leading-4 md:text-base sm:text-center text-center lg:text-start ">
-                  <h2 className=" text-white font-semibold md:text-lg md:pb-4 sm:pb-2 pb-2 sm:text-base text-base">
-                    Proxy
+                  <h2 className=" text-green-600 font-semibold md:text-lg md:pb-4 sm:pb-2 pb-2 sm:text-base text-base text-start">
+                    Categories
                   </h2>
-                  <Link href={``}>
-                    <a href={``}>
-                      <li className=" hover:text-white">Home</li>
+                  <a href={`/shop/1`}>
+                      <li className=" hover:text-green-100">Fruits</li>
                     </a>
-                    <a href={``}>
-                      <li className=" hover:text-white">Shop</li>
+                    <a href={`/shop/2`}>
+                      <li className=" hover:text-green-100">Vegetables</li>
                     </a>
-                    <a href={``}>
-                      <li className=" hover:text-white">Settings</li>
+                    <a href={`/shop/3`}>
+                      <li className=" hover:text-green-100">Bread & Bakery</li>
                     </a>
-                    <a href={``}>
-                      <li className=" hover:text-white">About us</li>
+                    <a href={`/shop/4`}>
+                      <li className=" hover:text-green-100">Meat & Fish</li>
                     </a>
-                    <a href={``}>
-                      <li className=" hover:text-white">Contact us</li>
+                    <a href={`/shop/5`}>
+                      <li className=" hover:text-green-100">Spices</li>
                     </a>
-                  </Link>
+                    <a href={`/shop/6`}>
+                      <li className=" hover:text-green-100">Stationary</li>
+                    </a>
+                    <a href={`/shop/7`}>
+                      <li className=" hover:text-green-100">Detergents</li>
+                    </a>
+                  
+                   
+                
                 </ul>
               </div>
 
               <div className=" md:justify-start md:text-start  ">
                 <ul className=" flex flex-col text-Lightgray md:leading-7 sm:text-xs text-xs sm:leading-6 leading-4 md:text-base sm:text-center text-center lg:text-start">
-                  <h2 className=" text-white font-semibold md:text-lg md:pb-4 sm:pb-2 pb-2 sm:text-base text-base">
-                    Proxy
+                  <h2 className=" text-green-600 font-semibold md:text-lg md:pb-4 sm:pb-2 pb-2 sm:text-base text-base">
+                  Customer Service
+
                   </h2>
-                  <Link href={``}>
-                    <a href={``}>
-                      <li className=" hover:text-white">Home</li>
-                    </a>
-                    <a href={``}>
-                      <li className=" hover:text-white">Shop</li>
-                    </a>
-                    <a href={``}>
-                      <li className=" hover:text-white">Settings</li>
-                    </a>
-                    <a href={``}>
-                      <li className=" hover:text-white">About us</li>
-                    </a>
-                    <a href={``}>
-                      <li className=" hover:text-white">Contact us</li>
-                    </a>
-                  </Link>
+                  <a href={`/aboutus`}>
+                    <li className=" hover:text-green-100">About us</li>
+                  </a>
+                  <a href={`/contactus`}>
+                    {" "}
+                    <li className=" hover:text-green-100">Contact us</li>
+                  </a>
+                    
                 </ul>
               </div>
 
@@ -147,7 +139,7 @@ const Footer = () => {
           </div>
         </div>
         {/* Copyright and Payment Options */}
-        <div className="flex flex-col md:flex-row justify-between items-center shadow-sm bg-DarkGreen2 w-full gap-5 mt-8 pb-2  ">
+        <div className="flex flex-col md:flex-row justify-between items-center shadow-sm bg-DarkGreen2 w-full gap-5 mt- pb-2  ">
           {/* Copyright */}
           <div className="text-zinc-500 md:text-sm leading-5 md:mr-auto sm:text-xs  text-xs">
             GREEN Supermarket © 2023. All Rights Reserved
@@ -158,14 +150,16 @@ const Footer = () => {
             <Image
               src={mastercard}
               alt="mastercard"
+              width={100}
+              height={100}
               className="w-full h-[31.76px]"
             />
-            <div className="border bg-zinc-900 flex flex-col px-1 py-1 rounded-md text-center w-full h-[31.76px]">
+            <div className="border border-Lightgray2 bg-zinc-900 flex flex-col px-1 py-1 rounded-md text-center w-full h-[31.76px]">
               <div className="flex items-center gap-0.5">
                 <BiLockAlt className="w-[8px] h-[8px] fill-white" />
-                <div className="text-white text-[8px] ">Secure</div>
+                <div className="text-Lightgray2 text-[8px] ">Secure</div>
               </div>
-              <div className="text-white text-[8px] font-semibold ">
+              <div className="text-Lightgray2 text-[8px] font-semibold ">
                 Payment
               </div>
             </div>
