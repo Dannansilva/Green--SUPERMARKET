@@ -10,6 +10,7 @@ import customer2 from "../../public/assets/customers/Image2.png";
 import customer3 from "../../public/assets/customers/Image3.png";
 import user from "../../public/assets/customers/User 1.png";
 import { useState } from "react";
+import products from "../../app/(pages)/shop/Products";
 
 const Productesdetails = () => {
   const [quantity, setQuantity] = useState(1);
@@ -24,6 +25,14 @@ const Productesdetails = () => {
 
   return (
     <div>
+       {
+         products.map((product) => ( 
+          <>  
+          
+          </>
+         ))
+       }
+       
       <div className=" lg:grid lg:gap-4 lg:grid-cols-2">
         <div>
           {/* main image */}
@@ -31,10 +40,10 @@ const Productesdetails = () => {
             <Image src={drink} alt="drink" width={500} height={500} />
           </div>
           {/* sub images */}
-          <div className=" inline-flex gap-1 mt-1">
+          {/* <div className=" inline-flex gap-1 mt-1">
             <Image src={drink} alt="drink" width={200} height={200} />
             <Image src={drink} alt="drink" width={200} height={200} />
-          </div>
+          </div> */}
         </div>
         <div>
           {/* heading */}
@@ -140,6 +149,7 @@ const Productesdetails = () => {
           </div>
         </div>
       </div>
+      
       {/* description */}
       <div className="items-center  bg-white self-stretch flex w-full flex-col justify-center px-16 max-md:max-w-full max-md:px-5 mt-5">
         <div className="flex items-stretch gap-0">
