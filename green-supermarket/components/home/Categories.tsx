@@ -3,7 +3,7 @@ export const Category = [
     {
       id: 1,
       location: "/assets/products images/Categoryimages/image 1.png",
-      name: "Fresh Fruit",
+      name: "Fresh Fruits",
     },
   
     {
