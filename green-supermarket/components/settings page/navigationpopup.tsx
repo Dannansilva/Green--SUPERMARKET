@@ -36,7 +36,7 @@ const navigationpopup = () => {
         <div className="w-6 h-6 p-1 justify-center items-center flex" />
         <Image src={refreshicon} alt="orderhistory" width={24} height={24} />
         <div className="w-[238px] text-base text-stone-500 font-normal leading-normal">
-          Order History
+          Order Details
         </div>
       </div>
 
