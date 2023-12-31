@@ -7,20 +7,28 @@ import mastercard from "../../../public/assets/Footer img/master.png";
 import Link from "next/link";
 
 const Footer = () => {
+
+  
   const navItems = [{ home: "Home", path: "/" }];
+
+
+
 
   return (
     <div className="bg-DarkGreen2 flex flex-col items-center sm:py-5 sm:px-2 md:px-16 lg:px-24 xl:px-36 md:py-10 ">
       <div className="flex flex-col items-center md:items-stretch w-full sm:pt-2 pt-2 ">
         <div className="flex flex-col sm:flex-col lg:flex-row justify-between gap-5 lg:pb-[50px] lg:gap-[112px] md:gap-[20px] ">
           {/* Logo */}
+          
           <div className="flex flex-col lg:max-w-[350px] sm:w-full">
             <div className="flex items-center justify-center sm:justify-center md:justify-between ">
+            <a href={`/`}>
               <Image
                 src={Logoimg}
                 alt="logo"
                 className="text-white text-3xl font-medium leading-10 tracking-tighter flex-shrink-0"
               />
+              </a>
             </div>
             {/* Company Info */}
             <div className="flex flex-col md:mt-0 ">
@@ -51,54 +59,54 @@ const Footer = () => {
 
           <hr className=" md:block lg:hidden border-Lightgray4 sm:mx-2 mx-2" />
 
-          <div className="  flex-row w-full justify-between  ">
+          <div className="  flex-col w-full justify-between  ">
             <div className=" grid sm:grid-cols-3 grid-cols-3  md:grid-cols-3">
               <div
-                className={`  md:justify-start md:text-start justify-between`}
+                className={`  md:justify-start md:text-start justify-between sm:text-center`}
               >
-                <ul className=" flex flex-col text-Lightgray md:leading-7  sm:text-xs text-xs leading-4 sm:leading-6  md:text-base sm:text-center text-center lg:text-start ">
-                  <h2 className=" text-green-600 font-semibold md:text-lg md:pb-4 sm:pb-2 pb-2 sm:text-base text-base">
+                <ul className=" flex flex-col text-Lightgray md:leading-6  sm:text-xs text-xs leading-4 sm:leading-6  md:text-sm lg:text-start ">
+                  <h2 className=" text-green-400 font-medium md:text-sm md:pb-2 sm:pb-2 pb-2  text-base sm:text-xs">
                     Proxy
                   </h2>
                   {navItems.map(({ home, path }) => (
                     <a key={``} href={path}>
-                      <li className=" hover:text-green-100">Home</li>
+                      <li className=" hover:text-green-50">Home</li>
                     </a>
                   ))}
                   <a href={`/shop`}>
-                    <li className=" hover:text-green-100">Shop</li>
+                    <li className=" hover:text-green-50">Shop</li>
                   </a>
-                  <a href={`/settings`}>
-                    <li className=" hover:text-green-100">Settings</li>
-                 </a>
+                  {/* <a href={`/settings`}>
+                    <li className=" hover:text-green-50">Settings</li>
+                 </a> */}
                 </ul>
               </div>
 
-              <div className="  md:justify-start md:text-start">
-                <ul className=" flex flex-col text-Lightgray md:leading-7  sm:text-xs text-xs  sm:leading-6  leading-4 md:text-base sm:text-center text-center lg:text-start ">
-                  <h2 className=" text-green-600 font-semibold md:text-lg md:pb-4 sm:pb-2 pb-2 sm:text-base text-base text-start">
+              <div className="  md:justify-start md:text-start sm:text-center ">
+                <ul className=" flex flex-col text-Lightgray md:leading-6  sm:text-xs text-xs  sm:leading-6  leading-4 md:text-sm  lg:text-start ">
+                  <h2 className="  text-green-400 font-medium md:text-sm md:pb-2 sm:pb-2 pb-2 sm:text-xs text-base text-start sm:text-center md:text-start ">
                     Categories
                   </h2>
                   <a href={`/shop/1`}>
-                      <li className=" hover:text-green-100">Fruits</li>
+                      <li className=" hover:text-green-50">Fruits</li>
                     </a>
                     <a href={`/shop/2`}>
-                      <li className=" hover:text-green-100">Vegetables</li>
+                      <li className=" hover:text-green-50">Vegetables</li>
                     </a>
                     <a href={`/shop/3`}>
-                      <li className=" hover:text-green-100">Bread & Bakery</li>
+                      <li className=" hover:text-green-50">Bread & Bakery</li>
                     </a>
                     <a href={`/shop/4`}>
-                      <li className=" hover:text-green-100">Meat & Fish</li>
+                      <li className=" hover:text-green-50">Meat & Fish</li>
                     </a>
                     <a href={`/shop/5`}>
-                      <li className=" hover:text-green-100">Spices</li>
+                      <li className=" hover:text-green-50">Spices</li>
                     </a>
                     <a href={`/shop/6`}>
-                      <li className=" hover:text-green-100">Stationary</li>
+                      <li className=" hover:text-green-50">Stationary</li>
                     </a>
                     <a href={`/shop/7`}>
-                      <li className=" hover:text-green-100">Detergents</li>
+                      <li className=" hover:text-green-50">Detergents</li>
                     </a>
                   
                    
@@ -106,18 +114,18 @@ const Footer = () => {
                 </ul>
               </div>
 
-              <div className=" md:justify-start md:text-start  ">
-                <ul className=" flex flex-col text-Lightgray md:leading-7 sm:text-xs text-xs sm:leading-6 leading-4 md:text-base sm:text-center text-center lg:text-start">
-                  <h2 className=" text-green-600 font-semibold md:text-lg md:pb-4 sm:pb-2 pb-2 sm:text-base text-base">
+              <div className=" md:justify-start md:text-start sm:text-center ">
+                <ul className=" flex flex-col text-Lightgray md:leading-6 sm:text-xs text-xs sm:leading-6 leading-4 md:text-sm  lg:text-start">
+                  <h2 className=" text-green-400 font-medium md:text-sm md:pb-2 sm:pb-2 pb-2 sm:text-xs text-base">
                   Customer Service
 
                   </h2>
                   <a href={`/aboutus`}>
-                    <li className=" hover:text-green-100">About us</li>
+                    <li className=" hover:text-green-50">About us</li>
                   </a>
                   <a href={`/contactus`}>
                     {" "}
-                    <li className=" hover:text-green-100">Contact us</li>
+                    <li className=" hover:text-green-50">Contact us</li>
                   </a>
                     
                 </ul>
@@ -139,7 +147,7 @@ const Footer = () => {
           </div>
         </div>
         {/* Copyright and Payment Options */}
-        <div className="flex flex-col md:flex-row justify-between items-center shadow-sm bg-DarkGreen2 w-full gap-5 mt- pb-2  ">
+        <div className="flex flex-col md:flex-row justify-between items-center shadow-sm bg-DarkGreen2 w-full gap-5  pb-2 mt-8  ">
           {/* Copyright */}
           <div className="text-zinc-500 md:text-sm leading-5 md:mr-auto sm:text-xs  text-xs">
             GREEN Supermarket © 2023. All Rights Reserved
@@ -154,7 +162,7 @@ const Footer = () => {
               height={100}
               className="w-full h-[31.76px]"
             />
-            <div className="border border-Lightgray2 bg-zinc-900 flex flex-col px-1 py-1 rounded-md text-center w-full h-[31.76px]">
+            <div className="border border-Lightgray2 bg-zinc-900 flex flex-col px-1 py-1 rounded-md text-center w-full h-[31.76px] ">
               <div className="flex items-center gap-0.5">
                 <BiLockAlt className="w-[8px] h-[8px] fill-white" />
                 <div className="text-Lightgray2 text-[8px] ">Secure</div>
