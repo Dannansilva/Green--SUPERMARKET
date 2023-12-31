@@ -9,8 +9,12 @@ import Link from "next/link";
 import { Category } from "@/components/home/Categories";
 import { GoSquareFill } from "react-icons/go";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { useRouter } from "next/navigation";
+
+
 
 const Product: React.FC = () => {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
   const [selectedSort, setSelectedSort] = useState<string>("sort");
@@ -40,6 +44,12 @@ const Product: React.FC = () => {
   };
 
   const navItems = [{ home: "Home", path: "/" }];
+
+  const productclick = () => {
+    router.push("/products_details");
+  };
+   
+  
 
   return (
     <>
@@ -252,6 +262,9 @@ const Product: React.FC = () => {
                   <div
                     key={id}
                     className=" px-2 hover:border-DarkGreen hover:shadow-sm hover:shadow-Green w-full border rounded-md  "
+                    onClick={() => {
+                      router.push("/products_details");
+                    } }
                   >
                     <div>
                       <Image
