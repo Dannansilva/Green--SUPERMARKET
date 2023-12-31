@@ -11,6 +11,7 @@ const Products = [
     price: "LKR 500.00",
     image2: <SlHandbag />,
     category: 1,
+    quantity:1,
   },
   {
     id: 2,
@@ -19,6 +20,8 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 1,
+    quantity:1,
+
   },
   {
     id: 3,
@@ -27,6 +30,8 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 1,
+    quantity:1,
+
   },
   {
     id: 4,
@@ -135,7 +140,7 @@ const Products = [
   //     image2: <SlHandbag/>
   // },
   {
-    id: 1,
+    id: 6,
     name: <p className=" text-Lightgray hover:text-DarkGreen ">Tomatoes</p>,
     image: "/assets/ShopPage/vegetables/Fresh red tomatoes.png",
     price: "LKR 100.00",
@@ -143,7 +148,7 @@ const Products = [
     category: 2,
   },
   {
-    id: 2,
+    id: 7,
     name: <p className=" text-Lightgray hover:text-DarkGreen ">Potatoes</p>,
     image: "/assets/ShopPage/vegetables/Potato.png",
     price: "LKR 100.00",
@@ -151,7 +156,7 @@ const Products = [
     category: 2,
   },
   {
-    id: 3,
+    id: 8,
     name: <p className="  text-Lightgray hover:text-DarkGreen ">Cabbage</p>,
     image:
       "/assets/ShopPage/vegetables/Fresh cabbage vegetable isolated on a white background.png",
@@ -160,7 +165,7 @@ const Products = [
     category: 2,
   },
   {
-    id: 4,
+    id: 9,
     name: (
       <p className=" text-Lightgray hover:text-DarkGreen ">Sweet potatoes</p>
     ),
@@ -170,7 +175,7 @@ const Products = [
     category: 2,
   },
   {
-    id: 5,
+    id: 10,
     name: (
       <p className=" text-Lightgray hover:text-DarkGreen ">Green Lettuce</p>
     ),
@@ -183,7 +188,7 @@ const Products = [
 
   /* Bakey */
   {
-    id: 1,
+    id: 11,
     name: <p className=" text-Lightgray hover:text-DarkGreen ">Bread</p>,
     image: "/assets/ShopPage/Bakery/Homemade crunchy bread with grains.png",
     price: "LKR 100.00",
@@ -191,7 +196,7 @@ const Products = [
     category: 3,
   },
   {
-    id: 2,
+    id: 12,
     name: (
       <p className="  text-Lightgray hover:text-DarkGreen ">Garlic bread</p>
     ),
@@ -201,7 +206,7 @@ const Products = [
     category: 3,
   },
   {
-    id: 3,
+    id: 13,
     name: (
       <p className=" text-Lightgray hover:text-DarkGreen ">Hamburger bun</p>
     ),
@@ -211,7 +216,7 @@ const Products = [
     category: 3,
   },
   {
-    id: 4,
+    id: 14,
     name: (
       <p className=" text-Lightgray hover:text-DarkGreen ">Submarine bun</p>
     ),
@@ -221,7 +226,7 @@ const Products = [
     category: 3,
   },
   {
-    id: 5,
+    id: 15,
     name: (
       <p className=" text-Lightgray hover:text-DarkGreen ">Cinnamon roll</p>
     ),
@@ -233,7 +238,7 @@ const Products = [
 
   /* Meat & fish */
   {
-    id: 1,
+    id: 16,
     name: <p className=" text-Lightgray hover:text-DarkGreen ">Chicken</p>,
     image: "/assets/ShopPage/meat/Raw chicken meat.png",
     price: "LKR 100.00",
@@ -241,7 +246,7 @@ const Products = [
     category: 4,
   },
   {
-    id: 2,
+    id: 17,
     name: <p className="  text-Lightgray hover:text-DarkGreen ">Beef</p>,
     image: "/assets/ShopPage/meat/Raw steak on white paper.png",
     price: "LKR 100.00",
@@ -249,7 +254,7 @@ const Products = [
     category: 4,
   },
   {
-    id: 3,
+    id: 18,
     name: <p className=" text-Lightgray hover:text-DarkGreen ">Mutton</p>,
     image: "/assets/ShopPage/meat/Raw steak on white paper-1.png",
     price: "LKR 100.00",
@@ -257,7 +262,7 @@ const Products = [
     category: 4,
   },
   {
-    id: 4,
+    id: 19,
     name: <p className=" text-Lightgray hover:text-DarkGreen ">Pork</p>,
     image: "/assets/ShopPage/meat/Raw meat.png",
     price: "LKR 100.00",
@@ -266,7 +271,7 @@ const Products = [
   },
 
   {
-    id: 5,
+    id: 20,
     name: <p className=" text-Lightgray hover:text-DarkGreen ">Turkey</p>,
     image: "/assets/ShopPage/meat/turkey.png",
     price: "LKR 100.00",
@@ -276,7 +281,7 @@ const Products = [
 
   /* Spices */
   {
-    id: 1,
+    id: 21,
     name: (
       <p className=" text-Lightgray hover:text-DarkGreen ">Chilli powder</p>
     ),
@@ -286,7 +291,7 @@ const Products = [
     category: 5,
   },
   {
-    id: 2,
+    id: 22,
     name: (
       <p className="  text-Lightgray hover:text-DarkGreen ">Curry powder</p>
     ),
@@ -294,9 +299,10 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 5,
+   
   },
   {
-    id: 3,
+    id: 23,
     name: (
       <p className=" text-Lightgray hover:text-DarkGreen ">Tumeric powder</p>
     ),
@@ -306,7 +312,7 @@ const Products = [
     category: 5,
   },
   {
-    id: 4,
+    id: 24,
     name: <p className=" text-Lightgray hover:text-DarkGreen ">Pepper</p>,
     image: "/assets/ShopPage/Spices/pepper.jpg",
     price: "LKR 100.00",
@@ -314,7 +320,7 @@ const Products = [
     category: 5,
   },
   {
-    id: 5,
+    id:25,
     name: <p className=" text-Lightgray hover:text-DarkGreen ">Salt</p>,
     image: "/assets/ShopPage/Spices/salt.jpg",
     price: "LKR 100.00",
@@ -325,7 +331,7 @@ const Products = [
   /* Stationary */
 
   {
-    id: 1,
+    id: 26,
     name: (
       <p className=" text-Lightgray hover:text-DarkGreen ">
         Single ruled 80pg Book
@@ -338,7 +344,7 @@ const Products = [
     category: 6,
   },
   {
-    id: 2,
+    id: 27,
     name: <p className="  text-Lightgray hover:text-DarkGreen ">Pen</p>,
     image: "/assets/ShopPage/Stationary/pen.jpg",
     price: "LKR 100.00",
@@ -346,7 +352,7 @@ const Products = [
     category: 6,
   },
   {
-    id: 3,
+    id: 28,
     name: <p className=" text-Lightgray hover:text-DarkGreen ">Pencil</p>,
     image: "/assets/ShopPage/Stationary/pencil.jpg",
     price: "LKR 100.00",
@@ -354,7 +360,7 @@ const Products = [
     category: 6,
   },
   {
-    id: 4,
+    id: 29,
     name: <p className=" text-Lightgray hover:text-DarkGreen ">A4 papers</p>,
     image: "/assets/ShopPage/Stationary/A4papers.jpg",
     price: "LKR 100.00",
@@ -362,7 +368,7 @@ const Products = [
     category: 6,
   },
   {
-    id: 5,
+    id: 30,
     name: (
       <p className=" text-Lightgray hover:text-DarkGreen ">Color pencils</p>
     ),
@@ -375,7 +381,7 @@ const Products = [
   /* detergents */
 
   {
-    id: 1,
+    id: 31,
     name: <p className=" text-Lightgray hover:text-DarkGreen ">Body soap</p>,
     image:
       "/assets/ShopPage/Detergents/Single soap bar isolated on white background.png",
@@ -385,7 +391,7 @@ const Products = [
 
   },
   {
-    id: 2,
+    id: 32,
     name: <p className="  text-Lightgray hover:text-DarkGreen ">Face cream</p>,
     image: "/assets/ShopPage/Detergents/skin-care-products-827153_640.jpg",
     price: "LKR 100.00",
@@ -394,7 +400,7 @@ const Products = [
 
   },
   {
-    id: 3,
+    id: 33,
     name: <p className=" text-Lightgray hover:text-DarkGreen ">Shampoo</p>,
     image: "/assets/ShopPage/Detergents/shampoo-827141_640.jpg",
     price: "LKR 100.00",
@@ -403,7 +409,7 @@ const Products = [
 
   },
   {
-    id: 4,
+    id: 34,
     name: <p className=" text-Lightgray hover:text-DarkGreen ">Face wash</p>,
     image: "/assets/ShopPage/Detergents/facewash.jpg",
     price: "LKR 100.00",
@@ -413,7 +419,7 @@ const Products = [
   },
 
   {
-    id: 5,
+    id: 35,
     name: (
       <p className=" text-Lightgray hover:text-DarkGreen ">Toilet paper roll</p>
     ),

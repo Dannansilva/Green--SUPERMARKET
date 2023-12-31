@@ -127,16 +127,17 @@ const Navbar = () => {
                 </div>
 
                 <div>
-                  <SlHandbag
+                   <a href={`/shoppingcart`}><SlHandbag
                     size={35}
                     className="pr-3 text-DarkGreen  hidden sm:hidden md:hidden lg:block xl:block "
-                  />
+                  /></a>
                   <div className="flex flex-row items-center">
                     <div className="flex flex-row justify-between justify items-center">
-                      <SlHandbag
+                      <a href={`/shoppingcart`}><SlHandbag
                         size={24}
                         className=" pr-2 sm:block md:block lg:hidden xl:hidden text-DarkGreen"
                       />
+                      </a>
                       <p className="pr-2 text-black text-[11px] sm:block md:block lg:hidden xl:hidden font-semibold">
                         Rs.0.00
                       </p>
