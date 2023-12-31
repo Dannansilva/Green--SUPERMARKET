@@ -15,7 +15,52 @@ interface ProductQuantityProps {
 const Shoppingcart: React.FC<ProductQuantityProps> = () => {
   const [quantity, setQuantity] = useState(1);
 
-  const [products, setProducts] = useState(Products);
+  const [products, setProducts] = useState([
+
+    {
+      id: 1,
+      name: <p className=" text-Lightgray hover:text-DarkGreen ">Apple</p>,
+      image:
+        "/assets/ShopPage/fruits/Green fresh apples on white background..png",
+      price: "LKR 500.00",
+      category: 1,
+      quantity:1,
+    },
+    {
+      id: 15,
+      name: (
+        <p className=" text-Lightgray hover:text-DarkGreen ">Cinnamon roll</p>
+      ),
+      image: "/assets/ShopPage/Bakery/Cinnamon roll.png",
+      price: "LKR 100.00",
+      category: 3,
+    },
+    {
+      id: 3,
+      name: <p className=" text-Lightgray hover:text-DarkGreen ">Mango</p>,
+      image: "/assets/ShopPage/fruits/mango.png",
+      price: "LKR 100.00",
+      category: 1,
+      quantity:1,
+  
+    },
+    {
+      id: 9,
+      name: (
+        <p className=" text-Lightgray hover:text-DarkGreen ">Sweet potatoes</p>
+      ),
+      image: "/assets/ShopPage/vegetables/Sweet potato.png",
+      price: "LKR 100.00",
+      category: 2,
+    },
+    {
+      id: 18,
+      name: <p className=" text-Lightgray hover:text-DarkGreen ">Mutton</p>,
+      image: "/assets/ShopPage/meat/Raw steak on white paper-1.png",
+      price: "LKR 100.00",
+      category: 4,
+    },
+  ]);
 
   const decreaseValue = (id: any) => {
     if (quantity > 1) {
