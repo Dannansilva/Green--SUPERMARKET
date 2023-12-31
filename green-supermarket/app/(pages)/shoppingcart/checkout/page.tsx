@@ -13,6 +13,7 @@ const Checkout: React.FC = () => {
   const handleCountryChange = (event: ChangeEvent<HTMLSelectElement>) => {
     setSelectedCountry(event.target.value);
   };
+  const navItems = [{ home: "Home", path: "/" }];
 
   return (
     <div>
@@ -29,11 +30,15 @@ const Checkout: React.FC = () => {
         }}
       >
         <div className="flex flex-row items-center mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36 gap-3 flex-1 cursor-pointer">
-          <Link href="/home">
-            <div>
-              <LiaHomeSolid className="text-Lightgray hover:text-white sm:text-xs md:text-base lg:text-md" />
-            </div>
-          </Link>
+          <div>
+            {navItems.map(({ home, path }) => (
+              <a key={home} href={path}>
+                <div>
+                  <LiaHomeSolid className="text-Lightgray hover:text-white sm:text-xs md:text-base lg:text-md" />
+                </div>
+              </a>
+            ))}
+          </div>
           <div className="text-Lightgray hover:text-white cursor-auto">
             <p className="sm:text-xs md:text-base lg:text-md ">{`>`}</p>
           </div>
@@ -263,26 +268,28 @@ const Checkout: React.FC = () => {
 
                 {/* 3rd line */}
                 <div className="flex sm:flex-col md:flex-row md:gap-5 py-3 md:mt-0 pb-8">
-                    <div className="flex flex-row justify-between">
-                  <div className="flex flex-col w-full px-4">
-                    <span className="text-xs lg:text-sm font-medium ">
-                      Expiry Date
-                    </span>
-                    <div className="w-full pt-1">
-                      <CustomDatePicker />
+                  <div className="flex flex-row justify-between">
+                    <div className="flex flex-col w-full px-4">
+                      <span className="text-xs lg:text-sm font-medium ">
+                        Expiry Date
+                      </span>
+                      <div className="w-full pt-1">
+                        <CustomDatePicker />
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="flex flex-col w-full px-4 md:mt-0">
-                    <span className="text-xs lg:text-sm font-medium">CVV </span>
-                    <div className="w-full pt-1">
-                      <input
-                        type="text"
-                        placeholder="xxx"
-                        className="px-4 py-3 bg-white rounded-md border border-Green focus:outline-none focus:border-DarkGreen3 focus:border-2 w-full sm:text-xs md:text-sm lg:text-md"
-                      />
+                    <div className="flex flex-col w-full px-4 md:mt-0">
+                      <span className="text-xs lg:text-sm font-medium">
+                        CVV{" "}
+                      </span>
+                      <div className="w-full pt-1">
+                        <input
+                          type="text"
+                          placeholder="xxx"
+                          className="px-4 py-3 bg-white rounded-md border border-Green focus:outline-none focus:border-DarkGreen3 focus:border-2 w-full sm:text-xs md:text-sm lg:text-md"
+                        />
+                      </div>
                     </div>
-                  </div>
                   </div>
 
                   <div className="flex flex-col w-full px-4 sm:mt-4  md:-ml-4 md:mt-0">
@@ -330,7 +337,10 @@ const Checkout: React.FC = () => {
 
                 <hr className=" " />
 
-                <a className="flex flex-row py-3 rounded-full" href=" ">
+                <a
+                  className="flex flex-row py-3 rounded-full"
+                  href={`/invoice`}
+                >
                   <button className=" w-full border bg-Green2 rounded-full py-2 hover:bg-DarkGreen ">
                     {" "}
                     <p className=" text-white font-medium text-xs">
