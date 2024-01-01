@@ -30,7 +30,7 @@ const Navbar = () => {
   const navItems = [
     { title: "Home", path: "/" },
     { title: "Shop", path: "/shop" },
-    { title: "Settings", path: "/settings" },
+    { title: "Acount", path: "/account" },
     { title: "About us", path: "/aboutus" },
     { title: "Contact us", path: "/contactus" },
   ];
@@ -156,7 +156,7 @@ const Navbar = () => {
                     <div className="sm:flex md:flex lg:hidden xl:hidden">
                       <button
                         onClick={isMenuOpen ? closeMenu : toggleMenu}
-                        className="pl-2"
+                        className="pl-2 transition-all delay-0 duration-300 ease-in-out"
                       >
                         {isMenuOpen ? <IoClose /> : <RiMenu3Fill />}
                       </button>

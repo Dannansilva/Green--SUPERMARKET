@@ -15,7 +15,7 @@ const Footer = () => {
 
 
   return (
-    <div className="bg-DarkGreen2 flex flex-col items-center sm:py-5 sm:px-2 md:px-16 lg:px-24 xl:px-36 md:py-6 ">
+    <div className="bg-DarkGreen2 flex flex-col items-center sm:py-5 sm:px-4 md:px-16 lg:px-24 xl:px-36 md:py-6 ">
       <div className="flex flex-col items-center md:items-stretch w-full sm:pt-2 pt-2 ">
         <div className="flex flex-col sm:flex-col lg:flex-row justify-between gap-5 lg:pb-[50px] lg:gap-[112px] md:gap-[20px] ">
           {/* Logo */}
@@ -26,7 +26,7 @@ const Footer = () => {
               <Image
                 src={Logoimg}
                 alt="logo"
-                className="text-white text-3xl font-medium leading-10 tracking-tighter flex-shrink-0"
+                className="text-white text-3xl font-medium leading-10 tracking-tighter flex-shrink-0 sm:w-20 md:w-24"
               />
               </a>
             </div>
@@ -76,13 +76,17 @@ const Footer = () => {
                   <a href={`/shop`}>
                     <li className=" hover:text-green-50">Shop</li>
                   </a>
+
+                  <a href={`/account`}>
+                    <li className=" hover:text-green-50">Account</li>
+                  </a>
                   {/* <a href={`/settings`}>
                     <li className=" hover:text-green-50">Settings</li>
                  </a> */}
                 </ul>
               </div>
 
-              <div className="  md:justify-start md:text-start sm:text-center ">
+              {/* <div className="  md:justify-start md:text-start sm:text-center ">
                 <ul className=" flex flex-col text-Lightgray md:leading-6  sm:text-xs text-xs  sm:leading-6  leading-4 md:text-sm  lg:text-start ">
                   <h2 className="  text-green-400 font-medium md:text-sm md:pb-2 sm:pb-2 pb-2 sm:text-xs text-base text-start sm:text-center md:text-start ">
                     Categories
@@ -112,7 +116,8 @@ const Footer = () => {
                    
                 
                 </ul>
-              </div>
+              </div> */}
+              
 
               <div className=" md:justify-start md:text-start sm:text-center ">
                 <ul className=" flex flex-col text-Lightgray md:leading-6 sm:text-xs text-xs sm:leading-6 leading-4 md:text-sm  lg:text-start">
@@ -146,14 +151,18 @@ const Footer = () => {
             </div>
           </div>
         </div>
+       
+
         {/* Copyright and Payment Options */}
         <div className="flex flex-col md:flex-row justify-between items-center shadow-sm bg-DarkGreen2 w-full gap-5  pb-2 sm:mt-6  ">
+
+        <hr className=" md:block lg:hidden border-Lightgray4 sm:mx-2 mx-2" />
           {/* Copyright */}
           <div className="text-zinc-500 md:text-sm leading-5 md:mr-auto sm:text-xs  text-xs">
             GREEN Supermarket © 2023. All Rights Reserved
           </div>
           {/* Payment Options */}
-          <div className="flex gap-2 md:justify-center">
+          {/* <div className="flex gap-2 md:justify-center">
             <Image src={visa} alt="visa" className="w-full h-[31.76px]" />
             <Image
               src={mastercard}
@@ -171,7 +180,7 @@ const Footer = () => {
                 Payment
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

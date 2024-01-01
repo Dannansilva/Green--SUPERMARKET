@@ -15,7 +15,7 @@ const PopCategories: React.FC = () => {
   return (
     <>
     
-      <div className="sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36 mb-10 md:mt-[60px] sm:-mt-1">
+      <div className="sm:mx-4 md:mx-16 lg:mx-24 xl:mx-36 mb-10 md:mt-[60px] sm:-mt-1">
         {/* first row */}
         <div className="flex justify-between items-center">
           <div>
@@ -29,29 +29,29 @@ const PopCategories: React.FC = () => {
         </div>
 
         {/* second row */}
-        <div className="grid grid-cols-3 place-items-center sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 pt-5 gap-2 w-full">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 xl:grid-cols-7 pt-5 gap-4 w-full">
           {Category.map(({ id, location, name }) => (
-            <Link key={id} href={`/shop/${id}`}>
+            <a key={id} href={`/shop/${id}`}>
               <div
                 key={id}
-                className="border py-4 px-2 rounded-md hover:border-Green hover:shadow-lg hover:shadow-green-100 w-full"
+                className="border py-4 px-2 rounded-md w-full h-full hover:border-0 hover:shadow-xl" 
               >
                 <div>
                   <Image
                     alt=""
                     src={location}
-                    width={300}
-                    height={300}
+                    width={500}
+                    height={500}
                     className="w-full"
                   />
                 </div>
                 <div className="text-center md:pt-[16px] ">
-                  <p className="sm:text-[10px] md:text-sm font-semibold text-Black1 pt-2">
+                  <p className="sm:text-[10px] md:text-sm  text-Black1 pt-2">
                     {name}
                   </p>
                 </div>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
       </div>
