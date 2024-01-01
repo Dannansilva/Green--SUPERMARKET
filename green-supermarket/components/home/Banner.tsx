@@ -63,40 +63,40 @@ const icons = [
 const Banner = () => {
   return (
     <>
-      <div className="mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36 pt-2 lg:mt-10 md  md:-mt-4 sm:mt-4 -mt-10   ">
+      <div className="mx-2 sm:mx-4 md:mx-16 lg:mx-24 xl:mx-36 pt-2 lg:mt-10 md  md:-mt-4 sm:mt-4 -mt-10   ">
         {/* Banner 1st part */}
         <div
-          className="bg-center bg-no-repeat bg-cover max-h-[400px] rounded-lg  sm:-mt-10 md:-mt-0 sm:max-h-[400px] md:max-h-[600px] inset-0   "
+          className="bg-center bg-no-repeat bg-cover max-h-[400px] rounded-lg  sm:-mt-10 md:-mt-0 sm:max-h-[300px] md:max-h-[400px] lg:max-h-[450px] inset-0  "
           style={{
             backgroundImage:
-              "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0)), url('/assets/HomePage/banner/Banner.jpg')",
+              "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5 )), url('/assets/HomePage/banner/Banner.jpg')",
             height: "600px",
           }}
         >
-          <div className="flex flex-col pt-[80px] md:pt-[155px] pl-[10px] md:pl-[50px] lg:pl-[105px] justify-between sm:pt-[80px] ">
-            <div className="pb-[28px] ">
-              <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-semibold">
+          <div className="flex flex-col pl-[20px] md:pl-[50px] lg:pl-[80px] justify-between w-full sm:py-6 md:py-10   ">
+            <div className="my-5 flex flex-col gap-2">
+              <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-medium">
                 Fresh & Healthy
               </h1>
-              <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-semibold">
+              <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-medium ">
                 Organic Food
               </h1>
             </div>
 
-            <div className="pb-[28px]">
+            <div className="md:my-4 sm:my-2">
               <div className="flex flex-row">
                 <div className="bg-Green w-[2px] h-[50px] md:w-[2px] md:h-[65px]"></div>
                 <div className="flex flex-col">
-                  <div className="flex flex-row items-center pl-[10px] md:pl-[14px]">
-                    <div className="text-white text-[16px] md:text-[20px] font-medium mr-[5px] md:mr-[8px]">
-                      Sale Upto
-                    </div>
-                    <span className=" font-semibold bg-[#FF8A00] px-[8px] md:px-[12px] rounded-md py-[3px] md:py-[4px] text-[16px] md:text-[20px] text-white">
+                  <div className="flex flex-row items-center pl-[10px] md:pl-[14px] gap-2">
+                    <span className="text-white text-[16px] md:text-[20px] font-medium mr-[5px] md:mr-[8px]">
+                      Sale up to
+                    </span>
+                    <span className=" font-medium bg-[#FF8A00] px-[8px] md:px-[8px] lg:px-[10px] rounded-md py-[3px] md:py-[2px] text-[10px] md:text-[15px] lg:text-[15px] text-white">
                       30% OFF
                     </span>
                   </div>
 
-                  <div className="pt-[5px] md:pt-[8px] pl-[10px] md:pl-[14px]">
+                  <div className="pt-[5px] md:pt-[8px] pl-[10px] md:pl-[14px] ">
                     <p className="text-white text-xs md:text-sm font-normal">
                       Free delivery for all your orders
                     </p>
@@ -105,7 +105,7 @@ const Banner = () => {
               </div>
             </div>
             <a href={`/shop`}>
-            <div className="round-full">
+            <div className="round-full my-3">
               <button className="text-Green bg-white rounded-full px-[20px] py-[10px] md:px-[40px] md:py-[16px] font-semibold text-xs md:text-base hover:bg-Green hover:text-white hover:shadow-lg hover:text-md hover:font-bold hover:shadow-green-300 items-center">{`Shop now » `}</button>
             </div>
             </a>
