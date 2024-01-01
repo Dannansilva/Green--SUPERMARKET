@@ -22,10 +22,17 @@ body {
   .menu.active {
     transform: translateX(0);
   }
-/* 
-  .some-selector {
+ 
+.slide-in {
+  transform: translateX(0);
+  transition: transform 20s ease-in-out;
+}
+
+.slide-out {
+  transform: translateX(100%);
+  transition: transform 20s   ease-in-out;
+}
+  /* .some-selector {
     color: red;
     font-size: 16px;
-  }
-   */
-  
+  } */

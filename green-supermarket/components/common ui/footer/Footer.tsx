@@ -15,7 +15,7 @@ const Footer = () => {
 
 
   return (
-    <div className="bg-DarkGreen2 flex flex-col items-center sm:py-5 sm:px-2 md:px-16 lg:px-24 xl:px-36 md:py-10 ">
+    <div className="bg-DarkGreen2 flex flex-col items-center sm:py-5 sm:px-2 md:px-16 lg:px-24 xl:px-36 md:py-6 ">
       <div className="flex flex-col items-center md:items-stretch w-full sm:pt-2 pt-2 ">
         <div className="flex flex-col sm:flex-col lg:flex-row justify-between gap-5 lg:pb-[50px] lg:gap-[112px] md:gap-[20px] ">
           {/* Logo */}
@@ -59,7 +59,7 @@ const Footer = () => {
 
           <hr className=" md:block lg:hidden border-Lightgray4 sm:mx-2 mx-2" />
 
-          <div className="  flex-col w-full justify-between  ">
+          <div className="  flex-col lg:w-2/3 w-full justify-between  mt-2  ">
             <div className=" grid sm:grid-cols-3 grid-cols-3  md:grid-cols-3">
               <div
                 className={`  md:justify-start md:text-start justify-between sm:text-center`}
@@ -147,7 +147,7 @@ const Footer = () => {
           </div>
         </div>
         {/* Copyright and Payment Options */}
-        <div className="flex flex-col md:flex-row justify-between items-center shadow-sm bg-DarkGreen2 w-full gap-5  pb-2 mt-8  ">
+        <div className="flex flex-col md:flex-row justify-between items-center shadow-sm bg-DarkGreen2 w-full gap-5  pb-2 sm:mt-6  ">
           {/* Copyright */}
           <div className="text-zinc-500 md:text-sm leading-5 md:mr-auto sm:text-xs  text-xs">
             GREEN Supermarket © 2023. All Rights Reserved
