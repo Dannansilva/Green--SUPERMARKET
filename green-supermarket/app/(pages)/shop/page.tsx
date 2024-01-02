@@ -10,6 +10,12 @@ import { Category } from "@/components/home/Categories";
 import { GoSquareFill } from "react-icons/go";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { useRouter } from "next/navigation";
+import { SlHandbag } from "react-icons/sl";
+import { HiAdjustmentsHorizontal } from "react-icons/hi2";
+import { HiMiniChevronDown } from "react-icons/hi2";
+
+
+
 
 
 
@@ -35,6 +41,7 @@ const Product: React.FC = () => {
     setShowCategories(!showCategories);
   };
 
+  const [isfilteropen] = useState(false) 
   /* filter category animation */
   const [clickedButtonId, setClickedButtonId] = useState(null);
 
@@ -88,11 +95,11 @@ const Product: React.FC = () => {
           </div>
         </div>
 
-        <div className="sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36 flex-col flex sm:py-2 md:py-4">
+        <div className="sm:mx-4 mx-4 md:mx-16 lg:mx-24 xl:mx-36 flex-col flex sm:py-2 md:py-4 ">
           {/* second part */}
           <div className=" flex sm:flex-col lg:flex-row gap-4   ">
-            <div className=" hidden sm:hidden lg:flex lg:pr-12 xl:pr-16">
-              <div className="lg:flex py-2 md:w-max">
+            {/* <div className=" hidden sm:hidden lg:flex lg:pr-12 xl:pr-16"> */}
+              {/* <div className="hidden py-2 md:w-max ">
                 <div className="flex flex-col">
                   <button
                     onClick={handleFilterClick}
@@ -144,7 +151,7 @@ const Product: React.FC = () => {
                     </div>
                   )}
                 </div>
-              </div>
+              </div> */}
             </div>
             {/* Third part */}
             {/* */}{" "}
@@ -186,38 +193,41 @@ const Product: React.FC = () => {
                 </div>
               </div> */}
             {/* <div className=" sm:flex sm:flex-row flex lg"> */}
-            <div className="flex flex-col">
+            <div className="flex flex-col pb-4">
               {/* number of products */}
               <div className="flex flex-row py-2">
                 {/* sm: filter */}
-                <div className=" flex flex-row lg:hidden  ">
+                <div className=" flex flex-row">
                   <div className="items-center justify-center text-center">
                     <button
                       onClick={handleFilterClick}
-                      className=" w-[65px] sm:block items-center  bg-Green text-white rounded-full py-1  hover:shadow-lg mb- "
+                      className="  h-full w-full text-center items-center justify-center  bg-White text-white rounded-full hover:shadow-md py-1a    "
                     >
-                      <div className="flex flex-row items-center justify-between gap- px-2 py-0.5   text-xs font-medium">
-                        <p className="pl-1">Filter</p>
-                        <MdKeyboardArrowDown className=" h-[15px] w-[15px]" />
+                      <div className="flex flex-row items-center justify-center text-center px-3 w-full  text-xs font-medium ">
+                        {/* <p className="pl-1">Filter</p>
+                        <MdKeyboardArrowDown className=" h-[15px] w-[15px]" /> */}
+                        <HiAdjustmentsHorizontal className=" h-[25px] w-full text-Green" />
+
+
                       </div>
                     </button>
                   </div>
-
-                  <div className=" absolute flex flex-col  z-50 mt-8 bg-white ">
-                    {showCategories && (
+                  {showCategories && (
+                  <div className=" absolute flex flex-col z-20 mt-11 bg-white border p-4  rounded-md border-green-600 ">
+                   
                       <>
                         {Category.map((category) => (
                           <Link key={category.id} href={`/shop/${category.id}`}>
                             <div
-                              className=" flex flex-col hover:font-semibold justify-start text-start px-2 hover:transition hover:duration-500 hover:ease-in-out hover:rounded-md
+                              className=" flex flex-col hover:scale-105 justify-start text-start px-2 hover:transition-all hover:duration-750 hover:ease-in-out  
                           "
                             >
-                              <div className=" flex flex-row items-center text-center">
-                                <GoSquareFill className=" text-green-400 w-[10px] h-[10px]" />
+                              <div className=" flex flex-row items-center text-center gap-1">
+                                <GoSquareFill className=" text-green-400 w-[7px] h-[7px]" />
                                 <button
                                   key={category.id}
                                   onClick={() => handleClick(category.id)}
-                                  className={` text-black items-center text-center text-xs m-2 transition duration-300 ease-in-out hover:font-semibold w-max ${
+                                  className={` text- items-center text-center text-xs m-2 transition duration-300 text-Gray2 ease-in-out hover:font-semibold w-max ${
                                     clickedButtonId === category.id
                                       ? "border-b-4 border-b-Green pb-1 text-DarkGreen font-semibold"
                                       : ""
@@ -230,22 +240,28 @@ const Product: React.FC = () => {
                           </Link>
                         ))}
                       </>
-                    )}
+               
                   </div>
+                       )}
                 </div>
 
-                <div className="sm:flex flex sm:items-center sm:justify-end justify-end flex-row w-full ">
-                  <span className="flex items-center text-center">
-                    <p className="font-bold text-xs pr-2 sm:text-xs  ">
-                      {Products.length}
-                    </p>
-                    <p className="sm:text-xs text-xs ">
-                      {Products.length > 0
-                        ? "Results Found"
-                        : "Results not found"}
-                    </p>
-                  </span>
+                <div className="sm:flex  flex lg:-mb-0  sm:justify-end lg:flex-row justify-end w-full  items-center">
+                {/* <div className="  items-center hidden ">
+                  <h2 className=" font-semibold sm:text-md lg:text-xl text-DarkGreen">
+                    {category.name}
+                  </h2>
+                </div> */}
+                <div className="flex items-center text-center justify-end gap-2">
+                  <p className="font-semibold text-xs lg:text-sm text-Gray2 ">
+                    {Products.length}
+                  </p>
+                  <p className="text-xs text-Gray lg:text-[13px]  ">
+                    {Products.length > 0
+                      ? "Products available"
+                      : "Products not available"}
+                  </p>
                 </div>
+              </div>
               </div>
               {/* <div className=" py-4 justify-end">
                   <span className="flex items-center text-center">
@@ -257,48 +273,57 @@ const Product: React.FC = () => {
                 </div> */}
 
               {/* second div */}
-              <div className="  grid grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-2 cursor-pointer py-4 h-full  ">
-                {Products.map(({ id, name, image, price, image2 }) => (
-                  <div
-                    key={id}
-                    className=" px-2 hover:border-DarkGreen hover:shadow-sm hover:shadow-Green w-full border rounded-md  "
-                    onClick={() => {
-                      router.push("/products_details");
-                    } }
-                  >
-                    <div>
-                      <Image
-                        alt=""
-                        src={image}
-                        width={500}
-                        height={500}
-                        className="w-full max-h-[250px] px-4 py-10"
-                      />
-                    </div>
-                    <div className="  hover:text-DarkGreen m-1 ">
-                      <p className="sm:text-[10px] md:text-[14px] font-light text-Gray hover:font-semibold  ">
-                        {name}
-                      </p>
-                    </div>
-                    <div className="flex flex-row items-center justify-between m-1 pb-4">
-                      <div>
-                        <p className="sm:text-[14px] md:text-[16px] font-semibold text-black">
-                          {price}
-                        </p>
-                      </div>
-                      <div className="items-center">
-                        <button className="items-center rounded-full bg-Lightgray2 text-black  hover:text-white hover:bg-Green p-3">
-                          {image2}
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+              <div className="  grid grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 pt-4 sm:gap-2 md:gap-4 ">
+        {Products.map(({ id, name, image, price }) => (
+          <div
+            key={id}
+            className="border sm:pt-2 md:pt-4 px-2 hover:border-Green hover:shadow-lg hover:shadow-green-100 justify-evenly flex flex-col w-full rounded-md max-w-full sm:min-h-[250px] lg:min-h-[280px] xl:max-w-max  hover:rounded-md "
+          >
+            
+            <div className="items-center justify-evenly flex lg:py- sm:py-6">
+              <Image
+                alt=""
+                src={image}
+                width={500}
+                height={500}
+                className=" sm:max-h-24 sm:min-w-[100px] md:min-w-[200px]  max-w-full xl:max-h-28  object-contain "
+              />
+            </div>
+            <div className=" flex flex-row justify-between mx-2 lg:-mb-2 gap-2 ">
+              <div className=" flex flex-col gap-0.5">
+                <div className=" items-center flex md:justify-start ">
+                  <p className="sm:text-[10px] md:text-[13px] font-light  md:text-Green  ">
+                    {name}
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-[12px]  font-semibold  text-DarkGreen">
+                    {price}
+                  </p>
+                </div>
               </div>
+
+              <div className="items-center md:flex hidden  ">
+                <button className="items-center rounded-full bg-white text-Green  hover:text-white hover:bg-Green p-3 w-full">
+                  <SlHandbag className=" w-full h-[12px] lg:h-[15px] " />
+                </button>
+              </div>
+
+             
+            </div>
+            <div className="items-center md:hidden flex flex-row justify-center  mt-2 mb-1 ">
+                <button className="items-center rounded-md bg-Green text-white  hover:text-white hover:bg-Green p-1.5 w-full flex flex-row  text-center justify-center gap-2">
+                  <SlHandbag className=" h-[12px]" /><p className=" text-white text-xs ">Add to cart</p>
+                </button>
+              </div>
+          </div>
+        ))}
+      </div>
             </div>
           </div>
         </div>
-      </div>
+      {/* </div> */}
       {/* </div> */}
     </>
   );

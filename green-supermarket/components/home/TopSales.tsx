@@ -119,13 +119,13 @@ const TopSales = () => {
             <div className=" flex flex-row justify-between mx-2 lg:-mb-2 ">
               <div className=" flex flex-col gap-1">
                 <div className=" items-center flex md:justify-start   ">
-                  <p className="sm:text-[12px] md:text-[13px] lg:text-[14px] font-light sm:text-Gray md:text-Green  ">
+                  <p className="sm:text-[10px] md:text-[13px] lg:text-[14px] font-light sm:text-Gray md:text-Green  ">
                     {productname}
                   </p>
                 </div>
 
                 <div>
-                  <p className="text-[10px]  font-semibold  text-DarkGreen">
+                  <p className="text-[12px]  font-semibold  text-DarkGreen">
                     {price}
                   </p>
                 </div>
