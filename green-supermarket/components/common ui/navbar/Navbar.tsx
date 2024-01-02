@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import logo from "../../../public/assets/Logo.png";
 import { SlHandbag } from "react-icons/sl";
@@ -41,8 +41,8 @@ const Navbar = () => {
         <div className="mx-2 sm:mx-4 md:mx-16 lg:mx-24 xl:mx-36 justify-between items-center">
           {/* navbar first row */}
           {/* <div className="h-[42px]  hidden justify-between text-Gray text-xs items-center lg:flex xl:flex md:flex-row lg:flex-row xl:flex-row"> */}
-            {/* location */}
-            {/* <div className="hidden sm:hidden items-center lg:flex xl:flex md:hidden lg:flex-row xl:flex-row">
+          {/* location */}
+          {/* <div className="hidden sm:hidden items-center lg:flex xl:flex md:hidden lg:flex-row xl:flex-row">
               <Image
                 src="/assets/mappin.png"
                 width={15}
@@ -55,7 +55,7 @@ const Navbar = () => {
               </p>
             </div>
             {/* sign in/sign up */}
-            {/* <div className="hidden lg:flex xl:flex lg:flex-row xl:flex-row">
+          {/* <div className="hidden lg:flex xl:flex lg:flex-row xl:flex-row">
               <a href={`/login`}>
                 <p className=" pr-1">Login</p>
               </a>
@@ -64,7 +64,7 @@ const Navbar = () => {
                 <p className=" pr-1">Register</p>
               </a>
             </div>
-          </div> */} 
+          </div> */}
 
           <hr className=" hidden lg:block xl:block" />
 
@@ -78,7 +78,7 @@ const Navbar = () => {
                   alt="Logo"
                   height={38}
                   width={137}
-                  className=" md:h-full sm:w-20 md:w-24 "
+                  className=" md:h-full w-20 md:w-24 "
                 />
               </a>
             </div>
@@ -153,10 +153,10 @@ const Navbar = () => {
                       className=" text-black  sm:block md:hidden lg:hidden xl:hidden"
                     />
 
-                    <div className="sm:flex md:flex lg:hidden xl:hidden">
+                    <div className="sm:flex md:flex lg:hidden ">
                       <button
-                        onClick={isMenuOpen ? closeMenu : toggleMenu}
-                        className="pl-2 transition-all delay-0 duration-300 ease-in-out"
+                        onClick={toggleMenu}
+                        className="pl-2 transition-all delay-100 duration-500 ease-in-out"
                       >
                         {isMenuOpen ? <IoClose /> : <RiMenu3Fill />}
                       </button>
@@ -170,15 +170,15 @@ const Navbar = () => {
 
                       {isMenuOpen && (
                         <div
-                          className={`fixed top-0 right-0 bg-DarkGreen h-full w-[260px] duration-300 ease-in-out transform z-50 ${
-                            isMenuOpen ? "slide-in" : "slide-out"
+                          className={`fixed top-0 right-0 bg-DarkGreen h-full w-[260px] duration-300 ease-in-out transition-all  transform z-50 ${
+                            isMenuOpen ? " ease-in" : "  ease-out"
                           }`}
                         >
                           {/* button inside */}
-                          <div className="flex flex-row items-center justify-end mt-8 mr-2 transition-all ease-in-out duration-300">
+                          <div className="flex flex-row items-center justify-end mt-8 mr-2 ">
                             <button
                               onClick={isMenuOpen ? closeMenu : toggleMenu}
-                              className="text-white transition-all ease-in-out duration-300 absolute "
+                              className="text-white transition-all ease-in-out duration-300 "
                             >
                               {isMenuOpen ? <IoClose /> : <RiMenu3Fill />}
                             </button>
@@ -219,11 +219,15 @@ const Navbar = () => {
                             <IoMdArrowDropleft className="mr-2" />
                             <div className=" flex flex-row gap-2 font-thin text-md ">
                               <a href="">
-                                <span><p className=" ">Login</p></span>
+                                <span>
+                                  <p className=" ">Login</p>
+                                </span>
                               </a>
                               <span>/</span>
                               <a href="">
-                                <span><p>Register</p></span>
+                                <span>
+                                  <p>Register</p>
+                                </span>
                               </a>
                             </div>
                           </div>
@@ -248,13 +252,13 @@ const Navbar = () => {
 
           {/* md, lg ,xl menu */}
         </div>
-        <div className="bg-DarkGreen h-[60px] hidden  lg:flex xl:flex lg:flex-row xl:flex-row justify-between items-center md:h-12 lg:h-[55px] xl:h-[55px] md:-mt-2  ">
+        <div className=" bg-DarkGreen h-[60px] hidden  lg:flex xl:flex lg:flex-row xl:flex-row justify-between items-center md:h-12 lg:h-[55px] xl:h-[55px] md:-mt-2  ">
           <div className="h-full flex flex-row md:text-xs lg:text-sm xl:text-md inset-0">
-            <ul className="flex items-center md:gap-[30px] lg:gap-[40px] xl:gap-[50px] text-Lightgray2 md:mx-16 lg:mx-24 xl:mx-36">
+            <ul className="flex items-center md:gap-[50px] lg:gap-[60px] xl:gap-[70px] text-Lightgray2 md:mx-16 lg:mx-24 xl:mx-36">
               {navItems.map(({ title, path }) => (
                 <li
                   key={title}
-                  className="hover:text-white duration-300 ease-in-out transform cursor-pointer hover:scale-105  hover:flex-grow-0 w-max"
+                  className="hover:text-white  ease-in-out transform cursor-pointer hover:scale-105 transition-transform duration-200   hover:flex-grow-0 w-max"
                 >
                   <Link className="" href={path}>
                     {title}

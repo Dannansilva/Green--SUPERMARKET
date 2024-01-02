@@ -68,14 +68,14 @@ const Banner = () => {
       <div className="mx-2 sm:mx-4 md:mx-16 lg:mx-24 xl:mx-36 pt-2 lg:mt-10 md  md:-mt-4 sm:mt-5    ">
         {/* Banner 1st part */}
         <div
-          className="bg-center bg-no-repeat bg-cover  rounded-lg  sm:-mt-10 md:-mt-0 sm:max-h-[300px] md:max-h-[385px] lg:max-h-[450px] xl:max-h-[500px] inset-0  "
+          className="bg-center bg-no-repeat bg-cover  rounded-lg  sm:-mt-10 md:-mt-0 sm:max-h-[450px] md:max-h-[385px] lg:max-h-[450px] xl:max-h-[500px] inset-0  "
           style={{
             backgroundImage:
-              "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3 )), url('/assets/HomePage/banner/Banner.jpg')",
+              "linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3 )), url('/assets/HomePage/banner/Banner.jpg')",
             height: "600px",
           }}
         >
-          <div className="flex flex-col pl-[30px] md:pl-[50px] lg:pl-[80px] justify-between w-full sm:py-6 md:py-10 lg:py-[60px] xl:py-20   ">
+          <div className="flex flex-col pl-[30px] md:pl-[50px] lg:pl-[80px] justify-between w-full sm:py-16 md:py-10 lg:py-[60px] xl:py-20   ">
             <div className="my-5 flex flex-col gap-2">
               <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-medium">
                 Fresh & Healthy
@@ -85,7 +85,7 @@ const Banner = () => {
               </h1>
             </div>
 
-            <div className="md:my-4 sm:my-2 lg:my-6 md:-mt-2 sm:-mt-4  lg:mt-4">
+            <div className="md:my-4 sm:my-4 lg:my-6 md:-mt-2  lg:mt-4 sm:mt-4 sm:mb-10 ">
               <div className="flex flex-row">
                 <div className="bg-Green w-[2px] my-4 "></div>
                 <div className="flex flex-col my-4">
@@ -148,12 +148,12 @@ const Banner = () => {
                     alt={""}
                     width={100}
                     height={100}
-                    className=" w-full  max-w-full hidden sm:hidden md:block object-contain "
+                    className=" lg:w-full md:max-w-5     max-w-full hidden sm:hidden md:block object-contain "
                   />
                 </div>
                 <div className=" hidden md:flex md:flex-col">
                   <div className="">
-                    <p className="text-base md:text-xs  font-medium text-black pb-2 lg:text-lg">
+                    <p className="text-base md:text-xs  font-medium text-black pb-2 lg:text-md">
                       {Service}
                     </p>
                   </div>
@@ -172,9 +172,9 @@ const Banner = () => {
           {icons.map(({ id, image, Service }) => (
             <div
               key={id}
-              className="flex flex-col md:flex-row py-4 md:py-[40px] px-4 md:justify-center w-full items-center "
+              className="flex flex-col md:flex-row py-3 md:py-[40px] px-4 md:justify-center w-full items-center "
             >
-              <div className="rounded-full w-[40px] h-[40px] flex items-center justify-center mb-1 ">
+              <div className="rounded-full w-[40px] h-[40px] flex items-center justify-center  ">
                 <Image
                   src={image}
                   alt=""
