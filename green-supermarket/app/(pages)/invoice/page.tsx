@@ -36,7 +36,7 @@ const page = () => {
           </div>
           <div className="flex text-Lightgray hover:text-white ">
             <p className="text-Green hover:text-white sm:text-xs md:text-base lg:text-md">
-              Settings
+              Shopping cart
             </p>
           </div>
         </div>
