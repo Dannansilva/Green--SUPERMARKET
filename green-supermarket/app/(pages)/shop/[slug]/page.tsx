@@ -21,6 +21,9 @@ const ProductCard = ({ params }: any) => {
   /* filter category animation */
   const [clickedButtonId, setClickedButtonId] = useState(null);
 
+  const [isHover, setIsHovered] = useState(false);
+
+
   const handleClick = (categoryId: any) => {
     console.log(categoryId);
     setClickedButtonId(categoryId === clickedButtonId ? null : categoryId);
@@ -40,6 +43,8 @@ const ProductCard = ({ params }: any) => {
   if (!category) {
     return <p>Category not found.</p>;
   }
+
+
 
   const CategoryFilter = [
     { id: 1, name: "Fruits" },
@@ -204,9 +209,15 @@ const ProductCard = ({ params }: any) => {
             {/* number of products */}
             <div className="flex flex-row py-2">
               {/* sm: filter */}
-              <div className=" flex flex-row">
-                <div className="items-center justify-center text-center">
-                  <button
+              <div
+                className="relative inline-block cursor-pointer"
+                
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                // onMouseLeave={() => setIsHovered(false)}
+
+              >
+                 <button
                     onClick={handleFilterClick}
                     className="  h-full w-full text-center items-center justify-center  bg-White text-white rounded-full hover:shadow-md py-1a    "
                   >
@@ -216,23 +227,22 @@ const ProductCard = ({ params }: any) => {
                       <HiAdjustmentsHorizontal className=" h-[25px] w-full text-Green" />
                     </div>
                   </button>
-                </div>
-                {showCategories && (
-                  <div className=" absolute flex flex-col z-20 mt-11 bg-white border p-4 objects-contain justify-between 
-                    rounded-md sm:border-green-600 ">
+
+                {isHover && (
+                  <div
+                    className="absolute flex flex-col z-20 -mt-0.5 bg-white border p-4 rounded-md border-green-600"
+                    onMouseLeave={() => setIsHovered(false)}
+                  >
                     <>
                       {Category.map((category) => (
                         <Link key={category.id} href={`/shop/${category.id}`}>
-                          <div
-                            className=" flex flex-col hover:scale-105 justify-start text-start px-2 hover:transition-all hover:duration-750 hover:ease-in-out  
-                          "
-                          >
-                            <div className=" flex flex-row items-center text-center gap-1">
-                              {/* <GoSquareFill className=" text-green-400 w-[7px] h-[7px]" /> */}
+                          <div className="flex flex-col hover:scale-105 justify-start text-start px-2 hover:transition-all hover:duration-750 hover:ease-in-out">
+                            <div className="flex flex-row items-center text-center gap-1">
+                              {/* <GoSquareFill className="text-green-400 w-[7px] h-[7px]" /> */}
                               <button
                                 key={category.id}
                                 onClick={() => handleClick(category.id)}
-                                className={` text- items-center text-center text-sm m-2 transition duration-300  text-Gray2 ease-in-out hover:font-semibold w-max ${
+                                className={`text-items-center text-center text-sm m-2 transition duration-300 text-Gray2 ease-in-out hover:font-semibold w-max ${
                                   clickedButtonId === category.id
                                     ? "border-b-4 border-b-Green pb-1 text-DarkGreen font-semibold"
                                     : ""
