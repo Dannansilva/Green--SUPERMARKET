@@ -203,7 +203,7 @@ const Product: React.FC = () => {
                       onClick={handleFilterClick}
                       className="  h-full w-full text-center items-center justify-center  bg-White text-white rounded-full hover:shadow-md py-1a    "
                     >
-                      <div className="flex flex-row items-center justify-center text-center px-3 w-full  text-xs font-medium ">
+                      <div className="flex flex-row items-center justify-center text-center px-3 w-full py-1 text-xs font-medium ">
                         {/* <p className="pl-1">Filter</p>
                         <MdKeyboardArrowDown className=" h-[15px] w-[15px]" /> */}
                         <HiAdjustmentsHorizontal className=" h-[25px] w-full text-Green" />
@@ -213,7 +213,7 @@ const Product: React.FC = () => {
                     </button>
                   </div>
                   {showCategories && (
-                  <div className=" absolute flex flex-col z-20 mt-11 bg-white border p-4  rounded-md border-green-600 ">
+                  <div className=" absolute flex flex-col z-20 mt-11 bg-white border p-4  rounded-md border-green-600  ">
                    
                       <>
                         {Category.map((category) => (
@@ -223,11 +223,11 @@ const Product: React.FC = () => {
                           "
                             >
                               <div className=" flex flex-row items-center text-center gap-1">
-                                <GoSquareFill className=" text-green-400 w-[7px] h-[7px]" />
+                                {/* <GoSquareFill className=" text-green-400 w-[7px] h-[7px]" /> */}
                                 <button
                                   key={category.id}
                                   onClick={() => handleClick(category.id)}
-                                  className={` text- items-center text-center text-xs m-2 transition duration-300 text-Gray2 ease-in-out hover:font-semibold w-max ${
+                                  className={` text- items-center text-center text-sm m-2 transition duration-300 text-Gray2 ease-in-out hover:font-semibold w-max ${
                                     clickedButtonId === category.id
                                       ? "border-b-4 border-b-Green pb-1 text-DarkGreen font-semibold"
                                       : ""
