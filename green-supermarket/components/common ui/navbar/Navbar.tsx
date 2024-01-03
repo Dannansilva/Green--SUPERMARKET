@@ -10,10 +10,13 @@ import { CiUser } from "react-icons/ci";
 import { RiMenu3Fill } from "react-icons/ri";
 import { IoClose } from "react-icons/io5";
 import { IoMdArrowDropleft } from "react-icons/io";
+import { PiUserCircleThin } from "react-icons/pi";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
+
+  const [showOptions, setShowOptions] = useState(false);
 
   const handleClick = () => {
     setIsClicked(true);
@@ -53,8 +56,8 @@ const Navbar = () => {
               <p className=" sm:text-xs">
                 Store Location: Colombo 05, Sri Lanka
               </p>
-            </div>
-            {/* sign in/sign up */}
+            </div> */}
+          {/* sign in/sign up */}
           {/* <div className="hidden lg:flex xl:flex lg:flex-row xl:flex-row">
               <a href={`/login`}>
                 <p className=" pr-1">Login</p>
@@ -63,10 +66,10 @@ const Navbar = () => {
               <a href={`/registration`}>
                 <p className=" pr-1">Register</p>
               </a>
-            </div>
-          </div> */}
+            </div> */}
+          {/* </div> */}
 
-          <hr className=" hidden lg:block xl:block" />
+          {/* <hr className=" hidden lg:block xl:block" /> */}
 
           {/* navbar second row */}
           <div className="h-[110px] flex flex-row items-center w-full justify-between md:justify-between lg:justify-between xl:justify-between  sm:-mt-6  pt-4 py-0">
@@ -78,7 +81,7 @@ const Navbar = () => {
                   alt="Logo"
                   height={38}
                   width={137}
-                  className=" md:h-full w-20 md:w-24 "
+                  className=" md:h-full w-20 md:w-24"
                 />
               </a>
             </div>
@@ -107,31 +110,65 @@ const Navbar = () => {
             {/* shopping cart */}
             <div className="flex flex-row items-center justify-center ">
               {/* lg search bar */}
-              <div className="  flex-row hidden sm:hidden lg:flex xl:flex md:hidden  ">
+              <div className="  flex-row hidden sm:hidden lg:flex xl:flex md:hidden">
                 <form
                   action="input"
                   className={`  first-letter:relative mx-auto w-full items-center focus:outline-0 focus:border-0 ${
                     isClicked ? "centered" : ""
                   }`}
                 >
-                  <div className="mr-2 relative items-center 0">
+                  <div className="mr- relative items-center 0">
                     <input
                       type="search"
-                      className="peer border-white  cursor-pointer relative z-10 sm:z-10 md:z-20 lg:z-20 xl:z-30 h-12 w-12 rounded-full bg-transparent  outline-none focus:w-full focus:cursor-text focus:pl-14 focus:pr-4 hover:shadow-md focus:shadow-md focus:border-none focus:outline-none  "
+                      className="peer border-white cursor-pointer relative z-10 sm:z-10 md:z-20 lg:z-20 xl:z-30 h-12 w-12 rounded-full bg-transparent  outline-none focus:w-full focus:cursor-text focus:pl-14 focus:pr-4 focus:shadow-md focus:border-none focus:outline-none  "
                       onClick={handleClick}
                     />
                     <div className="absolute inset-y-0 left-0 flex items-center pl-3">
-                      <IoSearch size={20} className="w-full ml-0.5 mt-0.5" />
+                      <IoSearch
+                        size={20}
+                        className="w-full ml-0.5 mt-0.5 text-Gray2"
+                      />
                     </div>
                   </div>
                 </form>
               </div>
 
+              <div className="flex-row justify-between justify items-center ">
+                <button onClick={() => setShowOptions(!showOptions)}>
+                  <PiUserCircleThin
+                    size={30}
+                    className="mr-4 text-Gray2 sm:w-6 sm:h-full pt-2 lg:w-[30px] "
+                  />
+                </button>
+              </div>
+
+              {showOptions && (
+                <div className="absolute top-[55px] right-[32px] md:top-[55px] md:right-[70px] lg:top-[60px] lg:right-[130px] xl:right-[178px] bg-white border-green-700 border rounded-md lg:px-4  justify-between sm:py-1.5 sm:px-3  md:py-2 md:px-4  shadow-md z-10">
+                  {/* Content for login/register options */}
+                  <a href="/login">
+                    <button
+                      onClick={() => alert("Login to your account")}
+                      className=" block w-full text-left text-xs lg:text-sm text-Gray2 hover:scale-105"
+                    >
+                      Login
+                    </button>
+                  </a>
+                  <a href="/registration">
+                    <button
+                      onClick={() => alert("Register a new account")}
+                      className="block pt-1 w-full text-left text-xs lg:text-sm  text-Gray2  hover:scale-105  "
+                    >
+                      Register
+                    </button>
+                  </a>
+                </div>
+              )}
+
               <div>
                 <a href={`/shoppingcart`}>
                   <SlHandbag
                     size={35}
-                    className="pr-3 text-DarkGreen hover:text-green-400 hidden sm:hidden md:hidden lg:block xl:block "
+                    className="pr-3 text-DarkGreen hover:text-green-400 hidden lg:block xl:block "
                   />
                 </a>
                 <div className="flex flex-row items-center">
@@ -148,10 +185,7 @@ const Navbar = () => {
                     {/* <div className="sm:block md:hidden lg:hidden xl:hidden pr-2">
                       <p className="text-black font-light ">|</p>
                     </div> */}
-                    <CiUser
-                      size={14}
-                      className=" text-black  sm:block md:hidden lg:hidden xl:hidden"
-                    />
+                    <CiUser size={14} className=" text-black  hidden" />
 
                     <div className="sm:flex md:flex lg:hidden ">
                       <button
@@ -268,12 +302,12 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <div className="flex felx-row justify-between items-center px-2 text-white font-light text-xs md:text-sm lg:text-sm xl:text-sm md:mx-16 lg:mx-24 xl:mx-36 w-max">
+          {/* <div className="flex felx-row justify-between items-center px-2 text-white font-light text-xs md:text-sm lg:text-sm xl:text-sm md:mx-16 lg:mx-24 xl:mx-36 w-max">
             <FiPhoneCall size={16} className="text-white mr-2" />
             <div className=" w-max">
               <p className=" ">+94 762630010</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </nav>
     </header>

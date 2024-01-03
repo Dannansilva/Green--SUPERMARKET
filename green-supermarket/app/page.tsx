@@ -8,8 +8,7 @@ export default function Home() {
     <div>
       <Banner />
       <TopSales />
-      <PopCategories />
-      
+      <PopCategories /> 
     </div>
   );
 }
