@@ -45,6 +45,8 @@ const Product: React.FC = () => {
   /* filter category animation */
   const [clickedButtonId, setClickedButtonId] = useState(null);
 
+  
+
   const handleClick = (categoryId: any) => {
     console.log(categoryId);
     setClickedButtonId(categoryId === clickedButtonId ? null : categoryId);
@@ -278,6 +280,9 @@ const Product: React.FC = () => {
           <div
             key={id}
             className="border sm:pt-2 md:pt-4 px-2 hover:border-Green hover:shadow-lg hover:shadow-green-100 justify-evenly flex flex-col w-full rounded-md max-w-full sm:min-h-[250px] lg:min-h-[280px] xl:max-w-max  hover:rounded-md "
+            onClick={() => {
+              router.push("/products_details");
+            } }
           >
             
             <div className="items-center justify-evenly flex lg:py- sm:py-6">

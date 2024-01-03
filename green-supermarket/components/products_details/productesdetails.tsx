@@ -40,10 +40,10 @@ const Productesdetails = () => {
             <Image src={drink} alt="drink" width={500} height={500} />
           </div>
           {/* sub images */}
-          {/* <div className=" inline-flex gap-1 mt-1">
+          <div className=" inline-flex gap-1 mt-1">
             <Image src={drink} alt="drink" width={200} height={200} />
             <Image src={drink} alt="drink" width={200} height={200} />
-          </div> */}
+          </div>
         </div>
         <div>
           {/* heading */}
