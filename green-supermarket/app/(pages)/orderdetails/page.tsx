@@ -84,7 +84,7 @@ const page = () => {
               <div className="justify-between flex flex-col">
                 <div className="flex flex-row justify-between border">
                   <div className="flex flex-col border w-full mb-8">
-                    <div className=" flex flex-row w-full py-3.5 border items-center text-center grid grid-cols-2">
+                    <div className="  flex-row w-full py-3.5 border items-center text-center grid grid-cols-2">
                       <div className="text-neutral-600 text-xs font-medium leading-3 uppercase flex flex-row items-center text-center ml-5">
                         <p>Billing Address</p>
                       </div>
@@ -93,7 +93,7 @@ const page = () => {
                       </div>
                     </div>
 
-                    <div className=" flex flex-row w-full py-3.5  items-center text-center grid grid-cols-2">
+                    <div className="  flex-row w-full py-3.5  items-center text-center grid grid-cols-2">
                       <div className="text-neutral-600 text-xs font-medium leading-3 uppercase flex flex-row items-center ml-5 ">
                         <p>Mark Dillon</p>
                       </div>
@@ -103,7 +103,7 @@ const page = () => {
                       </div>
                     </div>
 
-                    <div className=" flex flex-row w-full py-3.5 items-center text-center grid grid-cols-2">
+                    <div className="  flex-row w-full py-3.5 items-center text-center grid grid-cols-2">
                       <div className="text-neutral-600 text-xs font-medium leading-3 uppercase flex flex-row  items-center text-wrap  text-center ml-5">
                         <p>Kandana,Sri Lanka</p>
                       </div>
@@ -113,7 +113,7 @@ const page = () => {
                       </div>
                     </div>
 
-                    <div className=" flex flex-row w-full py-3.5 grid grid-cols-2">
+                    <div className=" flex-row w-full py-3.5 grid grid-cols-2">
                       <div className="text-neutral-600 text-xs font-medium leading-3 uppercase flex flex-row ml-5">
                         <p>
                           Email
@@ -133,7 +133,7 @@ const page = () => {
                       </div>
                     </div>
 
-                    <div className=" flex flex-row w-full py-3.5 text-center grid grid-cols-2">
+                    <div className="  flex-row w-full py-3.5 text-center grid grid-cols-2">
                       <div className="text-neutral-600 text-xs font-medium leading-3 uppercase flex flex-row ml-5">
                         <p>
                           Phone No
@@ -173,7 +173,7 @@ const page = () => {
                         </div>
                       </div>
 
-                      <div className=" flex flex-row w-full justify-between py-3.5 border grid grid-cols-2">
+                      <div className="  flex-row w-full justify-between py-3.5 border grid grid-cols-2">
                         <div className="text-neutral-600 text-xs font-medium leading-3 uppercase flex flex-row items-center ml-6 ">
                           <p>Subtotal:</p>
                         </div>
@@ -183,7 +183,7 @@ const page = () => {
                         </div>
                       </div>
 
-                      <div className=" flex flex-row w-full justify-between py-3.5 items-center text-center border grid grid-cols-2">
+                      <div className="  flex-row w-full justify-between py-3.5 items-center text-center border grid grid-cols-2">
                         <div className="text-neutral-600 text-xs font-medium leading-3 uppercase flex flex-row  items-center text-wrap  text-center ml-6">
                           <p>Discount</p>
                         </div>
@@ -193,7 +193,7 @@ const page = () => {
                         </div>
                       </div>
 
-                      <div className=" flex flex-row w-full justify-between py-3.5 border grid grid-cols-2  ">
+                      <div className="  flex-row w-full justify-between py-3.5 border grid grid-cols-2  ">
                         <div className="text-neutral-600 text-xs font-medium leading-3 uppercase flex flex-row ml-6">
                           <p>Shipping</p>
                         </div>
@@ -203,7 +203,7 @@ const page = () => {
                         </div>
                       </div>
 
-                      <div className=" flex flex-row w-full justify-between py-3.5 border grid grid-cols-2  ">
+                      <div className=" flex-row w-full justify-between py-3.5 border grid grid-cols-2  ">
                         <div className="text-neutral-600 text-xs font-medium leading-3 uppercase flex flex-row ml-6">
                           <p>Total</p>
                         </div>
@@ -234,7 +234,7 @@ const page = () => {
 
                 <div className=" flex flex-row w-full justify-between py-3.5 border">
                   <div className="text-neutral-600 text-xs font-medium leading-3 uppercase flex flex-row items-center ml-5 ">
-                    <img
+                    <Image
                       src=" \assets\ShopPage\vegetables\carrot.jpg"
                       width={60}
                       height={50}
@@ -255,7 +255,7 @@ const page = () => {
 
                 <div className=" flex flex-row w-full justify-between py-3.5 items-center text-center border">
                   <div className="text-neutral-600 text-xs font-medium leading-3 uppercase flex flex-row  items-center text-wrap  text-center ml-5">
-                    <img
+                    <Image
                       src="/assets/ShopPage/vegetables/Capsicum 1.png"
                       width={60}
                       height={50}
@@ -276,7 +276,7 @@ const page = () => {
 
                 <div className=" flex flex-row w-full justify-between py-3.5 border   ">
                   <div className="text-neutral-600 text-xs font-medium leading-3 uppercase flex flex-row ml-5">
-                    <img
+                    <Image
                       src="/assets/ShopPage/vegetables/Green chili peppers.png"
                       width={60}
                       height={50}

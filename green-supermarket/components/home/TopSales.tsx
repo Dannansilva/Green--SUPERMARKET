@@ -102,7 +102,7 @@ const TopSales = () => {
             key={id}
             className="border sm:pt-2 md:pt-4 px-2 hover:border-Green hover:shadow-lg hover:shadow-green-100 justify-evenly flex flex-col w-full rounded-md max-w-full md:min-h-[280px] sm:min-h-[260px]  hover:rounded-md "
           >
-            <div className=" items-center text-wrap sm:-mt-2 md:-mt-6 lg:-mt-8">
+            <div className=" items-center text-wrap -mt-1 md:-mt-7 lg:-mt-6">
               <span className=" bg-red-600 text-[10px] font-normal text-white rounded-sm px-1.5 py-1 ">
                 {sale}
               </span>

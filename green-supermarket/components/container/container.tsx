@@ -16,7 +16,7 @@ const Container: React.FC<ContainerProps> = ({ children }) => {
             mx-auto
             xl:mr-36
             xl:ml-36
-            sm:mx-2
+            sm:mx-4
             md:mx-16
             lg:mx-24
             xl:mx-36  

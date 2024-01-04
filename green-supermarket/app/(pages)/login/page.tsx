@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import Container from '@/components/container/container'
+import Link from 'next/link';
 import {  loginAPICall  } from "@/services/authService"
 
 
@@ -77,6 +78,8 @@ export default function login() {
             </div>
 
             <div>
+             
+              <a href="/">
               <button
                 type="submit"
                 onClick= {(e) => handleLoginForm(e)}
@@ -85,16 +88,18 @@ export default function login() {
               >
                 login
               </button>
+              </a>
+            
             </div>
           </form>
 
           <p className="mt-10 text-center text-sm text-gray-500">
            
-            <a href="#" className="font-semibold leading-6 text-black hover:text-DarkGreen">
+            <a href="/registration" className="font-semibold leading-6 text-black hover:text-DarkGreen">
               Create account {''} / {''}
             </a>
             
-            <a href="#" className="font-semibold text-black hover:text-DarkGreen underlie">
+            <a href="" className="font-semibold text-black hover:text-DarkGreen underlie">
                     Forgot password?
             </a>
           </p>
