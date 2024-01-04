@@ -1,5 +1,7 @@
 import React from 'react'
 import Container from '@/components/container/container'
+import Link from 'next/link';
+
 
 
 const login = () => {
@@ -49,22 +51,26 @@ const login = () => {
             </div>
 
             <div>
+             
+              <a href="/">
               <button
                 type="submit"
                 className="flex w-full h-11 rounded-[40px] justify-center bg-Green  py-2.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-DarkGreen "
               >
                 Sign in
               </button>
+              </a>
+            
             </div>
           </form>
 
           <p className="mt-10 text-center text-sm text-gray-500">
            
-            <a href="#" className="font-semibold leading-6 text-black hover:text-DarkGreen">
+            <a href="/registration" className="font-semibold leading-6 text-black hover:text-DarkGreen">
               Create account {''} / {''}
             </a>
             
-            <a href="#" className="font-semibold text-black hover:text-DarkGreen underlie">
+            <a href="" className="font-semibold text-black hover:text-DarkGreen underlie">
                     Forgot password?
             </a>
           </p>

@@ -46,6 +46,7 @@ const ProductCard = ({ params }: any) => {
 
 
 
+
   const CategoryFilter = [
     { id: 1, name: "Fruits" },
     { id: 2, name: "Vegetables" },
