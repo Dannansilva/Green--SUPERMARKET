@@ -14,6 +14,7 @@ export default function Registration() {
           </h2>
         </div>
 
+
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
           <form className="space-y-6" action="#" method="POST">
             <div>
@@ -64,6 +65,68 @@ export default function Registration() {
                   placeholder="Password"
                 />
               </div>
+
+      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+        <form className="space-y-6" action="#" method="POST">
+       
+          <div>
+            <div className="mt-2">
+              <input
+                className=" p-5 focus:outline-none block w-full rounded-[40px] h-11 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-Green sm:text-sm sm:leading-6"
+                name="Fname"
+                type="text"
+                autoComplete="FirstName"
+                required
+                placeholder='FirstName'
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+               
+              />
+            </div>
+          </div>
+          <div>
+            <div className="mt-2">
+              <input
+                className=" p-5 focus:outline-none block w-full rounded-[40px] h-11 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-Green sm:text-sm sm:leading-6"
+                name="Lname"
+                type="text"
+                autoComplete="LastName"
+                required
+                placeholder='LastName'
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+              />
+            </div>
+          </div>
+          <div>
+            <div className="mt-2">
+             <input
+                className=" p-5 focus:outline-none  block w-full rounded-[40px] h-11 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-Green sm:text-sm sm:leading-6"
+                name="email"
+                type="email"
+                autoComplete="email"
+                required
+                placeholder='Email Address'
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+             
+              />
+            </div>
+          </div>
+          <div>
+            <div className="mt-2">
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autoComplete="current-password"
+                required
+                className=" p-5 block w-full focus:outline-none rounded-[40px] h-11  border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-Green sm:text-sm sm:leading-6"
+                placeholder='Password'
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+
             </div>
             <div>
               

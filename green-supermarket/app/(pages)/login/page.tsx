@@ -1,10 +1,34 @@
-import React from 'react'
+'use client'
+
+import React, { useState } from 'react'
 import Container from '@/components/container/container'
 import Link from 'next/link';
+import {  loginAPICall  } from "@/services/authService"
 
 
 
-const login = () => {
+
+export default function login() {
+
+
+  const [email,setEmail] = useState ('')
+  const [password,setPassword] = useState('')
+
+
+
+  function handleLoginForm(e: any) {
+    e.preventDefault();
+
+    loginAPICall(email,password).then((response)=>{
+      console.log(response.data);
+    }).catch(error => {
+      console.log(error);
+    })
+
+   
+
+  }
+
   return (
     <>
     <Container>
@@ -21,15 +45,17 @@ const login = () => {
             <div>
               <div className="mt-2">
               <div>
+     
         <input
-                  className=" p-5  block w-full rounded-[40px] h-11 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-Green sm:text-sm sm:leading-6"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                  placeholder='Email Address'
-               
-         />
+          className="p-5 block w-full rounded-[40px] h-11 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-none focus:ring-Green focus:outline-none sm:text-sm sm:leading-6"
+          name="email"
+          type="email"
+          autoComplete="email"
+          required
+          placeholder='Email Address'
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
     </div>
               </div>
             </div>
@@ -43,10 +69,11 @@ const login = () => {
                   type="password"
                   autoComplete="current-password"
                   required
-                  className=" p-5 block w-full rounded-[40px] h-11  border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-Green sm:text-sm sm:leading-6"
+                  className=" p-5 block w-full focus:outline-none rounded-[40px] h-11  border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-Green sm:text-sm sm:leading-6"
                   placeholder='Password'
-                />
-                
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                /> 
               </div>
             </div>
 
@@ -55,9 +82,11 @@ const login = () => {
               <a href="/">
               <button
                 type="submit"
+                onClick= {(e) => handleLoginForm(e)}
+
                 className="flex w-full h-11 rounded-[40px] justify-center bg-Green  py-2.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-DarkGreen "
               >
-                Sign in
+                login
               </button>
               </a>
             
@@ -82,5 +111,3 @@ const login = () => {
     </>
   )
 }
-
-export default login
