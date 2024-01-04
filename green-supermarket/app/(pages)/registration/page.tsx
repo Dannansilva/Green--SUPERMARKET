@@ -43,7 +43,7 @@ export default function registration() {
           <div>
             <div className="mt-2">
               <input
-                className=" p-5  block w-full rounded-[40px] h-11 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-Green sm:text-sm sm:leading-6"
+                className=" p-5 focus:outline-none block w-full rounded-[40px] h-11 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-Green sm:text-sm sm:leading-6"
                 name="Fname"
                 type="text"
                 autoComplete="FirstName"
@@ -58,7 +58,7 @@ export default function registration() {
           <div>
             <div className="mt-2">
               <input
-                className=" p-5  block w-full rounded-[40px] h-11 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-Green sm:text-sm sm:leading-6"
+                className=" p-5 focus:outline-none block w-full rounded-[40px] h-11 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-Green sm:text-sm sm:leading-6"
                 name="Lname"
                 type="text"
                 autoComplete="LastName"
@@ -72,7 +72,7 @@ export default function registration() {
           <div>
             <div className="mt-2">
              <input
-                className=" p-5  block w-full rounded-[40px] h-11 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-Green sm:text-sm sm:leading-6"
+                className=" p-5 focus:outline-none  block w-full rounded-[40px] h-11 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-Green sm:text-sm sm:leading-6"
                 name="email"
                 type="email"
                 autoComplete="email"
@@ -92,7 +92,7 @@ export default function registration() {
                 type="password"
                 autoComplete="current-password"
                 required
-                className=" p-5 block w-full rounded-[40px] h-11  border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-Green sm:text-sm sm:leading-6"
+                className=" p-5 block w-full focus:outline-none rounded-[40px] h-11  border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-Green sm:text-sm sm:leading-6"
                 placeholder='Password'
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
