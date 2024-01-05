@@ -1,12 +1,13 @@
 "use client";
 import Container from "@/components/container/container";
-import React from "react";
+import React, { useEffect } from "react";
 import Productsdetails from "../../../components/products_details/productesdetails";
 import Products from "../shop/Products";
 import Image from "next/image";
 import { SlHandbag } from "react-icons/sl";
 import { FaPlus, FaMinus } from "react-icons/fa6";
 import { useState } from "react";
+import { useParams, useRouter } from "next/navigation"; 
 
 const Page = () => {
   const [quantity, setQuantity] = useState(1);
@@ -21,13 +22,29 @@ const Page = () => {
     setQuantity(quantity + 1);
   };
 
+
+  // const router = useRouter();
+  // const { id } = router.query;
+
+  // Check if id is undefined
+  // if (typeof id !== 'string') {
+  //   return <p>Invalid product ID</p>;
+  // }
+
+  // // Convert id to string (optional)
+  // const productId = id.toString();
+
+  // Find the product with the matching ID
+  // const product = Products.find((p) => p.id === parseInt(productId));
+
+  // if (!product) {
+  //   return <p>Product not found</p>;
+  // }
+  
   return (
-    <div className=" sm:mx-4 md:mx-16 lg:mx-24 xl:mx-36 mb-4  ">
+    <div className=" sm:mx-4 md:mx-16 lg:mx-24 xl:mx-36 lg:py-8 md:mb-8 lg:mb-0  ">
       {/* {Products.map(({ id, name, image, price }) => ( */}
-      <div
-        className="flex flex-col lg:flex-row  gap-4  my-0 mb-2 md:my-4 "
-        key={``}
-      >
+      <div className="flex flex-col lg:flex-row gap-4  my-0 mb-2  " key={``}>
         {/* product pics */}
         <div className="flex-col hidden lg:flex max-w-[80px] gap-2 ">
           <div className=" flex border rounded-sm w-[50px] h-[50px] items-center justify-center text-center  object-center  hover:border-Green">
@@ -72,7 +89,7 @@ const Page = () => {
           </div>
         </div>
         {/*main product pic */}
-        <div className="flex flex-col md:flex-row sm:justify-center items-center justify-between">
+        <div className="flex flex-col md:flex-row sm:justify-center items-center justify-between gap-4">
           <div className="flex lg:flex-col sm:justify-center shadow-md rounded-md sm:h-[200px] sm:w-[200px] md:w-[350px] md:h-[350px] lg:w-2/3  items-center flex-grow">
             <Image
               src={`/assets/ShopPage/fruits/Exotic and delicious pomegranate on white background.png`}
@@ -205,12 +222,12 @@ const Page = () => {
                   <SlHandbag className=" text-white font-medium text-xs " />
                 </button>
               </div>
-              
             </div>
             {/* Button */}
 
             <div className=" flex flex-row gap-2 py-4">
-              <h3 className=" text-xs"> Category: </h3> <p className=" text-Lightgray text-xs"> Vegetables</p>
+              <h3 className=" text-xs"> Category: </h3>{" "}
+              <p className=" text-Lightgray text-xs"> Vegetables</p>
             </div>
 
             <div></div>

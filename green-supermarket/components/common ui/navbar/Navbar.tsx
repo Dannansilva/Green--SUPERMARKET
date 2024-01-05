@@ -11,6 +11,7 @@ import { RiMenu3Fill } from "react-icons/ri";
 import { IoClose } from "react-icons/io5";
 import { IoMdArrowDropleft } from "react-icons/io";
 import { PiUserCircleThin } from "react-icons/pi";
+import ProtectedRoute from "@/components/protectedRoute";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -165,23 +166,28 @@ const Navbar = () => {
               )}
 
               <div>
+                <ProtectedRoute>
                 <a href={`/shoppingcart`}>
                   <SlHandbag
                     size={35}
                     className="pr-3 text-DarkGreen hover:text-green-400 hidden lg:block xl:block "
+                    onClick={() => alert("Please log in to continue!")}
                   />
                 </a>
+                </ProtectedRoute>
                 <div className="flex flex-row items-center">
                   <div className="flex flex-row justify-between justify items-center">
+                    <ProtectedRoute>
                     <a href={`/shoppingcart`}>
                       <SlHandbag
                         size={24}
                         className=" pr-2 sm:block md:block lg:hidden xl:hidden text-DarkGreen"
                       />
                     </a>
-                    <p className="pr-2 text-black text-[11px] hidden lg:hidden xl:hidden font-semibold">
+                    </ProtectedRoute>
+                    {/* <p className="pr-2 text-black text-[11px] hidden lg:hidden xl:hidden font-semibold">
                       Rs.0.00
-                    </p>
+                    </p> */}
                     {/* <div className="sm:block md:hidden lg:hidden xl:hidden pr-2">
                       <p className="text-black font-light ">|</p>
                     </div> */}
