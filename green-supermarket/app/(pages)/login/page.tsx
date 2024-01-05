@@ -21,6 +21,7 @@ export default function Login() {
 
     loginAPICall(email,password).then((response)=>{
       console.log(response.data);
+      //this is the place where you can right the code for
     }).catch(error => {
       console.log(error);
     })
@@ -78,8 +79,6 @@ export default function Login() {
             </div>
 
             <div>
-             
-              <a href="/">
               <button
                 type="submit"
                 onClick= {(e) => handleLoginForm(e)}
@@ -88,18 +87,16 @@ export default function Login() {
               >
                 login
               </button>
-              </a>
-            
             </div>
           </form>
 
           <p className="mt-10 text-center text-sm text-gray-500">
            
-            <a href="/registration" className="font-semibold leading-6 text-black hover:text-DarkGreen">
+            <a href="#" className="font-semibold leading-6 text-black hover:text-DarkGreen">
               Create account {''} / {''}
             </a>
             
-            <a href="" className="font-semibold text-black hover:text-DarkGreen underlie">
+            <a href="#" className="font-semibold text-black hover:text-DarkGreen underlie">
                     Forgot password?
             </a>
           </p>
