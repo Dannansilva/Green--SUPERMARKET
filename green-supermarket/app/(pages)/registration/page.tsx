@@ -116,3 +116,4 @@ export default function Registration() {
 )
   
 }
+// Compare this snippet from app/%28pages%29/registration/page.tsx:
