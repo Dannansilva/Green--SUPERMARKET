@@ -1,7 +1,6 @@
 import React from "react";
 import { SlHandbag } from "react-icons/sl";
 
-
 const Products = [
   {
     id: 1,

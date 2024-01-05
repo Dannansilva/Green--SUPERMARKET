@@ -8,7 +8,7 @@ import {  loginAPICall  } from "@/services/authService"
 
 
 
-export default function login() {
+export default function Login() {
 
 
   const [email,setEmail] = useState ('')
