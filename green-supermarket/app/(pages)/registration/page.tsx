@@ -99,6 +99,7 @@ export default function Registration() {
             </div>
           </div>
           <div>
+            <a href={`/`}>
             <button
               type="submit"
               onClick= {(e) => handleRegistrationForm(e)}
@@ -106,6 +107,7 @@ export default function Registration() {
             >
              Create
             </button>
+            </a>
           </div>
         </form>
       </div>
@@ -116,4 +118,3 @@ export default function Registration() {
 )
   
 }
-// Compare this snippet from app/%28pages%29/registration/page.tsx:

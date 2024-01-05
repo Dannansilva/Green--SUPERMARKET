@@ -3,30 +3,29 @@ import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 import { ReactNode } from 'react';
 
-
 interface ProtectedRouteProps {
-    children: ReactNode;
-  }
+  children: ReactNode;
+}
 
-  const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
-    const router = useRouter();
+const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
+  const navigation = useRouter();
 
-    useEffect(() => {
-        const isLoggedIn = false; // authentication check
-    
-        if (!isLoggedIn) {
-          router.push('/login');
-        }
-    
-       
-        return () => {
-        };
-      }, []); 
-      return <>
-      {children}
-     
+  useEffect(() => {
+    const isLoggedIn = false; // Replace this with your authentication check
+    const currentPath = window.location.pathname;
 
-      </>;
+    const isRegistrationPage = currentPath === '/login';
+
+    if (!isLoggedIn && !isRegistrationPage) {
+      navigation.push('/registration');
+    }
+
+    return () => {
+      // Cleanup logic if needed
     };
-    
-    export default ProtectedRoute;
+  }, [navigation]); // Include navigation in the dependency array
+
+  return <>{children}</>;
+};
+
+export default ProtectedRoute;
