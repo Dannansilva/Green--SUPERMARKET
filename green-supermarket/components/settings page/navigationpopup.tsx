@@ -9,6 +9,9 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
 import { Category } from "../home/Categories";
+import { SettingsNavItems } from "./settingsNavItems";
+import { ChevronDown } from 'lucide-react';
+
 
 
 const Navigationpopup = () => {
@@ -33,14 +36,14 @@ const Navigationpopup = () => {
     setIsOpen(false);
   };
 
-  /* filter button in sm devices */
+  /*navitems in sm devices */
   const [showCategories, setShowCategories] = useState(false);
 
   const handleFilterClick = () => {
     setShowCategories(!showCategories);
   };
 
-  /* filter category animation */
+  /* nav items animation */
   const [clickedButtonId, setClickedButtonId] = useState(null);
 
   const handleClick = (categoryId: any) => {
@@ -64,7 +67,7 @@ const Navigationpopup = () => {
   };
 
   return (
-    <div className="relative inline-block">
+    <div className="relative inline-block sm:pt-6">
            <div
                 className="relative inline-block cursor-pointer"
                 onMouseEnter={() => setIsHovered(true)}
@@ -75,12 +78,14 @@ const Navigationpopup = () => {
               >
                  <button
                     onClick={handleFilterClick}
-                    className="  h-full w-full text-center items-center justify-center  bg-White text-white rounded-full hover:shadow-md py-1a    "
+                    className="  h-full w-full text-center items-center justify-center  bg-White text-white rounded-md hover:shadow-lg hover:border hover:border-Gray3 py-3 px-4    "
                   >
-                    <div className="flex flex-row items-center justify-center text-center px-3 py-1 w-full  text-xs font-medium ">
+                    <div className="flex flex-row items-center justify-center text-center  text-xs font-medium gap-4">
                       {/* <p className="pl-1">Filter</p>
                         <MdKeyboardArrowDown className=" h-[15px] w-[15px]" /> */}
-                      <HiAdjustmentsHorizontal className=" h-[25px] w-full text-Green" />
+                          <p className=" text-lg text-Green font-semibold hover:text-Gray2">navigation</p>
+                       
+                      <ChevronDown className=" h-4 w-4 text-Green font-semibold " />
                     </div>
                   </button>
 
@@ -90,21 +95,21 @@ const Navigationpopup = () => {
                     onMouseLeave={() => setIsHovered(false)}
                   >
                     <>
-                      {Category.map((category) => (
-                        <Link key={category.id} href={`/shop/${category.id}`}>
+                      {SettingsNavItems.map((navitem) => (
+                        <Link key={navitem.id} href={``}>
                           <div className="flex flex-col hover:scale-105 justify-start text-start px-2 hover:transition-all hover:duration-750 hover:ease-in-out">
                             <div className="flex flex-row items-center text-center gap-1">
                               {/* <GoSquareFill className="text-green-400 w-[7px] h-[7px]" /> */}
                               <button
-                                key={category.id}
-                                onClick={() => handleClick(category.id)}
+                                key={navitem.id}
+                                onClick={() => handleClick(navitem.id)}
                                 className={`text-items-center text-center text-sm m-2 transition duration-300 text-Gray2 ease-in-out hover:font-semibold w-max ${
-                                  clickedButtonId === category.id
+                                  clickedButtonId === navitem.id
                                     ? "border-b-4 border-b-Green pb-1 text-DarkGreen font-semibold"
                                     : ""
                                 }`}
                               >
-                                {category.name}
+                                {navitem.name}
                               </button>
                             </div>
                           </div>
