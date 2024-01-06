@@ -11,6 +11,8 @@ const Products = [
     image2: <SlHandbag />,
     category: 1,
     quantity:1,
+
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
   },
   {
     id: 2,
@@ -21,6 +23,7 @@ const Products = [
     category: 1,
     quantity:1,
 
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
   },
   {
     id: 3,
@@ -31,6 +34,7 @@ const Products = [
     category: 1,
     quantity:1,
 
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
   },
   // {
   //   id: 4,
@@ -162,6 +166,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 2,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
   },
   {
     id: 9,
@@ -172,6 +177,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 2,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
   },
   {
     id: 10,
@@ -183,6 +189,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 2,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
   },
 
   /* Bakey */
@@ -193,6 +200,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 3,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
   },
   {
     id: 12,
@@ -203,6 +211,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 3,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
   },
   {
     id: 13,
@@ -213,6 +222,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 3,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
   },
   {
     id: 14,
@@ -223,6 +233,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 3,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
   },
   {
     id: 15,
@@ -233,6 +244,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 3,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
   },
 
   /* Meat & fish */
@@ -243,6 +255,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 4,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
   },
   {
     id: 17,
@@ -251,6 +264,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 4,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
   },
   {
     id: 18,
@@ -259,6 +273,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 4,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
   },
   {
     id: 19,
@@ -267,6 +282,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 4,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
   },
 
   {
@@ -276,6 +292,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 4,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
   },
 
   /* Spices */
@@ -288,6 +305,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 5,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
   },
   {
     id: 22,
@@ -298,6 +316,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 5,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
    
   },
   {
@@ -309,6 +328,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 5,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
   },
   {
     id: 24,
@@ -317,6 +337,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 5,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
   },
   {
     id:25,
@@ -325,6 +346,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 5,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
   },
 
   /* Stationary */
@@ -341,6 +363,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 6,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
   },
   {
     id: 27,
@@ -349,6 +372,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 6,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
   },
   {
     id: 28,
@@ -357,6 +381,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 6,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
   },
   {
     id: 29,
@@ -365,6 +390,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 6,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
   },
   {
     id: 30,
@@ -375,6 +401,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 6,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
   },
 
   /* detergents */
@@ -387,6 +414,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 7,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
 
   },
   {
@@ -396,6 +424,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 7,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
 
   },
   {
@@ -405,6 +434,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 7,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
 
   },
   {
@@ -414,6 +444,7 @@ const Products = [
     price: "LKR 100.00",
     image2: <SlHandbag />,
     category: 7,
+    description:"sofnnfjnfoondoovndvn dfndvodnvdondovndvodnodnvdovndovndvondfvoidnvdoi no ndvenvoinvefoindo noivnivn in0vneindv0enfv0fn d0 ind0 env0wieivnefivnefn n0fjw0ifn0imwivnevefnveifnvefivnefovevnfb"
 
   },
 

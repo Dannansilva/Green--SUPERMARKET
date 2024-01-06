@@ -1,4 +1,3 @@
-// components/ProtectedRoute.js
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 import { ReactNode } from 'react';
@@ -13,10 +12,9 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
   useEffect(() => {
     const isLoggedIn = false; // Replace this with your authentication check
     const currentPath = window.location.pathname;
+    const isShoppingCartPage = currentPath === '/shoppingcart';
 
-    const isRegistrationPage = currentPath === '/login';
-
-    if (!isLoggedIn && !isRegistrationPage) {
+    if (!isLoggedIn && isShoppingCartPage) {
       navigation.push('/registration');
     }
 

@@ -304,6 +304,7 @@ const Product: React.FC = () => {
             {/* second div */}
             <div className="  grid grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 pt-4 sm:gap-2 md:gap-4 ">
               {Products.map(({ id, name, image, price }) => (
+                 <Link key={id} href={`/product/${id}`}>
                 <div
                   key={id}
                   className="border sm:pt-2 md:pt-4 px-2 hover:border-Green hover:shadow-lg hover:shadow-green-100 justify-evenly flex flex-col w-full rounded-md max-w-full sm:min-h-[250px] lg:min-h-[280px] xl:max-w-max  hover:rounded-md "
@@ -348,6 +349,7 @@ const Product: React.FC = () => {
                     </button>
                   </div>
                 </div>
+                </Link>
               ))}
             </div>
           </div>
