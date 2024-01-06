@@ -7,9 +7,20 @@ import Image from "next/image";
 import { SlHandbag } from "react-icons/sl";
 import { FaPlus, FaMinus } from "react-icons/fa6";
 import { useState } from "react";
-import { useParams, useRouter } from "next/navigation"; 
+import { useParams } from "next/navigation"; 
+import { useRouter } from "next/router";
 
-const Page = () => {
+interface ProductDetailsProps {
+  id: any; // Assuming id is of any type
+  name: any;
+  image: any; // Assuming image is of any type
+  price: any;
+  description: any;
+}
+
+
+
+const ProductDetails: React.FC<ProductDetailsProps> = ({ id, name, image, price , description }) => {
   const [quantity, setQuantity] = useState(1);
 
   const decreaseValue = (id: any) => {
@@ -23,6 +34,29 @@ const Page = () => {
   };
 
 
+
+  const router = useRouter();
+  const { Id } = router.query;
+
+  if (!Id || typeof Id !== 'string') {
+    return <p>Invalid product ID</p>;
+  }
+  
+  // Parse the string to an integer
+  const productId = parseInt(Id, 10);
+
+  // Check if id is undefined or not a number
+  if (isNaN(productId)) {
+    return <p>Invalid product ID</p>;
+  }
+
+  // Fetch the product data based on the product id
+  // You may use your own data fetching logic here
+  const product = Products.find((p) => p.id === parseInt(Id));
+
+  if (!product) {
+    return <p>Product not found</p>;
+  }
   // const router = useRouter();
   // const { id } = router.query;
 
@@ -240,4 +274,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default ProductDetails;
