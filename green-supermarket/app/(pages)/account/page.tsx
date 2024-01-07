@@ -17,19 +17,7 @@ function Page() {
 
   return (
     <div>
-      <div
-        className="flex  w-full bg-cover bg-no-repeat items-center  max-h-[90px] sm:max-h-[60px] md:max-h-[90px] "
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25)), url('/assets/ShopPage/Breadcrumbs.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          width: "100%",
-          height: "120px",
-        }}
-      >
-        <div className="flex flex-row items-center mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36  gap-3 flex-1 cursor-pointer">
+     <div className="flex flex-row items-center mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36  gap-3 flex-1 cursor-pointer my-4">
           <div>
           {navItems.map(({home, path}) => (
           <a key={home} href={path}>
@@ -45,11 +33,10 @@ function Page() {
           </div>
           <div className="flex text-Lightgray hover:text-white ">
             <p className="text-Green hover:text-white sm:text-xs md:text-base lg:text-md">
-              Settings
+              Account
             </p>
           </div>
         </div>
-      </div>
       <Container>
         <NavigationPopup />
         <Accountsettings />

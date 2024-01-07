@@ -57,7 +57,7 @@ const Checkout: React.FC = () => {
         </div>
 
         <div className="flex sm:flex-col lg:flex-col mb-8 ">
-          {/* sm / md devicecart balance */}
+          {/* sm / md device cart balance */}
           <div className="flex flex-col w-full border rounded-t-md rounded-b-md p-4 lg:hidden mb-8 sm:shadow-lg  ">
             <div className=" my-2 -mt-1">
               <h4 className=" font-semibold"> Cart Total </h4>
@@ -104,7 +104,7 @@ const Checkout: React.FC = () => {
               {/* 1st div */}
               <div className="flex flex-col w-full border rounded-t-md rounded-b-md shadow-lg">
                 <div className="flex flex-row justify-start bg-Green w-full text-md font-medium pl-[18px] py-4 rounded-t-md text-Black1 ">
-                  <h4> Shopping details </h4>
+                  <h4 className=" text-white"> Shopping details </h4>
                 </div>
 
                 {/* 1st line */}
@@ -117,7 +117,7 @@ const Checkout: React.FC = () => {
                       <input
                         type="text"
                         placeholder="first name"
-                        className="pl-4 pr-4 py-3 bg-white rounded-md border border-Green focus:outline-none focus:border-DarkGreen3 focus:border-2 w-full sm:text-xs md:text-sm lg:text-md"
+                        className="pl-4 pr-4 py-3 bg-white rounded-md border border-gray-300 focus:outline-none focus:border-DarkGreen3 focus:border-2 w-full sm:text-xs md:text-sm lg:text-md"
                       />
                     </div>
                   </div>
@@ -130,7 +130,7 @@ const Checkout: React.FC = () => {
                       <input
                         type="text"
                         placeholder="last name"
-                        className="pl-4 pr-4 py-3 bg-white rounded-md border border-Green focus:outline-none focus:border-DarkGreen3 focus:border-2 w-full sm:text-xs md:text-sm lg:text-md"
+                        className="pl-4 pr-4 py-3 bg-white rounded-md border border-gray-300 focus:outline-none focus:border-DarkGreen3 focus:border-2 w-full sm:text-xs md:text-sm lg:text-md"
                       />
                     </div>
                   </div>
@@ -144,7 +144,7 @@ const Checkout: React.FC = () => {
                     <input
                       type="text"
                       placeholder="Line 1"
-                      className="pl-4 pr-4 py-3 bg-white rounded-md border border-Green focus:outline-none focus:border-DarkGreen3 focus:border-2 w-full sm:text-xs md:text-sm lg:text-md"
+                      className="pl-4 pr-4 py-3 bg-white rounded-md border border-gray-300 focus:outline-none focus:border-DarkGreen3 focus:border-2 w-full sm:text-xs md:text-sm lg:text-md"
                     />
                   </div>
                 </div>
@@ -158,7 +158,7 @@ const Checkout: React.FC = () => {
                     <input
                       type="text"
                       placeholder="Line 2"
-                      className="pl-4 pr-4 py-3 bg-white rounded-md border border-Green focus:outline-none focus:border-DarkGreen3 focus:border-2 w-full sm:text-xs md:text-sm lg:text-md"
+                      className="pl-4 pr-4 py-3 bg-white rounded-md border border-gray-300 focus:outline-none focus:border-DarkGreen3 focus:border-2 w-full sm:text-xs md:text-sm lg:text-md"
                     />
                   </div>
                 </div>
@@ -170,13 +170,13 @@ const Checkout: React.FC = () => {
                       Country / Region
                     </span>
                     <div className="relative  pt-1">
-                      <div className="absolute inset-y-0 right-0 flex items-center px-2 text-Green pointer-events-none">
+                      <div className="absolute inset-y-0 right-0 flex items-center px-2 text-gray-300 pointer-events-none">
                         <MdOutlineKeyboardArrowDown className="h-3 w-3 text-Gray mt-1" />
                       </div>
                       <select
                         onChange={handleCountryChange}
                         value={selectedCountry}
-                        className="appearance-none block w-full px-4 sm:h-[42px] md:h-[45px] border border-Green rounded-md shadow-sm focus:outline-none focus:border-DarkGreen3 text-Lightgray bg-white focus:border-2  text-left justify-start sm:text-[12px] md:text-[15px] "
+                        className="appearance-none block w-full px-4 sm:h-[42px] md:h-[45px] border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-DarkGreen3 text-Lightgray bg-white focus:border-2  text-left justify-start sm:text-[12px] md:text-[15px] "
                       >
                         <option value="" disabled>
                           Select Country
@@ -198,7 +198,7 @@ const Checkout: React.FC = () => {
                       <input
                         type="text"
                         placeholder="xxxxx"
-                        className="pl-4 pr-4 py-3 bg-white rounded-md border border-Green focus:outline-none focus:border-DarkGreen3 focus:border-2 w-full sm:text-xs md:text-sm lg:text-md"
+                        className="pl-4 pr-4 py-3 bg-white rounded-md border border-gray-300 focus:outline-none focus:border-DarkGreen3 focus:border-2 w-full sm:text-xs md:text-sm lg:text-md"
                       />
                     </div>
                   </div>
@@ -208,7 +208,7 @@ const Checkout: React.FC = () => {
               {/* 2nd div */}
               <div className="flex flex-col w-full border rounded-t-md rounded-b-md shadow-lg">
                 <div className="flex flex-row justify-start bg-Green w-full text-md font-medium pl-[18px] py-4 rounded-t-md text-Black1 ">
-                  <h4> Choose a payment method </h4>
+                  <h4 className=" text-white"> Choose a payment method </h4>
                 </div>
 
                 {/* 1st line */}
@@ -261,7 +261,7 @@ const Checkout: React.FC = () => {
                     <input
                       type="text"
                       placeholder="xxxx xxxx xxxx"
-                      className="pl-4 pr-4 py-3 bg-white rounded-md border border-Green focus:outline-none focus:border-DarkGreen3 focus:border-2 w-full sm:text-xs md:text-sm lg:text-md"
+                      className="pl-4 pr-4 py-3 bg-white rounded-md border border-gray-300 focus:outline-none focus:border-DarkGreen3 focus:border-2 w-full sm:text-xs md:text-sm lg:text-md"
                     />
                   </div>
                 </div>
@@ -286,7 +286,7 @@ const Checkout: React.FC = () => {
                         <input
                           type="text"
                           placeholder="xxx"
-                          className="px-4 py-3 bg-white rounded-md border border-Green focus:outline-none focus:border-DarkGreen3 focus:border-2 w-full sm:text-xs md:text-sm lg:text-md"
+                          className="px-4 py-3 bg-white rounded-md border border-gray-300 focus:outline-none focus:border-DarkGreen3 focus:border-2 w-full sm:text-xs md:text-sm lg:text-md"
                         />
                       </div>
                     </div>
@@ -298,7 +298,7 @@ const Checkout: React.FC = () => {
                       <input
                         type="text"
                         placeholder="******"
-                        className="pl-4 pr-4 py-3 bg-white rounded-md border border-Green focus:outline-none focus:border-DarkGreen3 focus:border-2 w-full sm:text-xs md:text-sm lg:text-md"
+                        className="pl-4 pr-4 py-3 bg-white rounded-md border border-gray-300 focus:outline-none focus:border-DarkGreen3 focus:border-2 w-full sm:text-xs md:text-sm lg:text-md"
                       />
                     </div>
                   </div>

@@ -67,7 +67,7 @@ const Navigationpopup = () => {
   };
 
   return (
-    <div className="relative inline-block sm:pt-6">
+    <div className="relative inline-block py-4 -mt-6">
            <div
                 className="relative inline-block cursor-pointer"
                 onMouseEnter={() => setIsHovered(true)}
@@ -109,7 +109,8 @@ const Navigationpopup = () => {
                                     : ""
                                 }`}
                               >
-                                {navitem.name}
+                                <div className="items-center justify-between gap-4 flex flex-row">{navitem.image}{navitem.name}</div>
+                                
                               </button>
                             </div>
                           </div>

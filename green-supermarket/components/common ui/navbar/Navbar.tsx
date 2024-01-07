@@ -12,8 +12,11 @@ import { IoClose } from "react-icons/io5";
 import { IoMdArrowDropleft } from "react-icons/io";
 import { PiUserCircleThin } from "react-icons/pi";
 import ProtectedRoute from "@/components/protectedRoute";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
+  const router = useRouter();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
 
@@ -38,6 +41,26 @@ const Navbar = () => {
     { title: "About us", path: "/aboutus" },
     { title: "Contact us", path: "/contactus" },
   ];
+
+  /* search bar */
+  const [keyword, setKeyword] = useState("");
+
+  // const submitHandler = () => {
+  //   if (keyword) {
+  //     router.push(`/?keyword = $ {keyword}`);
+  //   } else {
+  //     router.push("/");
+  //   }
+  // };
+
+  const submitHandler = () => {
+    if (keyword) {
+      router.push(`/?keyword=${encodeURIComponent(keyword)}`);
+    } else {
+      router.push("/");
+    }
+  };
+  
 
   return (
     <header>
@@ -111,26 +134,49 @@ const Navbar = () => {
             {/* shopping cart */}
             <div className="flex flex-row items-center justify-center ">
               {/* lg search bar */}
-              <div className="  flex-row hidden sm:hidden lg:flex xl:flex md:hidden">
-                <form
+              <div className="  flex-row hidden sm:hidden lg:flex xl:flex md:hidden ">
+                {/* <form
                   action="input"
-                  className={`  first-letter:relative mx-auto w-full items-center focus:outline-0 focus:border-0 ${
+                  className={`relative mx-auto w-full items-center focus:outline-0 focus:border-0  ${
                     isClicked ? "centered" : ""
                   }`}
                 >
-                  <div className="mr- relative items-center 0">
+                  <div className="relative items-center ">
                     <input
-                      type="search"
-                      className="peer border-white cursor-pointer relative z-10 sm:z-10 md:z-20 lg:z-20 xl:z-30 h-12 w-12 rounded-full bg-transparent  outline-none focus:w-full focus:cursor-text focus:pl-14 focus:pr-4 focus:shadow-md focus:border-none focus:outline-none  "
+                      type="text"
+                      value={keyword}
+                      onChange={(e) => setKeyword(e.target.value)}
+                      className={`peer border-white cursor-pointer z-10 h-12 w-12 rounded-full  bg-transparent  outline-none focus:w-full focus:cursor-text focus:pl focus:pr-4 focus:shadow-md focus:border-none focus:outline-none ${
+                        isClicked ? "pl-14" : ""
+                      }`}
                       onClick={handleClick}
                     />
-                    <div className="absolute inset-y-0 left-0 flex items-center pl-3">
-                      <IoSearch
-                        size={20}
-                        className="w-full ml-0.5 mt-0.5 text-Gray2"
-                      />
-                    </div>
+                    {isClicked ? (
+                      <button
+                        type="submit"
+                        className="absolute inset-y-0 right-0 flex items-center pr-3"
+                      >
+                        <IoSearch size={20} className="w-full text-Gray2" />
+                      </button>
+                    ) : null}
                   </div>
+                </form> */}
+
+                <form className="hidden lg:flex flex-nowrap items-center justify-end w-full order-last md:order-none">
+                  <input type="text"
+                  className=" w-52 text-Gray focus:pl-4 h-[35px] pl-4  items-center text-xs appearance-none border bg-white rounded-full mr-4 py-2 px-2  focus:outline-none focus:border-Green" 
+                  placeholder=" Search your product "
+                  value={keyword}
+                  onChange={(e) => setKeyword(e.target.value)}
+                  required/>
+
+                  <button
+                  type="button"
+                  className="absolute border-lightgrey text-white mr-4 px-2 py-[9px] cursor-pointer border border-transparent bg-Green rounded-full "
+                  onClick={submitHandler}>
+                     <IoSearch size={15} className="w-full text-white text-center items-center h-full pl-0.5   " 
+                     />
+                  </button>
                 </form>
               </div>
 
@@ -167,23 +213,23 @@ const Navbar = () => {
 
               <div>
                 <ProtectedRoute>
-                <a href={`/shoppingcart`}>
-                  <SlHandbag
-                    size={35}
-                    className="pr-3 text-DarkGreen hover:text-green-400 hidden lg:block xl:block "
-                    onClick={() => alert("Please log in to continue!")}
-                  />
-                </a>
+                  <a href={`/shoppingcart`}>
+                    <SlHandbag
+                      size={35}
+                      className="pr-3 text-DarkGreen hover:text-green-400 hidden lg:block xl:block "
+                      onClick={() => alert("Please log in to continue!")}
+                    />
+                  </a>
                 </ProtectedRoute>
                 <div className="flex flex-row items-center">
                   <div className="flex flex-row justify-between justify items-center">
                     <ProtectedRoute>
-                    <a href={`/shoppingcart`}>
-                      <SlHandbag
-                        size={24}
-                        className=" pr-2 sm:block md:block lg:hidden xl:hidden text-DarkGreen"
-                      />
-                    </a>
+                      <a href={`/shoppingcart`}>
+                        <SlHandbag
+                          size={24}
+                          className=" pr-2 sm:block md:block lg:hidden xl:hidden text-DarkGreen"
+                        />
+                      </a>
                     </ProtectedRoute>
                     {/* <p className="pr-2 text-black text-[11px] hidden lg:hidden xl:hidden font-semibold">
                       Rs.0.00
