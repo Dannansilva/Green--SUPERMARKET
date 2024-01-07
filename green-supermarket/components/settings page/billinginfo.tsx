@@ -139,7 +139,7 @@ const Billinginfo = () => {
                 {/* 1st line */}
                 <div className="flex sm:flex-col md:gap-5 py-2 sm:mt-4 md:mt-0">
                   <div className="flex flex-col w-full ">
-                    <span className="text-[14px] font-medium text-gray-900  ">
+                    <span className="text-[14px] font-medium text-gray-800  ">
                     Street Address
                     </span>
                     <div className="w-full pt-1">
