@@ -17,7 +17,7 @@ function Page() {
 
   return (
     <div>
-     <div className="flex flex-row items-center mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36  gap-3 flex-1 cursor-pointer my-4">
+     {/* <div className="flex flex-row items-center mx-2 sm:mx-2 md:mx-16 lg:mx-24 xl:mx-36  gap-3 flex-1 cursor-pointer my-4">
           <div>
           {navItems.map(({home, path}) => (
           <a key={home} href={path}>
@@ -36,7 +36,7 @@ function Page() {
               Account
             </p>
           </div>
-        </div>
+        </div> */}
       <Container>
         <NavigationPopup />
         <Accountsettings />

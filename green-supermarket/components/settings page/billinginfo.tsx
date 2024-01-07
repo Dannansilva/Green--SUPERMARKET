@@ -2,19 +2,37 @@
 import React from "react";
 import { useState } from "react";
 import Image from "next/image";
+import countryList from "@/app/(pages)/shoppingcart/checkout/country";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import provinces from "./provinces";
 
 
-const Billinginfo = () => {
+const Billinginfo: React.FC= () => {
+
+  const [selectedCountry, setSelectedCountry] = useState<string>("");
+  const [selectedProvince, setSelectedProvince] = useState<string>("");
+
+
   const [streetAddress, setStreetAddress] = useState("");
   const [line2, setLine2] = useState("");
   const [country, setCountry] = useState("Sri Lanka");
   const [province, setProvince] = useState("Western");
   const [zipCode, setZipCode] = useState("");
 
+  // type ChangeEvent<T = HTMLInputElement> = React.ChangeEvent<T>;
+
+
+  const handleCountryChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    setSelectedCountry(event.target.value);
+  };
+
+  const handleProvinceChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    setSelectedProvince(event.target.value);
+  };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Here you would typically send the form data to your server or perform some other action.
     console.log({
       streetAddress,
       line2,
@@ -100,12 +118,12 @@ const Billinginfo = () => {
     //   </form>
     // </div>
     <div className="border border-[color:var(--Gray-Scale-Gray-100,#E6E6E6)] bg-white flex grow flex-col items-stretch w-full pt-1 pb-6 rounded-lg border-solid max-md:max-w-full mt-6">
-      <h2 className="text-Gray3 text-[16px]  font-medium leading-8 whitespace-nowrap  bg-white justify-center pl-6 pr-16 py-2 rounded-lg items-start max-md:max-w-full max-md:px-5">
+      <h2 className="text-Gray3 text-[16px] font-semibold leading-8 whitespace-nowrap  bg-white justify-center pl-6 pr-16 py-2 rounded-lg items-start max-md:max-w-full max-md:px-5">
       Billing Address
       </h2>
       <hr />
       <form
-        className="flex flex-col items-stretch mt- px-10 max-md:max-w-full max-md:px-5"
+        className="flex flex-col items-stretch mt-4 px-10 max-md:max-w-full max-md:px-5"
         onSubmit={handleSubmit}
       >
         <div className="max-md:max-w-full ">
@@ -169,6 +187,8 @@ const Billinginfo = () => {
                    
                   </div> */}
                 </div>
+
+                
                 {/* 2nd line */}
 
 
@@ -176,7 +196,7 @@ const Billinginfo = () => {
 
 
                 {/* 4th line */}
-                {/* <div className="flex sm:flex-row md:flex-row sm:gap-5 md:gap-[55px] px-4 py-2 pb-8 ">
+                <div className="flex lg:flex-row sm:gap-5 md:gap-[55px] py-2 pb-8 ">
                   <div className="flex flex-col w-full">
                     <span className=" text-xs  lg:text-sm font-medium">
                       Country / Region
@@ -202,6 +222,31 @@ const Billinginfo = () => {
                     </div>
                   </div>
 
+                  <div className="flex flex-col w-full">
+                    <span className=" text-xs  lg:text-sm font-medium">
+                      Province
+                    </span>
+                    <div className="relative  pt-1">
+                      <div className="absolute inset-y-0 right-0 flex items-center px-2 text-gray-300 pointer-events-none">
+                        <MdOutlineKeyboardArrowDown className="h-3 w-3 text-Gray mt-1" />
+                      </div>
+                      <select
+                        onChange={handleProvinceChange}
+                        value={selectedProvince}
+                        className="appearance-none block w-full px-4 sm:h-[42px] md:h-[45px] border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-DarkGreen3 text-Lightgray bg-white focus:border-2  text-left justify-start sm:text-[12px] md:text-[15px] "
+                      >
+                        <option value="" disabled>
+                          Select Province
+                        </option>
+                        {provinces.map((p) => (
+                          <option key={p.id} value={p.name}>
+                            {p.name}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+
                   <div className="flex flex-col w-full py-1 sm:-mt-1 ">
                     <span className=" sm:text-xs lg:text-sm font-medium">
                       Zip Code
@@ -214,7 +259,7 @@ const Billinginfo = () => {
                       />
                     </div>
                   </div>
-                </div> */}
+                </div>
               </div>
             </div>
           </div>
@@ -232,5 +277,4 @@ const Billinginfo = () => {
     </div>
   );
 };
-
 export default Billinginfo;
