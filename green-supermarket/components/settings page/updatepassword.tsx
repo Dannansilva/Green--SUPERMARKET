@@ -80,12 +80,12 @@ const updatepassword = () => {
     //   </form>
     // </div>
     <div className="border border-[color:var(--Gray-Scale-Gray-100,#E6E6E6)] bg-white flex grow flex-col items-stretch w-full pt-1 pb-6 rounded-lg border-solid max-md:max-w-full my-6">
-      <h2 className="text-Gray3 text-md font-semibold leading-8 whitespace-nowrap  bg-white justify-center pl-6 pr-16 py-2 rounded-lg items-start max-md:max-w-full max-md:px-5">
+      <h2 className="text-Gray3 text-md font-semibold leading-8 whitespace-nowrap  bg-white justify-center mx-4 py-4 rounded-lg items-start max-md:max-w-full max-md:px-5">
         Change Password
       </h2>
-      <hr />
+      <hr  className=" mx-4"/>
       <form
-        className="flex flex-col items-stretch mt- px-10 max-md:max-w-full max-md:px-5"
+        className="flex flex-col items-stretch mx-4 max-md:max-w-full "
         onSubmit={handleSubmit}
       >
         <div className="max-md:max-w-full ">
