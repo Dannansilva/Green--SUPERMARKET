@@ -30,12 +30,12 @@ const Accountsettings = () => {
   };
   return (
     <div className="border  border-[color:var(--Gray-Scale-Gray-100,#E6E6E6)] bg-white -mt-6 flex grow flex-col items-stretch w-full pb-6 rounded-lg border-solid max-md:max-w-full">
-      <h2 className="text-Gray3 text-md  font-semibold leading-8 whitespace-nowrap  bg-white justify-center pl-6 pr-16 py-2 rounded-lg items-start max-md:max-w-full max-md:px-5">
+      <h2 className="text-Gray3 text-md  font-semibold leading-8 whitespace-nowrap  bg-white justify-center mx-4 py-4 rounded-lg items-start max-md:max-w-full ">
         Account Settings
       </h2>
-      <hr />
+      <hr  className=" mx-4"/>
       <form
-        className="flex flex-col items-stretch mt-6 lg:mt-2 px-10 max-md:max-w-full max-md:px-5"
+        className="flex flex-col items-stretch mt-6 lg:mt-2 mx-4 max-md:max-w-full "
         onSubmit={handleSubmit}
       >
         <div className="max-md:max-w-full ">
@@ -54,7 +54,7 @@ const Accountsettings = () => {
 
                 <button
                   type="button"
-                  className="text-Green2 text-[12px] lg:text-[14px]  font-medium leading-4 whitespace-nowrap justify-center border-Green2 bg-white px-6 py-2 rounded-full border border-solid "
+                  className="text-Green2 text-[12px] lg:text-[14px] mt-4 font-medium leading-4 whitespace-nowrap justify-center border-Green2 bg-white px-6 py-2 rounded-full border border-solid "
                 >
                   Choose Image
                 </button>

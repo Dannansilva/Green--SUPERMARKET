@@ -118,12 +118,12 @@ const Billinginfo: React.FC= () => {
     //   </form>
     // </div>
     <div className="border border-[color:var(--Gray-Scale-Gray-100,#E6E6E6)] bg-white flex grow flex-col items-stretch w-full pt-1 pb-6 rounded-lg border-solid max-md:max-w-full mt-6">
-      <h2 className="text-Gray3 text-[16px] font-semibold leading-8 whitespace-nowrap  bg-white justify-center pl-6 pr-16 py-2 rounded-lg items-start max-md:max-w-full max-md:px-5">
+      <h2 className="text-Gray3 text-[16px] mx-4 font-semibold leading-8 whitespace-nowrap  bg-white justify-center  py-4 rounded-lg items-start max-md:max-w-full ">
       Billing Address
       </h2>
-      <hr />
+      <hr  className=" mx-4"/>
       <form
-        className="flex flex-col items-stretch mt-4 px-10 max-md:max-w-full max-md:px-5"
+        className="flex flex-col items-stretch my-2 mx-4 max-md:max-w-full "
         onSubmit={handleSubmit}
       >
         <div className="max-md:max-w-full ">
@@ -160,7 +160,7 @@ const Billinginfo: React.FC= () => {
                     <span className="text-[14px] font-medium text-gray-800  ">
                     Street Address
                     </span>
-                    <div className="w-full pt-1">
+                    {/* <div className="w-full pt-1">
                       <input
                         type="text"
                         placeholder="Line 1"
@@ -168,11 +168,11 @@ const Billinginfo: React.FC= () => {
                         onChange={(e) => setStreetAddress(e.target.value)}
                         className="pl-4 pr-4 py-3 bg-white rounded-md border text-Gray border-gray-300 focus:outline-none focus:border-DarkGreen3 focus:border-2 w-full sm:text-xs md:text-sm lg:text-md"
                       />
-                    </div>
+                    </div> */}
                     <div className="w-full pt-2">
                       <input
                         type="text"
-                        placeholder="Line 2"
+                        placeholder="Address"
                         value={line2}
                         onChange={(e) => setLine2(e.target.value)}
                         className="pl-4 pr-4 py-3 bg-white text-Gray rounded-md border border-gray-300 focus:outline-none focus:border-DarkGreen3 focus:border-2 w-full sm:text-xs md:text-sm lg:text-md"
@@ -196,7 +196,7 @@ const Billinginfo: React.FC= () => {
 
 
                 {/* 4th line */}
-                <div className="flex lg:flex-row sm:gap-5 md:gap-[55px] py-2 pb-8 ">
+                <div className="flex lg:flex-row sm:gap-5 md:gap-[55px] ">
                   <div className="flex flex-col w-full">
                     <span className=" text-xs  lg:text-sm font-medium">
                       Country / Region
@@ -265,13 +265,15 @@ const Billinginfo: React.FC= () => {
           </div>
         </div>
         {/* Button */}
+        <div className=" items-center justify-start lg:justify-end flex">
         <div className=" items-center justify-start lg:justify-end mt-4 flex">
           <button
-            className="text-white bg-Green2 hover:bg-green-850 lg:font-semibold py-2 px-4 lg:py-2 lg:px-6 rounded-full inline-flex items-center  hover:bg-green-800  "
+            className="text-white bg-Green2 hover:bg-green-850 lg:font-semibold py-2 px-4 lg:py-2.5 lg:px-6 rounded-full inline-flex items-center  hover:bg-green-800  "
             type="submit"
           >
-            <span className="text-[12px] lg:text-[14px]  font-medium">Save Changes</span>
+            <span className=" text-[12px] lg:text-[14px] font-medium">Save Changes</span>
           </button>
+        </div>
         </div>
       </form>
     </div>
