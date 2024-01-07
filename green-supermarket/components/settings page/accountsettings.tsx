@@ -8,10 +8,10 @@ import countryList from "@/app/(pages)/shoppingcart/checkout/country";
 const Accountsettings = () => {
   const [selectedCountry, setSelectedCountry] = useState<string>("");
 
-  const [firstName, setFirstName] = useState("Sashya");
-  const [lastName, setLastName] = useState("Hawkins");
-  const [email, setEmail] = useState("sashyhawk@gmail.com");
-  const [phoneNumber, setPhoneNumber] = useState("037483990");
+  const [firstName, setFirstName] = useState("Navishka");
+  const [lastName, setLastName] = useState("Malalage");
+  const [email, setEmail] = useState("navishkanuwan11@gmail.com");
+  const [phoneNumber, setPhoneNumber] = useState("0762630010");
 
   const handleCountryChange = (event: ChangeEvent<HTMLSelectElement>) => {
     setSelectedCountry(event.target.value);
@@ -29,13 +29,13 @@ const Accountsettings = () => {
     });
   };
   return (
-    <div className="border border-[color:var(--Gray-Scale-Gray-100,#E6E6E6)] bg-white flex grow flex-col items-stretch w-full pt-1 pb-6 rounded-lg border-solid max-md:max-w-full">
-      <h2 className="text-Gray3 text-md  font-medium leading-8 whitespace-nowrap  bg-white justify-center pl-6 pr-16 py-2 rounded-lg items-start max-md:max-w-full max-md:px-5">
+    <div className="border  border-[color:var(--Gray-Scale-Gray-100,#E6E6E6)] bg-white -mt-6 flex grow flex-col items-stretch w-full pb-6 rounded-lg border-solid max-md:max-w-full">
+      <h2 className="text-Gray3 text-md  font-semibold leading-8 whitespace-nowrap  bg-white justify-center pl-6 pr-16 py-2 rounded-lg items-start max-md:max-w-full max-md:px-5">
         Account Settings
       </h2>
       <hr />
       <form
-        className="flex flex-col items-stretch mt- px-10 max-md:max-w-full max-md:px-5"
+        className="flex flex-col items-stretch mt-6 lg:mt-2 px-10 max-md:max-w-full max-md:px-5"
         onSubmit={handleSubmit}
       >
         <div className="max-md:max-w-full ">

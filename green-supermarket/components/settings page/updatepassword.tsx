@@ -79,8 +79,8 @@ const updatepassword = () => {
     //       </div>
     //   </form>
     // </div>
-    <div className="border border-[color:var(--Gray-Scale-Gray-100,#E6E6E6)] bg-white flex grow flex-col items-stretch w-full pt-1 pb-6 rounded-lg border-solid max-md:max-w-full">
-      <h2 className="text-Gray3 text-md  font-medium leading-8 whitespace-nowrap  bg-white justify-center pl-6 pr-16 py-2 rounded-lg items-start max-md:max-w-full max-md:px-5">
+    <div className="border border-[color:var(--Gray-Scale-Gray-100,#E6E6E6)] bg-white flex grow flex-col items-stretch w-full pt-1 pb-6 rounded-lg border-solid max-md:max-w-full my-6">
+      <h2 className="text-Gray3 text-md font-semibold leading-8 whitespace-nowrap  bg-white justify-center pl-6 pr-16 py-2 rounded-lg items-start max-md:max-w-full max-md:px-5">
         Change Password
       </h2>
       <hr />
@@ -133,7 +133,8 @@ const updatepassword = () => {
                       />
                     </div>
                   </div>
-
+                  </div>
+<div className=" flex flex-col lg:flex-row items-center gap-4">
                   <div className="flex flex-col w-full  sm:mt-4 md:mt-0">
                     <span className="text-[14px] font-medium text-gray-900 ">
                       New Password
@@ -149,7 +150,7 @@ const updatepassword = () => {
                       />
                     </div>
                   </div>
-                </div>
+                
                 {/* 2nd line */}
                 <div className="flex flex-col w-full  py-2">
                   <span className=" text-[14px] font-medium text-gray-900 ">
@@ -166,7 +167,7 @@ const updatepassword = () => {
                     />
                   </div>
                 </div>
-
+                </div>
               </div>
             </div>
           </div>

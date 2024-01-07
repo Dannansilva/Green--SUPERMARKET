@@ -17,14 +17,14 @@ export const SettingsNavItems = [
     name: "Shopping Cart",
   },
 
-  {
-    id: 3,
-    image: <IoSettingsSharp />,
-    name: "Settings",
-  },
+  // {
+  //   id: 3,
+  //   image: <IoSettingsSharp />,
+  //   name: "",
+  // },
 
   {
-    id: 4,
+    id: 3,
     image: <FiLogOut />,
     name: "Log-out",
   },
