@@ -10,7 +10,7 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
   const navigation = useRouter();
 
   useEffect(() => {
-    const isLoggedIn = false; // Replace this with your authentication check
+    const isLoggedIn = true; // authentication check
     const currentPath = window.location.pathname;
     const isShoppingCartPage = currentPath === '/shoppingcart';
 
@@ -19,9 +19,9 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
     }
 
     return () => {
-      // Cleanup logic if needed
+
     };
-  }, [navigation]); // Include navigation in the dependency array
+  }, [navigation]); 
 
   return <>{children}</>;
 };

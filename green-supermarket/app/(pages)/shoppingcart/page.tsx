@@ -26,40 +26,7 @@ const Shoppingcart: React.FC<ProductQuantityProps> = () => {
       category: 1,
       quantity:1,
     },
-    {
-      id: 15,
-      name: (
-        <p className=" text-Lightgray hover:text-DarkGreen ">Cinnamon roll</p>
-      ),
-      image: "/assets/ShopPage/Bakery/Cinnamon roll.png",
-      price: "LKR 100.00",
-      category: 3,
-    },
-    {
-      id: 3,
-      name: <p className=" text-Lightgray hover:text-DarkGreen ">Mango</p>,
-      image: "/assets/ShopPage/fruits/mango.png",
-      price: "LKR 100.00",
-      category: 1,
-      quantity:1,
-  
-    },
-    {
-      id: 9,
-      name: (
-        <p className=" text-Lightgray hover:text-DarkGreen ">Sweet potatoes</p>
-      ),
-      image: "/assets/ShopPage/vegetables/Sweet potato.png",
-      price: "LKR 100.00",
-      category: 2,
-    },
-    {
-      id: 18,
-      name: <p className=" text-Lightgray hover:text-DarkGreen ">Mutton</p>,
-      image: "/assets/ShopPage/meat/Raw steak on white paper-1.png",
-      price: "LKR 100.00",
-      category: 4,
-    },
+   
   ]);
 
   const decreaseValue = (id: any) => {
@@ -158,19 +125,19 @@ const Shoppingcart: React.FC<ProductQuantityProps> = () => {
                             <Image
                               alt=""
                               src={image}
-                              width={50}
-                              height={50}
+                              width={500}
+                              height={500}
                               className="w-[50px] h-full"
                             />
                           </div>
-                          <div className="sm:text-[9px] lg:text-xs sm:pl-2">
-                            <p className="">{name}</p>
+                          <div className="sm:text-[9px] lg:text-sm sm:pl-2">
+                            <p className=" ">{name}</p>
                           </div>
                         </div>
                       </div>
 
-                      <div className="sm:text-[10px] lg:text-xs font-medium">
-                        <p>{price}</p>
+                      <div className="sm:text-[10px] lg:text-sm font-medium">
+                        <p className="">{price}</p>
                       </div>
                       <div className="">
                         <div className="md:w-[75px] sm:w-[60px] md:py-1 md:px-1 sm:py-1 sm:px-0.5 bg-white rounded-full border border-neutral-200 justify-between items-center inline-flex sm:-ml-4 md:-ml-0">
@@ -200,8 +167,8 @@ const Shoppingcart: React.FC<ProductQuantityProps> = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="flex sm:text-[9px] lg:text-xs font-semibold sm:items-center">
-                        <p>LKR 280.00</p>
+                      <div className="flex sm:text-[9px] lg:text-sm font-semibold sm:items-center">
+                        <p>LKR 1500.00</p>
                       </div>
                       <div className="justify-end items-end text-end mx-4">
                         <button
@@ -230,169 +197,6 @@ const Shoppingcart: React.FC<ProductQuantityProps> = () => {
                 </div>
               </div>
             </div>
-
-            {/* <div className=" text-Darkgrey flex md:p-1  border-x-0 border-t-0 border-b  md:justify-between text-Gray font-[14px]   ">
-                  <div className=" w-full justify-between  ">
-                    <p>PRODUCT</p>
-                  </div>
-                  <div className=" ">
-                    <p>PRICE</p>
-                  </div>
-                  <div className="">
-                    <p>QUANTITY</p>
-                  </div>
-                  <div className=" ">
-                    <p>SUB TOTAL</p>
-                  </div>
-                </div> */}
-            {/* <div className="justufy-between mx-5 "> */}
-            {/* <div className="justify-between flex flex-row items-center "> */}
-            {/* <div className="flex items-center font-[16px] sm:mr-6 md:mr-0">
-                      <div className=" w-full  ">
-                        <Image
-                          className="w-full sm:mr-6 md:mr-0 "
-                          src="/assets/shoppingcart/Image-1.png"
-                          alt=""
-                          width={100}
-                          height={100}
-                        />
-                      </div>
-                      <div className="text-Black1 text-sm sm:text-base :">
-                        <p className="md:text-[14px] sm:text-[10px] sm:font-semibold md:font-normal">
-                          Green Capsicum
-                        </p>
-                      </div>
-                    </div> */}
-            {/* <div className="text-Black1 text-sm sm:text-base sm:hidden  md:block ">
-                      <p className=" md:text-[14px] sm:text-[10px] sm:font-semibold md:font-normal">
-                        LKR140.00
-                      </p>
-                    </div>
-                    <div className="ml-4 sm:ml-0 md:ml-16 sm:mr-4"> */}
-            {/* plus */}
-            {/* <div className="w-[100px] h-[40px] p-2 bg-white rounded-[150px] md:border border-neutral-200 justify-center items-center inline-flex"> */}
-            {/* minus */}
-            {/* <div className="w-[26px] h-[26px] relative">
-                          <div className="w-[26px] h-[26px] left-0 top-0 items-center md:bg-zinc-100 rounded-[170px]">
-                            <button onClick={decreaseValue1} className="m-1">
-                              <FaMinus />
-                            </button>
-                          </div>
-                        </div> */}
-
-            {/* quantity */}
-            {/* <div className="md:w-10 text-center text-zinc-900 text-base font-normal leading-normal sm:w-4"> */}
-            {/* {quantity1}
-                        </div> */}
-            {/* plus */}
-            {/* <div className="w-[26px] h-[26px] relative">
-                          <div className="w-[26px] h-[26px] left-0 top-0 items-center md:bg-zinc-100 rounded-[170px]">
-                            <button onClick={increaseValue1} className="p-1">
-                              <FaPlus />
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div> */}
-
-            {/* <div className="pl-14 text-Black1 text-sm sm:text-base  text-[14px] sm:hidden md:block">
-                      <p className=" md:text-[14px] sm:text-[10px] sm:font-semibold md:font-normal">
-                        LKR140.00
-                      </p>
-                    </div>
-                    <div>
-                      <button className="rounded-full w-[20px] h-[20px] bg-zinc-100 items-center text-center text-sm[5px] font-light text-Gray2 hover:bg-Lightgray text-[12px]">
-                        x
-                      </button>
-                    </div>
-                  </div>
-                  <hr />
-                </div> */}
-            {/* second */}
-            {/* 3rd */}
-            {/* <div className="justufy-between mx-5 border flex flex-row ">
-                  <div className="justify-between flex flex-row items-center ">
-                    <div className="flex items-center">
-                      <div className="mx-auto w-full  ">
-                        <Image
-                          className="w-full sm:mr-6 md:mr-0"
-                          src="/assets/shoppingcart/Image.png"
-                          alt=""
-                          width={100}
-                          height={100}
-                        />
-                      </div> */}
-            {/* <div className="text-Black1 text-sm">
-                        <p className="md:text-[12px] sm:text-[10px] sm:font-semibold md:font-normal ml-2 ">
-                          Red Capsicum
-                        </p>
-                      </div>
-                    </div>
-                    <div className="text-Black1 text-sm sm:hidden  md:block ">
-                      <p className=" md:text-[12px] sm:text-[10px] sm:font-semibold md:font-normal ml-2">
-                        LKR140.00
-                      </p>
-                    </div>
-                    <div className="ml-4 sm:ml-0 md:ml-16 sm:mr-4"> */}
-            {/* pus */}
-            {/* <div className="w-[100px] h-[40px] p-2 bg-white rounded-[150px] md:border border-neutral-200 justify-center items-center inline-flex"> */}
-            {/* minus */}
-            {/* <div className="w-[26px] h-[26px] relative">
-                          <div className="w-[26px] h-[26px] left-0 top-0 items-center md:bg-zinc-100 rounded-[170px]">
-                            <button onClick={decreaseValue2} className="m-1">
-                              <FaMinus />
-                            </button>
-                          </div>
-                        </div> */}
-
-            {/* quantity */}
-            {/* <div className="md:w-10 text-center text-zinc-900 text-base font-normal leading-normal sm:w-4">
-                          {quantity2}
-                        </div> */}
-            {/* plus */}
-            {/* <div className="w-[26px] h-[26px] relative">
-                          <div className="w-[26px] h-[26px] left-0 top-0 items-center md:bg-zinc-100 rounded-[170px]">
-                            <button onClick={increaseValue2} className="p-1">
-                              <FaPlus />
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="pl-14 text-Black1 text-sm sm:text-base  text-[14px] sm:hidden md:block">
-                      <p className=" md:text-[14px] sm:text-[10px] sm:font-semibold md:font-normal">
-                        LKR140.00
-                      </p>
-                    </div>
-                    <div>
-                      <button className="rounded-full w-[20px] h-[20px] bg-zinc-100 items-center text-center text-sm[5px] font-light text-Gray2 hover:bg-Lightgray text-[12px]">
-                        x
-                      </button>
-                    </div>
-                  </div>
-                </div> */}
-            {/* 3rd */}
-            {/* <hr />
-                <div className="justify-between flex flex-row md:p-2 "> */}
-            {/* 4th */}
-
-            {/* <div>
-                    <button className="text-Gray2 bg-Lightgray2 hover:bg-green-850 font-bold py-2   px-10 rounded-full inline-flex items-center  hover:bg-Green md:text-[11px] sm:text-[8px] sm:m-2">
-                      <span className="">Return to shop</span>
-                    </button>
-                  </div>
-                  <div>
-                    <button className="text-Gray2 bg-Lightgray2 hover:bg-green-850 font-bold py-2   px-10 rounded-full inline-flex items-center  hover:bg-Green md:text-[11px] sm:text-[8px] sm:m-2 ">
-                      <span className="">Update Cart</span>
-                    </button>
-                  </div>
-                </div>
-                {/* 4th */}
-            {/* </div> */}
-
-            {/* end first box */}
-
             {/* start 2nd box */}
             <div className="lg:flex flex-col lg:w-1/3 md:w-2/4 border w-full  rounded-t-md rounded-b-md p-4 max-h-[240px] ">
               <div className=" my-2 -mt-1">
