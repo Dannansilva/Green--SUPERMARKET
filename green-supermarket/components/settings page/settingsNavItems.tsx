@@ -9,12 +9,15 @@ export const SettingsNavItems = [
     id: 1,
     image: <TbListDetails />,
     name: "Order Details",
+    navigate:'/shoppingcart' ,
   },
+
 
   {
     id: 2,
     image: <SlHandbag />,
     name: "Shopping Cart",
+    navigate:'/shoppingcart' ,
   },
 
   // {

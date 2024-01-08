@@ -66,34 +66,6 @@ const Navbar = () => {
     <header>
       <nav>
         <div className="mx-2 sm:mx-4 md:mx-16 lg:mx-24 xl:mx-36 justify-between items-center">
-          {/* navbar first row */}
-          {/* <div className="h-[42px]  hidden justify-between text-Gray text-xs items-center lg:flex xl:flex md:flex-row lg:flex-row xl:flex-row"> */}
-          {/* location */}
-          {/* <div className="hidden sm:hidden items-center lg:flex xl:flex md:hidden lg:flex-row xl:flex-row">
-              <Image
-                src="/assets/mappin.png"
-                width={15}
-                height={18}
-                alt="location"
-                className=" mr-1"
-              />
-              <p className=" sm:text-xs">
-                Store Location: Colombo 05, Sri Lanka
-              </p>
-            </div> */}
-          {/* sign in/sign up */}
-          {/* <div className="hidden lg:flex xl:flex lg:flex-row xl:flex-row">
-              <a href={`/login`}>
-                <p className=" pr-1">Login</p>
-              </a>
-              <p className=" pr-1">/</p>
-              <a href={`/registration`}>
-                <p className=" pr-1">Register</p>
-              </a>
-            </div> */}
-          {/* </div> */}
-
-          {/* <hr className=" hidden lg:block xl:block" /> */}
 
           {/* navbar second row */}
           <div className="h-[110px] flex flex-row items-center w-full justify-between md:justify-between lg:justify-between xl:justify-between  sm:-mt-6  pt-4 py-0">
@@ -103,64 +75,17 @@ const Navbar = () => {
                 <Image
                   src={logo}
                   alt="Logo"
-                  height={38}
-                  width={137}
+                  height={500}
+                  width={500}
                   className=" md:h-full w-20 md:w-24"
                 />
               </a>
             </div>
 
-            {/* search bar for md, lg, xl*/}
-            {/* <div className="flex-row hidden sm:hidden lg:flex xl:flex md:hidden  ">
-              <form
-                action="input"
-                className={`first-letter:relative mx-auto w-full items-center focus:outline-0 focus:border-0 ${
-                  isClicked ? "centered" : ""
-                }`}
-              >
-                <div className="mr-2 relative items-center 0">
-                  <input
-                    type="search"
-                    className="peer border-white  cursor-pointer relative z-10 sm:z-10 md:z-20 lg:z-20 xl:z-30 h-12 w-12 rounded-full bg-transparent  outline-none focus:w-full focus:cursor-text focus:pl-14 focus:pr-4 hover:shadow-md focus:shadow-md focus:border-none focus:outline-none  "
-                    onClick={handleClick}
-                  />
-                  <div className="absolute inset-y-0 left-0 flex items-center pl-3">
-                    <IoSearch size={20} className="w-full ml-0.5 mt-0.5" />
-                  </div>
-                </div>
-              </form>
-            </div> */}
-
             {/* shopping cart */}
             <div className="flex flex-row items-center justify-center ">
               {/* lg search bar */}
               <div className="  flex-row hidden sm:hidden lg:flex xl:flex md:hidden ">
-                {/* <form
-                  action="input"
-                  className={`relative mx-auto w-full items-center focus:outline-0 focus:border-0  ${
-                    isClicked ? "centered" : ""
-                  }`}
-                >
-                  <div className="relative items-center ">
-                    <input
-                      type="text"
-                      value={keyword}
-                      onChange={(e) => setKeyword(e.target.value)}
-                      className={`peer border-white cursor-pointer z-10 h-12 w-12 rounded-full  bg-transparent  outline-none focus:w-full focus:cursor-text focus:pl focus:pr-4 focus:shadow-md focus:border-none focus:outline-none ${
-                        isClicked ? "pl-14" : ""
-                      }`}
-                      onClick={handleClick}
-                    />
-                    {isClicked ? (
-                      <button
-                        type="submit"
-                        className="absolute inset-y-0 right-0 flex items-center pr-3"
-                      >
-                        <IoSearch size={20} className="w-full text-Gray2" />
-                      </button>
-                    ) : null}
-                  </div>
-                </form> */}
 
                 <form className="hidden lg:flex flex-nowrap items-center justify-end w-full order-last md:order-none">
                   <input type="text"
@@ -231,12 +156,6 @@ const Navbar = () => {
                         />
                       </a>
                     </ProtectedRoute>
-                    {/* <p className="pr-2 text-black text-[11px] hidden lg:hidden xl:hidden font-semibold">
-                      Rs.0.00
-                    </p> */}
-                    {/* <div className="sm:block md:hidden lg:hidden xl:hidden pr-2">
-                      <p className="text-black font-light ">|</p>
-                    </div> */}
                     <CiUser size={14} className=" text-black  hidden" />
 
                     <div className="sm:flex md:flex lg:hidden ">
@@ -353,13 +272,6 @@ const Navbar = () => {
               ))}
             </ul>
           </div>
-
-          {/* <div className="flex felx-row justify-between items-center px-2 text-white font-light text-xs md:text-sm lg:text-sm xl:text-sm md:mx-16 lg:mx-24 xl:mx-36 w-max">
-            <FiPhoneCall size={16} className="text-white mr-2" />
-            <div className=" w-max">
-              <p className=" ">+94 762630010</p>
-            </div>
-          </div> */}
         </div>
       </nav>
     </header>

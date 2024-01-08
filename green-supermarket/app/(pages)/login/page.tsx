@@ -21,7 +21,7 @@ export default function Login() {
 
     loginAPICall(email,password).then((response)=>{
       console.log(response.data);
-      //this is the place where you can right the code for the login to appear the login pop up
+// code for the login to appear the login pop up
     }).catch(error => {
       console.log(error);
     })

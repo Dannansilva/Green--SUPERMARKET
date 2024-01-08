@@ -19,7 +19,7 @@ const Billinginfo: React.FC= () => {
   const [province, setProvince] = useState("Western");
   const [zipCode, setZipCode] = useState("");
 
-  // type ChangeEvent<T = HTMLInputElement> = React.ChangeEvent<T>;
+  type ChangeEvent<T = HTMLInputElement> = React.ChangeEvent<T>;
 
 
   const handleCountryChange = (event: ChangeEvent<HTMLSelectElement>) => {
@@ -42,81 +42,6 @@ const Billinginfo: React.FC= () => {
     });
   };
   return (
-    // <div className="border border-[color:var(--Gray-Scale-Gray-100,#E6E6E6)] bg-white flex grow flex-col items-stretch w-full pt-1 pb-6 rounded-lg border-solid max-md:max-w-full max-md:mt-6">
-    //   <header className="text-zinc-900 text-xl font-medium leading-8 whitespace-nowrap shadow-sm bg-white justify-center pl-6 pr-16 py-5 rounded-lg items-start max-md:max-w-full max-md:px-5">
-    //     Billing Address
-    //   </header>
-    //   <form
-    //     className="flex flex-col items-stretch mt-9 px-10 max-md:max-w-full max-md:px-5"
-    //     onSubmit={handleSubmit}
-    //   >
-    //     {/* Street info */}
-    //     <div className="flex flex-col mt-5 px-6 max-md:max-w-full max-md:px-5">
-    //       <div className="text-zinc-900 text-sm leading-5 self-stretch max-md:max-w-full">
-    //         Street Address
-    //       </div>
-    //       <input
-    //         type="text"
-    //         value={streetAddress}
-    //         onChange={(e) => setStreetAddress(e.target.value)}
-    //         className="text-stone-500 text-base leading-5 whitespace-nowrap border border-[color:var(--Gray-Scale-Gray-100,#E6E6E6)] bg-white self-stretch justify-center mt-1.5 pl-4 pr-16 py-5 rounded-md border-solid items-start max-md:max-w-full max-md:pr-5"
-    //         aria-label="Street Address Input"
-    //       />
-            
-    //         <input
-    //           type="text"
-    //           value={line2}
-    //           onChange={(e) => setLine2(e.target.value)}
-    //           className="text-stone-500 text-base leading-5 whitespace-nowrap border border-[color:var(--Gray-Scale-Gray-100,#E6E6E6)] bg-white self-stretch justify-center mt-1.5 pl-4 pr-16 py-5 rounded-md border-solid items-start max-md:max-w-full max-md:pr-5"
-    //           aria-label="Line 2 (Optional)"
-    //         />
-
-    //       <div className="self-stretch flex items-stretch justify-between gap-4 mt-8 max-md:max-w-full max-md:flex-wrap max-md:justify-center">
-    //         <div className="items-stretch flex grow basis-[0%] flex-col">
-    //           <div className="text-zinc-900 text-sm leading-5">
-    //             Country / Region
-    //           </div>
-    //           <input
-    //             type="text"
-    //             value={country}
-    //             onChange={(e) => setCountry(e.target.value)}
-    //             className="text-stone-500 text-base leading-5 whitespace-nowrap border border-[color:var(--Gray-Scale-Gray-100,#E6E6E6)] bg-white justify-center mt-1.5 pl-4 pr-16 py-5 rounded-md border-solid max-md:max-w-full"
-    //             aria-label="Country / Region Input"
-    //           />
-    //         </div>
-
-    //         <div className="items-stretch flex grow basis-[0%] flex-col">
-    //           <div className="text-zinc-900 text-sm leading-5">Province</div>
-    //           <input
-    //             type="text"
-    //             value={province}
-    //             onChange={(e) => setProvince(e.target.value)}
-    //             className="text-stone-500 text-base leading-5 whitespace-nowrap border border-[color:var(--Gray-Scale-Gray-100,#E6E6E6)] bg-white justify-center mt-1.5 pl-4 pr-16 py-5 rounded-md border-solid max-md:max-w-full"
-    //             aria-label="Province Input"
-    //           />
-    //         </div>
-
-    //         <div className="items-stretch flex grow basis-[0%] flex-col">
-    //           <div className="text-zinc-900 text-sm leading-5">Zip Code</div>
-    //           <input
-    //             type="text"
-    //             value={zipCode}
-    //             onChange={(e) => setZipCode(e.target.value)}
-    //             className="text-stone-500 text-base leading-5 whitespace-nowrap border border-[color:var(--Gray-Scale-Gray-100,#E6E6E6)] bg-white justify-center mt-1.5 pl-4 pr-16 py-5 rounded-md border-solid max-md:max-w-full"
-    //             aria-label="Zip Code Input"
-    //           />
-    //         </div>
-    //       </div>
-
-    //       {/* Button */}
-    //       <div>
-    //         <button className="text-white bg-green-500 hover:bg-green-850 font-bold py-2 px-4 rounded-full inline-flex items-center mt-5 hover:bg-green-800">
-    //           <span className="mr-2">Save Changes</span>
-    //         </button>
-    //       </div>
-    //     </div>
-    //   </form>
-    // </div>
     <div className="border border-[color:var(--Gray-Scale-Gray-100,#E6E6E6)] bg-white flex grow flex-col items-stretch w-full pt-1 pb-6 rounded-lg border-solid max-md:max-w-full mt-6">
       <h2 className="text-Gray3 text-[16px] mx-4 font-semibold leading-8 whitespace-nowrap  bg-white justify-center  py-4 rounded-lg items-start max-md:max-w-full ">
       Billing Address
@@ -128,31 +53,10 @@ const Billinginfo: React.FC= () => {
       >
         <div className="max-md:max-w-full ">
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-            {/* <div className="flex flex-col items-stretch  w-1/3 max-md:w-full max-md:ml-0">
-              <div className="flex flex-col items-center justify-center h-full">
-                <div className="rounded-full overflow-hidden">
-                  <Image
-                    alt="User avatar"
-                    width={500}
-                    height={500}
-                    src={`/assets/profile.png`}
-                    className="w-[250px] object-cover"
-                  />
-                </div>
-
-                <button
-                  type="button"
-                  className="text-Green2 text-xs  font-semibold leading-4 whitespace-nowrap justify-center border-Green2 bg-white px-4 py-2 rounded-full border border-solid "
-                >
-                  Choose Image
-                </button>
-              </div>
-            </div> */}
+           
             <div className="flex flex-col items-stretch w-full  max-md:w-full max-md:ml-0">
               <div className="flex flex-col w-full rounded-t-md rounded-b-md ">
-                {/* <div className="flex flex-row justify-start bg-Green w-full text-md font-medium pl-[18px] py-4 rounded-t-md text-Black1 ">
-                  <h4 className=" text-white"> Shopping details </h4>
-                </div> */}
+                
 
                 {/* 1st line */}
                 <div className="flex sm:flex-col md:gap-5 py-2 sm:mt-4 md:mt-0">
@@ -160,15 +64,7 @@ const Billinginfo: React.FC= () => {
                     <span className="text-[14px] font-medium text-gray-800  ">
                     Street Address
                     </span>
-                    {/* <div className="w-full pt-1">
-                      <input
-                        type="text"
-                        placeholder="Line 1"
-                        value={streetAddress}
-                        onChange={(e) => setStreetAddress(e.target.value)}
-                        className="pl-4 pr-4 py-3 bg-white rounded-md border text-Gray border-gray-300 focus:outline-none focus:border-DarkGreen3 focus:border-2 w-full sm:text-xs md:text-sm lg:text-md"
-                      />
-                    </div> */}
+                 
                     <div className="w-full pt-2">
                       <input
                         type="text"
@@ -179,23 +75,9 @@ const Billinginfo: React.FC= () => {
                       />
                     </div>
                   </div>
-
-                  {/* <div className="flex flex-col w-full  sm:mt-4 md:mt-0">
-                    <span className="text-xs font-medium text-gray-900 ">
-                      Last name
-                    </span>
-                   
-                  </div> */}
                 </div>
-
                 
                 {/* 2nd line */}
-
-
-                {/* 3rd line */}
-
-
-                {/* 4th line */}
                 <div className="flex lg:flex-row sm:gap-5 md:gap-[55px] ">
                   <div className="flex flex-col w-full">
                     <span className=" text-xs  lg:text-sm font-medium">
