@@ -93,103 +93,9 @@ const Product: React.FC = () => {
         <div className="sm:mx-4 mx-4 md:mx-16 lg:mx-24 xl:mx-36 flex-col flex sm:py-2 md:py-4 ">
           {/* second part */}
           <div className=" flex sm:flex-col lg:flex-row gap-4   ">
-            {/* <div className=" hidden sm:hidden lg:flex lg:pr-12 xl:pr-16"> */}
-            {/* <div className="hidden py-2 md:w-max ">
-                <div className="flex flex-col">
-                  <button
-                    onClick={handleFilterClick}
-                    className=" w-[72px] hidden text-sm sm:hidden md:block  bg-Green text-white rounded-full py-1 items-center text-center hover:shadow-lg mb-2"
-                  >
-                    {" "}
-                    <div className="flex flex-row items-center justify-between gap-1 px-2 py-0.5   text-sm font-medium">
-                      <p className="pl-1">Filter</p>
-                      <MdKeyboardArrowDown className="pt- h-[15px] w-[15px]" />
-                    </div>
-                  </button>
-
-                  {showCategories && (
-                    <div>
-                      <div className="flex flex-row pt-2">
-                        <h2 className=" text-md text-black font-semibold ">
-                          All Categories
-                        </h2>
-                      </div>
-
-                      <div className=" sm:hidden hidden lg:flex lg:flex-col gap-0.5 items-start text-start pt-2 ">
-                        <>
-                          {Category.map((category) => (
-                            <Link
-                              key={category.id}
-                              href={`/shop/${category.id}`}
-                            >
-                              <div className=" flex flex-col lg:w-max   ">
-                                <div className="flex flex-row items-center">
-                                  <GoSquareFill className=" text-green-400 w-[10px] h-[10px]" />
-
-                                  <button
-                                    key={String(category.id)} // Convert the id to a string
-                                    onClick={() => handleClick(category.id)}
-                                    className={`mx-2 text-black items-center text-center text-sm m-2 transition duration-300 ease-in-out hover:font-semibold ${
-                                      clickedButtonId === category.id
-                                        ? "border-b-4 border-b-Green pb-1 text-DarkGreen font-semibold"
-                                        : ""
-                                    }`}
-                                  >
-                                    {category.name}
-                                  </button>
-                                </div>
-                              </div>
-                            </Link>
-                          ))}
-                        </>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div> */}
+          
           </div>
-          {/* Third part */}
-          {/* */}{" "}
-          {/* <div className="flex flex-col">
-             first div */}
-          {/* <div className="flex md:flex-row justify-between"> */}
-          {/* <div className="flex flex-row gap-2 items-center">
-                <div>
-                  <p className="font-normal text-sm">sort by: </p>
-                </div>
-                <div className="relative w-[166px]">
-                  <button
-                    className="w-full border rounded-[4px] h-[40px] py-1 px-2 flex flex-row justify-between items-center"
-                    onClick={toggleDown}
-                  >
-                    <p className="items-start justify-start font-normal text-sm">
-                      {selectedSort}
-                    </p>
-                    <RiArrowDropDownLine className=" font-extralight text-[20px]" />
-                  </button>
-                  {isOpen && (
-                    <div className="absolute top-[40px] left-0 bg-white border rounded shadow flex flex-col w-full ">
-                      <a
-                        className=" hover:bg-Green hover:border hover:border-white hover:text-white "
-                        onClick={() => handleSortOption("Price")}
-                        href="#"
-                      >
-                        Price
-                      </a>
-                      <a
-                        className=" hover:bg-Green hover:border hover:border-white hover:text-white "
-                        onClick={() => handleSortOption("Date")}
-                        href="#"
-                      >
-                        Date
-                      </a>
-                    </div>
-                  )}
-                </div>
-              </div> */}
-          {/* <div className=" sm:flex sm:flex-row flex lg"> */}
           <div className="flex flex-col pb-4">
-            {/* number of products */}
             <div className="flex flex-row py-2 ">
               {/* sm: filter */}
 
@@ -243,37 +149,7 @@ const Product: React.FC = () => {
                 )}
               </div>
 
-              {/* <div className=" absolute flex flex-col z-20 mt-11 bg-white border p-4  rounded-md border-green-600  "
-      >
-                   
-                      <>
-                        {Category.map((category) => (
-                          <Link key={category.id} href={`/shop/${category.id}`}>
-                            <div
-                              className=" flex flex-col hover:scale-105 justify-start text-start px-2 hover:transition-all hover:duration-750 hover:ease-in-out  
-                          "
-                            >
-                              <div className=" flex flex-row items-center text-center gap-1">
-                                {/* <GoSquareFill className=" text-green-400 w-[7px] h-[7px]" /> */}
-              {/* <button
-                                  key={category.id}
-                                  // onClick={() => handleClick(category.id)}
-                                  className={` text- items-center text-center text-sm m-2 transition duration-300 text-Gray2 ease-in-out hover:font-semibold w-max ${
-                                    clickedButtonId === category.id
-                                      ? "border-b-4 border-b-Green pb-1 text-DarkGreen font-semibold"
-                                      : ""
-                                  }`}
-                                >
-                                  {category.name}
-                                </button>
-                              </div>
-                            </div>
-                          </Link>
-                        ))}
-                      </>
-               
-                  </div> */}
-
+             
               <div className="sm:flex  flex lg:-mb-0  sm:justify-end lg:flex-row justify-end w-full  items-center">
                 {/* <div className="  items-center hidden ">
                   <h2 className=" font-semibold sm:text-md lg:text-xl text-DarkGreen">
@@ -292,14 +168,6 @@ const Product: React.FC = () => {
                 </div>
               </div>
             </div>
-            {/* <div className=" py-4 justify-end">
-                  <span className="flex items-center text-center">
-                    <p className=" font-bold text-xs pr-2 sm:text-xs md:text-base lg:text-md">
-                      {}
-                    </p>
-                    <p className="sm:text-xs md:text-base lg:text-md"></p>
-                  </span>
-                </div> */}
 
             {/* second div */}
             <div className="  grid grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 pt-4 sm:gap-2 md:gap-4 ">
@@ -355,8 +223,6 @@ const Product: React.FC = () => {
           </div>
         </div>
       </div>
-      {/* </div> */}
-      {/* </div> */}
     </>
   );
 };

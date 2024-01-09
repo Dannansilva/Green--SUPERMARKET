@@ -23,9 +23,6 @@ const PopCategories: React.FC = () => {
               Shop By Category
             </h2>
           </div>
-          {/* <div className="items-center sm:hidden">
-            <button className="flex text-Green text-base font-medium hover:scale-105 px-4">{`View All`}</button>
-          </div> */}
         </div>
 
         {/* second row */}

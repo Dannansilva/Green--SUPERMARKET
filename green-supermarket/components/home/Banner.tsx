@@ -123,24 +123,6 @@ const Banner = () => {
                 key={id}
                 className="flex flex-col md:flex-row  md:py-[40px] px-4 md:justify-center w-full items-center"
               >
-                {/* sm banner2 */}
-                {/* <div className="items-center justify-center md:block lg:hidden">
-  <div className="hidden md:flex lg:hidden image-container sm:flex sm:flex-row items-center sm:justify-center">
-    <Image
-      src={image}
-      alt={""}
-      width={30}
-      height={27.27}
-      className=""
-    />
-  </div>
-
-  <div className="sm:flex md:hidden sm:justify-center sm:items-center pt-1">
-    <p className="text-xs font-semibold text-gray text-center">
-      {Service}
-    </p>
-  </div>
-</div> */}
 
                 <div className=" flex flex-row pr-2 md:pr-5 max-w-full rounded-full sm:hover:shadow-sm md:hover:shadow-none items-center">
                   <Image
