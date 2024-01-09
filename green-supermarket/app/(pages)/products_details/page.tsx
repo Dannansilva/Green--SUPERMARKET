@@ -8,12 +8,12 @@ import { SlHandbag } from "react-icons/sl";
 import { FaPlus, FaMinus } from "react-icons/fa6";
 import { useState } from "react";
 import { useParams } from "next/navigation"; 
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 interface ProductDetailsProps {
-  id: any; // Assuming id is of any type
+  id: any;
   name: any;
-  image: any; // Assuming image is of any type
+  image: any;
   price: any;
   description: any;
 }
@@ -35,28 +35,27 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ id, name, image, price 
 
 
 
-  const router = useRouter();
-  const { Id } = router.query;
+  // const router = useRouter();
+  // const { Id } = router.query;
 
-  if (!Id || typeof Id !== 'string') {
-    return <p>Invalid product ID</p>;
-  }
+  // if (!Id || typeof Id !== 'string') {
+  //   return <p>Invalid product ID</p>;
+  // }
   
-  // Parse the string to an integer
-  const productId = parseInt(Id, 10);
+  // // string to an integer
+  // const productId = parseInt(Id, 10);
 
-  // Check if id is undefined or not a number
-  if (isNaN(productId)) {
-    return <p>Invalid product ID</p>;
-  }
+  // // Check if id is undefined or not a number
+  // if (isNaN(productId)) {
+  //   return <p>Invalid product ID</p>;
+  // }
 
-  // Fetch the product data based on the product id
-  // You may use your own data fetching logic here
-  const product = Products.find((p) => p.id === parseInt(Id));
+  // // Fetch the product data based on the product id
+  // const product = Products.find((p) => p.id === parseInt(Id));
 
-  if (!product) {
-    return <p>Product not found</p>;
-  }
+  // if (!product) {
+  //   return <p>Product not found</p>;
+  // }
   // const router = useRouter();
   // const { id } = router.query;
 
@@ -133,36 +132,6 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ id, name, image, price 
               className="max-h-22 sm:min-w-[100px] md:min-w-[300px] lg:min-w-full  max-w-full md:max-h-36 lg:max-h-44 object-contain"
             />
           </div>
-
-          {/* Product details */}
-          {/* <div className=" flex flex-col px-6 border  ">
-            <div className=" flex flex-row">
-            <div className="flex  my-4 flex-row gap-2 items-center">
-              <h1 className="text-xl font-semibold">Kiwi Fruit</h1>
-              <span className=" bg-LightGreen items-center text-center rounded-md px-2 py-1 ">
-                {" "}
-                <p className=" text-xs text-DarkGreen4 font-medium ">
-                  In Stock
-                </p>
-              </span>
-
-            </div>
-            <div className="  w-full hidden lg:flex md:flex"></div>
-            </div>
-
-            <div className="flex  my-4 flex-row gap-3 items-center">
-              <h1 className="text-md font-semibold text-DarkGreen4 ">
-                LKR 250.00
-              </h1>
-              <span className=" bg-red-100 items-center text-center rounded-full px-2 py-0.5 ">
-                {" "}
-                <p className=" text-xs text-red-500  font-medium ">25% Off</p>
-              </span>
-            </div>
-
-            <hr className=" border-Gray w-full" />
-          </div> */}
-
           <div className=" px-4 lg:px-8 py-4 md:w-full rounded-md sm:mt-4 md:mt-0 md:h-full ">
             <div className=" flex flex-col ">
               <div className=" flex flex-row text-xl mb-2 font-bold gap-2 items-center">
@@ -185,21 +154,14 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ id, name, image, price 
                 </span>
               </div>
               <div className=" flex lg:flex-row">
-                {/* <div className=" flex flex-row w-full sm:justify-normal sm:text-xs  ">
-                  <p className=" text-wrap sm:justify-normal text-Lightgray ">
-                    Our customer service department is working round-the clock
-                    to ensure you have a smooth process. Feel free to contact us
-                    if you have any issues.
-                  </p>
-                </div> */}
                 <div className="  w-full hidden lg:flex md:flex"></div>
               </div>
-              <hr className=" border-Lightgray2 my-4  " />
+              <hr className=" border-Lightgray2 my-4 lg:my-6  " />
             </div>
 
             <div className="flex sm:flex-col lg:flex-row sm:g ">
               {/* name */}
-              <div className=" bg-white w-full sm:text-xs   ">
+              <div className=" bg-white w-full text-xs lg:text-sm   ">
                 <p className=" text-wrap sm:justify-normal text-Lightgray ">
                   Our customer service department is working round-the clock to
                   ensure you have a smooth process. Feel free to contact us if
@@ -207,18 +169,9 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ id, name, image, price 
                   round-the clock to ensure you have a smooth process.
                 </p>
               </div>
-              {/* email */}
-              {/* <div className="  w-full">
-                <input
-                  type="text"
-                  placeholder="Type in your email"
-                  width={300}
-                  className=" pl-4 pr-4 py-3 bg-white rounded-md border border-neutral-200 w-full focus:outline-none focus:border-DarkGreen3 focus:border-2 sm:text-xs md:text-sm lg:text-md "
-                />
-              </div> */}
             </div>
 
-            <hr className=" border-Lightgray2 my-4 " />
+            <hr className=" border-Lightgray2 my-4 lg:my-6 " />
 
             {/* message box */}
             <div className=" flex flex-row justify-between gap-2 lg:gap-4">
@@ -250,18 +203,18 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ id, name, image, price 
               </div>
 
               <div className=" flex flex-row w-full">
-                <button className=" flex flex-row justify-center items-center text-center gap-2 w-full border bg-Green2 rounded-full py-2 hover:bg-Lightgray  ">
+                <button className=" flex flex-row justify-center items-center text-center gap-2 w-full max-w-[150px] border bg-Green2 rounded-full py-2 hover:bg-Lightgray  ">
                   {" "}
-                  <p className=" text-white font-medium text-xs">Add to Cart</p>
-                  <SlHandbag className=" text-white font-medium text-xs " />
+                  <p className=" text-white font-medium text-xs lg:text-sm">Add to Cart</p>
+                  <SlHandbag className=" text-white font-medium max-w-[50px]  " />
                 </button>
               </div>
             </div>
             {/* Button */}
 
-            <div className=" flex flex-row gap-2 py-4">
-              <h3 className=" text-xs"> Category: </h3>{" "}
-              <p className=" text-Lightgray text-xs"> Vegetables</p>
+            <div className=" flex flex-row gap-2 py-4 lg:py-6">
+              <h3 className=" text-xs lg:text-sm"> Category: </h3>{" "}
+              <p className=" text-Lightgray text-xs lg:text-sm"> Vegetables</p>
             </div>
 
             <div></div>

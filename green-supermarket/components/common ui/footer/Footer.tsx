@@ -85,40 +85,7 @@ const Footer = () => {
                  </a> */}
                 </ul>
               </div>
-
-              {/* <div className="  md:justify-start md:text-start sm:text-center ">
-                <ul className=" flex flex-col text-Lightgray md:leading-6  sm:text-xs text-xs  sm:leading-6  leading-4 md:text-sm  lg:text-start ">
-                  <h2 className="  text-green-400 font-medium md:text-sm md:pb-2 sm:pb-2 pb-2 sm:text-xs text-base text-start sm:text-center md:text-start ">
-                    Categories
-                  </h2>
-                  <a href={`/shop/1`}>
-                      <li className=" hover:text-green-50">Fruits</li>
-                    </a>
-                    <a href={`/shop/2`}>
-                      <li className=" hover:text-green-50">Vegetables</li>
-                    </a>
-                    <a href={`/shop/3`}>
-                      <li className=" hover:text-green-50">Bread & Bakery</li>
-                    </a>
-                    <a href={`/shop/4`}>
-                      <li className=" hover:text-green-50">Meat & Fish</li>
-                    </a>
-                    <a href={`/shop/5`}>
-                      <li className=" hover:text-green-50">Spices</li>
-                    </a>
-                    <a href={`/shop/6`}>
-                      <li className=" hover:text-green-50">Stationary</li>
-                    </a>
-                    <a href={`/shop/7`}>
-                      <li className=" hover:text-green-50">Detergents</li>
-                    </a>
-                  
-                   
-                
-                </ul>
-              </div> */}
               
-
               <div className=" md:justify-start md:text-start sm:text-center ">
                 <ul className=" flex flex-col text-Lightgray md:leading-6 sm:text-xs text-xs sm:leading-6 leading-4 md:text-sm  lg:text-start">
                   <h2 className=" text-green-400 font-medium md:text-sm md:pb-2 sm:pb-2 pb-2 sm:text-xs text-base">
@@ -136,18 +103,6 @@ const Footer = () => {
                 </ul>
               </div>
 
-              {/* <div className="">
-                <ul className=" flex flex-col text-Lightgray leading-7">
-                  <h2 className=" text-white font-semibold text-lg pb-4">Proxy</h2>
-                  <Link href={``}>
-                    <li className=" hover:text-white">Home</li>
-                    <li className=" hover:text-white">Shop</li>
-                    <li className=" hover:text-white">Account</li>
-                    <li className=" hover:text-white">About us</li>
-                    <li className=" hover:text-white">Contact us</li>
-                  </Link>
-                </ul>
-              </div> */}
             </div>
           </div>
         </div>
