@@ -124,7 +124,7 @@ const Banner = () => {
                 className="flex flex-col md:flex-row  md:py-[40px] px-4 md:justify-center w-full items-center"
               >
 
-                <div className=" flex flex-row pr-2 md:pr-5 max-w-full rounded-full sm:hover:shadow-sm md:hover:shadow-none items-center">
+<div className=" flex flex-row pr-2 md:pr-5 max-w-full rounded-full sm:hover:shadow-sm md:hover:shadow-none items-center">
                   <Image
                     src={image}
                     alt={""}
