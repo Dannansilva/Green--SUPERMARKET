@@ -1,7 +1,7 @@
 "use client";
 import Container from "@/components/container/container";
 import React, { useEffect } from "react";
-import Productsdetails from "../../../components/products_details/productesdetails";
+// import Productsdetails from "../../../components/products_details/productesdetails";
 import Products from "../shop/Products";
 import Image from "next/image";
 import { SlHandbag } from "react-icons/sl";
